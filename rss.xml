@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Twistronics Blog]]></title><description><![CDATA[A blog.]]></description><link>https://twistronics.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Aug 2020 14:28:42 GMT</lastBuildDate><item><title><![CDATA[An attempt to playing contra with machine learning]]></title><description><![CDATA[This article presents an attempt for playing contra on Nintendo Entertainment System (NES) with neural networks. We have tried different…]]></description><link>https://twistronics.github.io/an-attempt-to-playing-contra-with-machine-learning/</link><guid isPermaLink="false">https://twistronics.github.io/an-attempt-to-playing-contra-with-machine-learning/</guid><pubDate>Sat, 03 Dec 2016 00:00:00 GMT</pubDate><content:encoded>&lt;!-- #### Abstract --&gt;
+&lt;p&gt;This article presents an attempt for playing contra on Nintendo Entertainment System (NES) with neural networks. We have tried different network architectures and different strategies of training, but we failed to beat level 1. We mainly focus on the analysis of our failure and possible solutions.&lt;/p&gt;
+&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;The Nintendo Entertainment System is one of the most successful commercial video game console. It also has a Chinese counterpart, Subor(小霸王学习机), which is part of the childhood of people born in 80s and 90s. Contra is one of the famous games on both NES and Subor. It is of moderate difficulty, not as hard as Mega Man or Ghosts’n Goblins, which is meant for hardcore gamers, and not as easy as Tetris or Breakout for machine to learn or parameterize the action strategies. Contra is also a game of linear gameplay. Since nonlinear games such as Zelda needs long-term strategy and memory, it is almost impossible for neural networks to be trained for such games. &lt;/p&gt;
+&lt;h4&gt;The NES emulator&lt;/h4&gt;
+&lt;p&gt;There are many NES emulators created and used by nerds who are in favor of old-school 8-bit games. From those NES emulators, we have chosen two of them for the final project, FCEUX and Bizhawk. The two emulator has a lua script interpreter and some built in functions for users to program them, but both has some defects in dueling with socket or dueling with graphics, so we have used them both.&lt;/p&gt;
+&lt;p&gt;The NES is based on an 8-bit processor and a RAM of 2048 bytes. The RAM contains all the data needed for the game to run. Due to the limitation of RAM size, NES games fix the memory at fixed physical memory location, which is to say, it is reasonable to scratch information from memory. NES has a screen of 256240 pixels, which is consisted of squares, or sprites, of 88 pixels. Trying to capture the information directly from the screen will generate a 32*30 tensor so that not too much information is lost, but to keep information such as momentum (or velocity) will result in higher dimension of input.&lt;/p&gt;
+&lt;h4&gt;Training Method&lt;/h4&gt;
+&lt;p&gt;At first, we decided to follow Google Deepmind’s work, using reinforcement learning to
+parameterize out network so that it can react to the different circumstances in the game. At the
+time, we try to implement Q-learning algorithm in lua, we come over a critical problem. Atari
+games, comparing to NES games, are far easier.
+When you play an Atari game, you want to get a high score. Not many Atari games have a complicated circumstance and DQN does not perform well on them, such as Ms. Pac-Man.
+Unfortunately, when playing an NES game, people do not care about the score, except the
+hardcore players. Beating a level is already hard enough. In addition, NES needs more operations
+and more strategies. Contra is such a complicated game that needs a more complicated
+architecture, so training it with Q-learning will be far slower than an Atari game. Thus, we
+decide to train it with supervised learning at first.&lt;/p&gt;
+&lt;h4&gt;Network architecture&lt;/h4&gt;
+&lt;p&gt;The best game the DQN network performs on is Video Pinball, which Deepmind team claims to
+perform 2539% better than human players do. As far as I am concerned, mastering Video Pinball
+is of equal difficulty of mastering Flappy Bird. There was somebody already done the work.
+&lt;a href=&quot;https://github.com/SarvagyaVaish/FlappyBirdRL&quot;&gt;FlappyBirdRL&lt;/a&gt;
+An Atari game has a joystick and a button, and for Pinball, it only needs three operations, up,
+down and stay.&lt;/p&gt;
+&lt;p&gt; For Flappy Bird, two operations are needed, touch and release. Parameterizing
+the network focuses mainly on parameterizing the timing of these operations. Deepmind team
+claims to have accomplished human-level control through DQN, as they uses only the graphic as
+input. The network indeed reaches the human-level, but it is limited by its architecture and
+cannot satisfy our need. To duel with the graphic, two convolution layers are used to do down
+sampling. Much information are lost and many noises are imported. In addition, these
+convolution layers are a great overhead. In the network that plays flappy bird, very simple
+network is used to accomplish the task, may be a linear layer to transform the input, which
+should be less than 10 nodes, and a sigmoid layer of one dimension to regulate the output. DQN
+uses two layers of fully connected linear layer with ReLU gates to do the similar task. The main
+difference between DQN and the flappy bird network is that DQN has two convolution layers to
+scratch information from screen, while the latter scratch information directly from memory. Thus
+the latter can perform far better than human while DQN only reaches a normal standard.&lt;/p&gt;
+&lt;p&gt;Based on the above reasoning, we use the memory as input instead of the screen. For
+performance reasons, we used some of memories instead of all memories.&lt;/p&gt;
+&lt;h4&gt;Performance&lt;/h4&gt;
+&lt;p&gt;We have tried different neural network architectures, which performed quite differently. Here is
+the detailed description of different networks.
+To measure the performance, we train the network with a sequence of 4550 inputs, which are
+4550 frames in the game play, and count the times of the network gives different output
+compared to the target input. Network architectures are enclosed with this document.&lt;/p&gt;
+&lt;h4&gt;Performance of FFNN&lt;/h4&gt;
+&lt;h6&gt;Grouped Connection from memory&lt;/h6&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/88e9dd1a1cd0ad21794cfdb7dcb718ca/09e48/ffnn1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 68.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAABSElEQVQ4y6VUi26DMAzk/3+UVpTxCnk63HxeaUHVpLWLdIrtOJfDiWlwH9u22TwMA7quQ9/3htvthsvlgrZtMU2TzVy/Xq+2vuE8GiaVUlBrNdKUEkKMiHfQ5xxCQMr5EafPmft2cH9TRSAKOrvK98b22GuE4zgi68k/gYqYBcOakYpobsWXS+iXhCUUjD5j1LXZF8zqT+r7VDTtoJCOj1kDP+pCrugdN5KgYImCqolEkWrY/R0nhW5Z0M/BEjWihGIqeSJVbXbyruBpm3+o30nhoJ+VSWgKBWsSHG//HTR+dZjWaGpY4HbUm81yUvJXGKFI0WcjVuRuTlpk+UjZQ+G6rnbLuVS9vfxSl7cVkowP+9OavSgM3ptCewL/UPfsFDWOnXLEb4qP8d0mj/UyyY49yZoyRts5pzbjcrefcZaJRPwX7J3G+DcG10+K9eO7CQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ffnn1&quot;
+        title=&quot;ffnn1&quot;
+        src=&quot;/static/88e9dd1a1cd0ad21794cfdb7dcb718ca/fcda8/ffnn1.png&quot;
+        srcset=&quot;/static/88e9dd1a1cd0ad21794cfdb7dcb718ca/12f09/ffnn1.png 148w,
+/static/88e9dd1a1cd0ad21794cfdb7dcb718ca/e4a3f/ffnn1.png 295w,
+/static/88e9dd1a1cd0ad21794cfdb7dcb718ca/fcda8/ffnn1.png 590w,
+/static/88e9dd1a1cd0ad21794cfdb7dcb718ca/efc66/ffnn1.png 885w,
+/static/88e9dd1a1cd0ad21794cfdb7dcb718ca/09e48/ffnn1.png 974w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Trained with method that focus on special cases. Here is the pseudo code&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4550&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+  calculate loss with input &lt;span class=&quot;token keyword&quot;&gt;and&lt;/span&gt; target
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; loss &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; threshold&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
+      record input&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; target
+      train with all previous records &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; times
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+  train with this &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4f9a554f461a1d87570db4c3728922c5/58213/ffn2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.2972972972973%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAABcklEQVQ4y6VT2ZKDMAzj/391S0tucmott2Eo04c9MuOJbWRbUcKSUkJrDfuesG0bnA8wxsI5By8WY4S1Fvd11VwIXmMnRjwthIAxhtqy7ztyzphrhAfQK367eu/PhmTApgyaW9GS073vAb1I/gWu9obOvL+jEufuaOIrTmqPhmRXSkVvFUMaKEvxezRazJ3FQwpLrdh5mt4UU0SmVstx3IOh6igTrE+oJcsHqaGRXbTSzGv8CAWrL6htwMcEFyKqDCG7gyEvhEnhBRMrjCOovATtOijXhk2alTY0vbqM1cjlJKnlJJwY8taCsBzjOcXGgq/NizlsNuBmxCQ2LshJIrLoHYRZ45HbEz9rtaFehrDkfty0GJmFPBm88oKpwrbVekLiXUNlGKIGUwudJkYxxyk3WVyxbxpeGZ6n/cUWvvKzhv+1hTpMhleWP/VnzLVQI75FPh025kPnfvX5N33y+YZnLfPL+T/85M/Fgk8+m008/W+JxE7lsPeErgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ffn2&quot;
+        title=&quot;ffn2&quot;
+        src=&quot;/static/4f9a554f461a1d87570db4c3728922c5/fcda8/ffn2.png&quot;
+        srcset=&quot;/static/4f9a554f461a1d87570db4c3728922c5/12f09/ffn2.png 148w,
+/static/4f9a554f461a1d87570db4c3728922c5/e4a3f/ffn2.png 295w,
+/static/4f9a554f461a1d87570db4c3728922c5/fcda8/ffn2.png 590w,
+/static/4f9a554f461a1d87570db4c3728922c5/efc66/ffn2.png 885w,
+/static/4f9a554f461a1d87570db4c3728922c5/58213/ffn2.png 902w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/18f1e763819e34a961b8515e14af312e/636c2/ffnn3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABJ0AAASdAHeZh94AAABcUlEQVQ4y6VT25aDIAz0/3+yb20Vr4CicslmUum6rm4flnPiISSZDBMsUkqEFWOk+/1OSinq+57KspR907Skqooejwc9n0/2G+q6TmLIqThm7SgYwCpoW3CGYRAzxkiRtZbuDASw2+0mprWmcbScp6Ux8pdl+QZc11XYZabHhYK6rpmJEnbIPVuoF0CNDgyaODGe2HHFi7xMqhiniRY3UXSG4oeCTyaA0GmeHXnTUgzhX4CwwhhNbvE0NBXTY8BE/2OIiQVmhomZjkUPntJLZXzeYsN9ndDuLO7221DwRDD2wB00PwXbKjJtRZ0qyfWKomnI61okCZOhsEwbo3R6mzdgnqgkMmPvmfW4kHHbC/ArBR5cGAdpEGwn/lH3YuIp4y2CbtYhGy64+t3Z7spoEJ2VZqdXvhT6cggXV7b2N2BmK7Z1Poulow+Ggacqv9+mBSYedrqc+X/FCmwyQ3TAYdYU5pz7oTE0zzHUzfP89hH7Ar5nmmi1DJAiAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ffnn3&quot;
+        title=&quot;ffnn3&quot;
+        src=&quot;/static/18f1e763819e34a961b8515e14af312e/fcda8/ffnn3.png&quot;
+        srcset=&quot;/static/18f1e763819e34a961b8515e14af312e/12f09/ffnn3.png 148w,
+/static/18f1e763819e34a961b8515e14af312e/e4a3f/ffnn3.png 295w,
+/static/18f1e763819e34a961b8515e14af312e/fcda8/ffnn3.png 590w,
+/static/18f1e763819e34a961b8515e14af312e/efc66/ffnn3.png 885w,
+/static/18f1e763819e34a961b8515e14af312e/636c2/ffnn3.png 911w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;Related works&lt;/h4&gt;
+&lt;p&gt;There are some other works related to playing NES games by machine, let along the work done
+by Google Deepmind group. These works also inspired our work.&lt;/p&gt;
+&lt;h4&gt;Lexicographic ordering approach&lt;/h4&gt;
+&lt;p&gt;Dr. Tom Murphy does this work. Here is the homepage for his work.
+&lt;a href=&quot;http://www.cs.cmu.edu/~tom7/mario/&quot;&gt;mario&lt;/a&gt;
+Considering the performance, his work is currently the most successful approach toward
+automating computer to play an NES game. However, lexicographic ordering the memory of
+NES game is very memory consuming. For linear games, his approach works very well,
+especially on Mario and Punch-out. When it comes to non-linear games, such as Zelda, the
+algorithm fails to figure out what to do, just as what we would expect.&lt;/p&gt;
+&lt;h3&gt;Neuroevolution&lt;/h3&gt;
+&lt;p&gt;Software engineer SethBling implemented the neuroevolution algorithm on lua to learn the play
+of Super Mario. To be honest, his work outperforms ours a lot. We kind of regret to have
+abandoned the neuroevolution approach.
+The advantage of neuroevolution is that the network can dynamically grow, adding new neurons
+so that it can fit into new circumstances. In other words, these neurons act as memory cells in the
+network.&lt;/p&gt;
+&lt;p&gt;When Deepmind released the paper of DNC, we shifted our focus onto differentiable neural
+computer (DNC) and neural Turing machine (NTM). NTM is the ancestor of DNC, while DNC
+has improved external memory management mechanism. Unfortunately, the NTM implemented
+on lua by other people is unusable and we failed to fix that out, so we did not use these neural
+networks. As a result, we did not use a neural network with dynamically allocated memory.&lt;/p&gt;
+&lt;h3&gt;Further analysis&lt;/h3&gt;
+&lt;p&gt;First, I would like to analyze our goal, automate the playing of Contra.&lt;/p&gt;
+&lt;p&gt;As far as I am concerned, let the machine learn to play the game by itself, or parameterize the
+neural network by reinforcement learning is far more difficult than let it learn by supervised
+learning. To train the network by RL, the network should predict or explore a possible suited
+target by itself. On the other hand, by supervised learning, human provides the target.&lt;/p&gt;
+&lt;p&gt;Q-learning, which is the strategy used by DQN to explore a possible target, is shortsighted
+inevitably on the long term. Lexicographic ordering provides the best target in short term, but the
+memory size limits the future it can search from, thus it is also shortsighted and may lead to a
+dead end if no further mechanism is provided. For example, the character in the game may
+perform a jump that leads him to death after 20 frames. The penalty for a death may not be
+counted if lexicographic ordering limits it depth below 20 frames. Also, the decay in Q-learning
+penalty for future time, which is often presented by a hyperparameter gamma, may also leads to
+the failure of avoiding such pits.&lt;/p&gt;
+&lt;p&gt;Playing an NES game is a precise task, many shortsighted behavior leads to failure of the game.
+This is quite different than playing an Atari game. when you fail, you still get a score.&lt;/p&gt;
+&lt;p&gt;Let us put the problem in a mathematical way. We have eight buttons, each is ether pressed or
+not pressed. We also has the memory of 2048 bytes. By eliminating the useless data, we still
+have 500 bytes to classify the behavior of the eight buttons, which is to say, pressed or released.
+Since reinforcement learning often leads to pits, we choose supervised learning. The actions I
+provided for the game, altogether for 4500 frames, along with the data we extract from game
+memory, consists a policy space:
+[0, 255]^500 —&gt; {0, 1}^8&lt;/p&gt;
+&lt;p&gt;What we try to train is to let the neural network classify 4500 given circumstances to given
+actions. To play though the game, only non-critical circumstances are allowed to give an output
+of wrong action. Critical circumstances, such as jumping over pits, avoiding an enemy or bullet,
+are not allowed to fail. The network is also required to have some special behaviors. For
+example, to fire a bullet, it must press and release B button alternatively, given similar
+circumstances. This feature is provided by taking previous output as input, but it also makes the
+output rely greatly on previous output, thus the original input.&lt;/p&gt;
+&lt;p&gt;Suppose the number a byte stands for is continuous. Let me explain it this way. Since a byte can
+present 256 numbers, when applying linear transformation to it, the discontinuity between
+integers can be ignored. Then we can consider [0, 255] as R, to make problem simpler. Is there
+always a hyperplane that can split data set of R^255 to two spaces so that 4500 given point in the
+space can be classified correctly? From the many trials and errors my team has experienced, my
+answer is, in the circumstance of this game, NO. Linear transformation and mappings such as
+tanh and sigmoid do not change the basic properties of the space. Adding quadratic function may
+be a good idea, but it costs much more computation and will only provide a slightly better shape
+of the plane to separate actions. To make problem more difficult, the similar conditions may
+need different actions. For example, jumping over a pit of 20 pixels may be okay, but jumping
+over a pit 21 pixel-wide may be lethal. Continuous condition leads to discontinuous decision. If
+we simply have this pit width pw as input to judge whether to perform a jump, a transformation
+of sigmoid(pw-20.5) may serve the problem well, as we just need to parameterize the bias.
+However, in the case of contra, with the input space of 500 dimensions, this becomes impossible.&lt;/p&gt;
+&lt;h4&gt;Possible solutions&lt;/h4&gt;
+&lt;p&gt;Since it is impossible to train a simple neural network to play through the game, I raised several
+possible solutions to the problem.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Less input dimensions.
+Input dimensions is the biggest cause of our failure. Just as DQN fails to beat the AI on
+Pinball, high dimensions cursed neural networks to scratch critical information to
+perform well. Convolution layer is an effective approach to down sample the information,
+but it inevitably losses critical information and introduces noises. In addition, since it is
+hard for human to judge the quality of convolution layer output, no one really knows
+what information the network scratches from that graphic. In our case, we choose several
+Linear layer along with Tanh Layer to scratch information from memory. Just as the
+result shows, we failed. Information flow through an unknown mysterious and strange
+way to subsequent layers. There is an absolute effective method, also the ultimate
+solution, using HNN, human neural network. In other words, we would spend more time
+on Contra to investigate further into its memory structure and game mechanism. That is
+to say, calculate the position of player and distances from enemies and tiles, and then
+send the data directly toward neural network. This will be an input of less than 50
+dimensions.&lt;/li&gt;
+&lt;li&gt;Neural network with memory.
+We failed to fix the compatibility problem of torch-ntm with torch-nn. NTM is not a
+usual view in machine learning society, so it is not well maintained and well tested.
+DQN, the precedent of NTM is not implemented in lua yet. Implementing or maintain
+such a module needs further efforts into torch, which we can do only in the future.
+Neuroevolution, though mainly consists of simple neurons, has the ability to dynamically
+allocate new neuron, thus acquire the ability to hold memory. Other concepts in
+neuroevolution, such as mutate, also provide further insights into training neural network.
+Our next step will be returning to neuroevolution.&lt;/li&gt;
+&lt;li&gt;Other approach.
+Dr. Tom Murphy’s work has inspired us a lot. Dueling inconsistency in policy space
+given similar input space with neural network, especially linear transformation may not
+be a good idea. Something like decision tree may do a better job.
+Our training method also needs some improvement. Treating a game play through as
+sequential input is not the best approach. I once designed an attention system in training,
+which resides in some part of the script. It increase the training loss greatly, but it focus
+on special cases. After training for certain cases, when the network meets a case that has
+a relatively large loss, it records this case, and then it is trained from the recorded cases
+for several times and returns to the origin training sequence. On most times, the network
+is trained with different circumstances but similar action policies. With this training
+strategy, great emphasis is laid on special cases with different action. However, this
+method simply fails. We may try it with different architecture in the future.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Conclusion&lt;/h4&gt;
+&lt;p&gt;Our team tried and failed to train a neural network to play contra. It is not a total failure; at least
+the network learns a “run to right and shoot” strategy. Under more complicated circumstances,
+such as avoiding a bullet or jumping over a pit, our neural network fails. From this project, we
+have learnt to use some important tools, such as Torch7 and Tensorflow. In addition, we acquire
+some more concrete knowledge of basic neural network layers. Machine learning is a powerful
+tool for automation, we will pay more endeavor into this subject.&lt;/p&gt;</content:encoded></item></channel></rss>
