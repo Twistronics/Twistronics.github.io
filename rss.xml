@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Twistronics Blog]]></title><description><![CDATA[A blog.]]></description><link>https://twistronics.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Aug 2020 14:28:42 GMT</lastBuildDate><item><title><![CDATA[An attempt to playing contra with machine learning]]></title><description><![CDATA[This article presents an attempt for playing contra on Nintendo Entertainment System (NES) with neural networks. We have tried different…]]></description><link>https://twistronics.github.io/an-attempt-to-playing-contra-with-machine-learning/</link><guid isPermaLink="false">https://twistronics.github.io/an-attempt-to-playing-contra-with-machine-learning/</guid><pubDate>Sat, 03 Dec 2016 00:00:00 GMT</pubDate><content:encoded>&lt;!-- #### Abstract --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Twistronics Blog]]></title><description><![CDATA[A blog.]]></description><link>https://twistronics.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Aug 2020 13:14:57 GMT</lastBuildDate><item><title><![CDATA[An attempt to playing contra with machine learning]]></title><description><![CDATA[This article presents an attempt for playing contra on Nintendo Entertainment System (NES) with neural networks. We have tried different…]]></description><link>https://twistronics.github.io/blogs/an-attempt-to-playing-contra-with-machine-learning/</link><guid isPermaLink="false">https://twistronics.github.io/blogs/an-attempt-to-playing-contra-with-machine-learning/</guid><pubDate>Sat, 03 Dec 2016 00:00:00 GMT</pubDate><content:encoded>&lt;!-- #### Abstract --&gt;
 &lt;p&gt;This article presents an attempt for playing contra on Nintendo Entertainment System (NES) with neural networks. We have tried different network architectures and different strategies of training, but we failed to beat level 1. We mainly focus on the analysis of our failure and possible solutions.&lt;/p&gt;
 &lt;h4&gt;Introduction&lt;/h4&gt;
 &lt;p&gt;The Nintendo Entertainment System is one of the most successful commercial video game console. It also has a Chinese counterpart, Subor(小霸王学习机), which is part of the childhood of people born in 80s and 90s. Contra is one of the famous games on both NES and Subor. It is of moderate difficulty, not as hard as Mega Man or Ghosts’n Goblins, which is meant for hardcore gamers, and not as easy as Tetris or Breakout for machine to learn or parameterize the action strategies. Contra is also a game of linear gameplay. Since nonlinear games such as Zelda needs long-term strategy and memory, it is almost impossible for neural networks to be trained for such games. &lt;/p&gt;
@@ -263,4 +263,405 @@ the network learns a “run to right and shoot” strategy. Under more complicat
 such as avoiding a bullet or jumping over a pit, our neural network fails. From this project, we
 have learnt to use some important tools, such as Torch7 and Tensorflow. In addition, we acquire
 some more concrete knowledge of basic neural network layers. Machine learning is a powerful
-tool for automation, we will pay more endeavor into this subject.&lt;/p&gt;</content:encoded></item></channel></rss>
+tool for automation, we will pay more endeavor into this subject.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[数学模型：乙方后卫最佳的防御姿态]]></title><description><![CDATA[…]]></description><link>https://twistronics.github.io/blogs/mathematical-model-best-posture/</link><guid isPermaLink="false">https://twistronics.github.io/blogs/mathematical-model-best-posture/</guid><pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在一场足球赛上，甲方边前锋从边路带球到乙方球门附近，乙方后卫上前阻拦，那么乙方后卫最佳的防御姿态（他面朝的方向，他的运动情况，他和甲方前锋的距离等）应该是怎样的？&lt;/p&gt;
+&lt;h4&gt;背景&lt;/h4&gt;
+&lt;p&gt;边锋是球赛中从边路进攻的球员，关于边锋一个很常用的战术就是下底传中。即边锋带球从边路插到球场底部，再将球传给正对球门处等待的中锋，让中锋射门。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/41fb7b8016e9fcd6d70602cd9fe39101/4a8d4/pic1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.4054054054054%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//aAAwDAQACEAMQAAAByXqUzAP/xAAaEAACAgMAAAAAAAAAAAAAAAAAAQIQERIT/9oACAEBAAEFAubFA1QmZr//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAAAARH/2gAIAQIBAT8BrKz/xAAWEAEBAQAAAAAAAAAAAAAAAAAAMSD/2gAIAQEABj8CVcf/xAAaEAEBAAIDAAAAAAAAAAAAAAABABEhMWGB/9oACAEBAAE/ITNtPITc7kjyyrN//9oADAMBAAIAAwAAABCMD//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPxC1r//EABURAQEAAAAAAAAAAAAAAAAAAABh/9oACAECAQE/EFZ//8QAHBABAQEAAQUAAAAAAAAAAAAAAREAITFBUaHR/9oACAEBAAE/EHlm7saCF04ku8nr+ZIKYjBhhQ53/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic1&quot;
+        title=&quot;pic1&quot;
+        src=&quot;/static/41fb7b8016e9fcd6d70602cd9fe39101/1c72d/pic1.jpg&quot;
+        srcset=&quot;/static/41fb7b8016e9fcd6d70602cd9fe39101/a80bd/pic1.jpg 148w,
+/static/41fb7b8016e9fcd6d70602cd9fe39101/1c91a/pic1.jpg 295w,
+/static/41fb7b8016e9fcd6d70602cd9fe39101/1c72d/pic1.jpg 590w,
+/static/41fb7b8016e9fcd6d70602cd9fe39101/4a8d4/pic1.jpg 802w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+边锋从边路带球时，他有可能下底传中给中锋，但我们也没有排除他直接射门的可能。因此后卫的任务此时就是尽量防止边锋传中或者射门。这就是我们问题的背景。&lt;/p&gt;
+&lt;h4&gt;数据&lt;/h4&gt;
+&lt;p&gt;速度7m/s，体育课体质测试，大多数人的50m成绩都在7s以上，因此奔跑速度我们定为7m/s（我们没有考虑专业运动员的情况）
+突越距离1m。中锋距球门16m，初始时边锋距离中锋20m&lt;/p&gt;
+&lt;p&gt;我们对于这个问题进行了一些初步的探索，发现不恰当的模型假设会使模型相当复杂。因此我们先从最简单的情况进行了考虑，以下是我们对于这个问题一个最简单情形的分析。&lt;/p&gt;
+&lt;h4&gt;假设&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;边锋以恒定速度运动，运动方向如图。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/07dedb4bd045b13a94cb6caa1b7ba368/65654/%E5%9B%BE%E7%89%872.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABcRAAAXEQHKJvM/AAABCUlEQVQ4y71S0W6DMAzk//9uD3uZNGi1CdYkgIAR0iTOzUGhZaitUCftpJMtx7mcMdk0OUg5IiKEgGfA9yjFPPsXwRgv4ilfn617Eu8Lrl1uhbaiK1CKtx3S+Qw/TVeHRL8eibDDAMM91jl47+84pCTYtqiLApUQsNbC9D0U5w3XFxitoaRE07TQWj8YOSb8cjAGtLhxdhYOm++5b+RFdDPijc3uX8oTvAoaw4JqxB+xHtmGquxChLU+OEcP6Z0PvNQLyc/1WZBjnjn+RaqjhJAa4vQNIW7zxGeqnpC/fuCYK5TlgLIa8PZywFfZUdf52FNkye5ujm1PouqorjUppUl8Kq4Hl0Z+/wFLY/2CDqU6kgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;  2&quot;
+        title=&quot;  2&quot;
+        src=&quot;/static/07dedb4bd045b13a94cb6caa1b7ba368/fcda8/%E5%9B%BE%E7%89%872.png&quot;
+        srcset=&quot;/static/07dedb4bd045b13a94cb6caa1b7ba368/12f09/%E5%9B%BE%E7%89%872.png 148w,
+/static/07dedb4bd045b13a94cb6caa1b7ba368/e4a3f/%E5%9B%BE%E7%89%872.png 295w,
+/static/07dedb4bd045b13a94cb6caa1b7ba368/fcda8/%E5%9B%BE%E7%89%872.png 590w,
+/static/07dedb4bd045b13a94cb6caa1b7ba368/65654/%E5%9B%BE%E7%89%872.png 872w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;中锋始终静止。&lt;/li&gt;
+&lt;li&gt;假设人的转身、踢球等动作发生所需要的时间为0。&lt;/li&gt;
+&lt;li&gt;后卫与边锋距离始终不变。&lt;/li&gt;
+&lt;li&gt;忽略速度变化所需要的时间问题，即假设速度变化可以是瞬时的。&lt;/li&gt;
+&lt;li&gt;忽略人与球的实际形状所带来的问题，即把人与球的运动假设为点的运动&lt;/li&gt;
+&lt;li&gt;假设为理想环境，即双方球员均遵守比赛规则，无天气、场地等环境因素影响，无受伤、犯规等偶然因素影响，无个人身体素质与水平等个人差异影响&lt;/li&gt;
+&lt;li&gt;假定除对方边锋、中锋与我方后卫在我方后场，其他球员相距较远且不造成影响。&lt;/li&gt;
+&lt;li&gt;假设我方后卫的目的只是防住对方边锋射门或者传球给中锋。（假设两者同等重要）&lt;/li&gt;
+&lt;li&gt;边锋踢球不偏，且射门时对着球门中心射门（为了简单起见）。&lt;/li&gt;
+&lt;li&gt;后卫拦球时，忽略反应时间，边锋一旦传球或射门后卫能迅速突进一小段距离d（假设d=1m），若突进后能在球的运行轨迹上则视为拦球成功。&lt;/li&gt;
+&lt;li&gt;此模型目前只考虑二维平面情况。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;怎样的防守方案视为最合理的方案？我们定义：在有效拦球的前提下尽量节省体力的防守视作最合理的防守。因此，我们要设计的防守方案是要能使后卫拦住球并且奔跑时速度最小。接下来我们就设计了一个防守方案并且求出后卫奔跑的速度。&lt;/p&gt;
+&lt;p&gt;由假设9、10可知，后卫应当站在边锋中锋的连线和边锋球门中心连线的角平分线上。即如图：
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1422615e31c5faf672e721c3b984e92b/4d08a/%E5%9B%BE%E7%89%873.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 86.48648648648648%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABcRAAAXEQHKJvM/AAABo0lEQVQ4y61Tf2+CMBD1+3+0/bFkMZrhFEFQhKm0ovKrvdtdKU5gZm6R5Lj22r6+99qO8DmfttkfPR0QAEyL83/Cru0ybAfsKP96BOBHWvBNZMiwSAXqWl8x61phVSnK2vSVgqZvaoCFkCRUdyQTFgHaopxM0Zm46Plb3O1Ss6iiYMD9XqAQmWmXZW3q5+QTp+Mxns5nnDnODUNLCXwPU570PscoiomJxmy9wZqYhWGIaXroyOe/kJI2qVFKeeMhg3FTiKs3ZUkyaUpMQFGUGMlca+TD3VNuJAP0DTZRFArzosbWbwZjDy+XisAVeaoHp2wA21Mwgy2g3ZZl53k9YMVgBW3GYcG7kjugN0zbxcyK8+CKWeYEqhmSNhi+lN6FvWZmypL7c249JPDGw8fCMMCc2F5rusla656Hf/jA3AJ1/y277gF+jz0sPQHzsQ++E4IXZLB4W0Awj2AVHmHxOtNBkCHN9UdVxdfhlyBGzGztxjifrnF/yDHZSkziDOPkhJOXD2MoebxiyerRKI9HtfFiFcUnFW0ztaXYbKRKw6iykpdfgYI0KEx/fHcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;  3&quot;
+        title=&quot;  3&quot;
+        src=&quot;/static/1422615e31c5faf672e721c3b984e92b/fcda8/%E5%9B%BE%E7%89%873.png&quot;
+        srcset=&quot;/static/1422615e31c5faf672e721c3b984e92b/12f09/%E5%9B%BE%E7%89%873.png 148w,
+/static/1422615e31c5faf672e721c3b984e92b/e4a3f/%E5%9B%BE%E7%89%873.png 295w,
+/static/1422615e31c5faf672e721c3b984e92b/fcda8/%E5%9B%BE%E7%89%873.png 590w,
+/static/1422615e31c5faf672e721c3b984e92b/4d08a/%E5%9B%BE%E7%89%873.png 709w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+为此我们建立平面直角坐标系，以中锋为原点（中锋和球门中心都在y轴上，初始时边锋在x轴上）设边锋速度v，位置（-a，0），球门中心位置（0，-h），边锋t时刻的位置（-a，vt）。设后卫位置（x，y），由后卫在角平分线上知应有方程：
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b7969a7b47e0c29099d622b0eb90b0ed/f0685/pic4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 15.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABJ0AAASdAHeZh94AAAAb0lEQVQI15WO2QqAMAwE/f9/lKpYj96tVmkfumpAEMEHB0Jg2Qyp8KCUQjvnDOc8jLGQUmHbdoSwIMaIeRbQ2lDneXNTfQnHcULTtOd0WNcIIST6fkBdMzDW/hOmlOB9gFKavryw1lHG+UD53X0LD8nN6WS2NxNpAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic4&quot;
+        title=&quot;pic4&quot;
+        src=&quot;/static/b7969a7b47e0c29099d622b0eb90b0ed/fcda8/pic4.png&quot;
+        srcset=&quot;/static/b7969a7b47e0c29099d622b0eb90b0ed/12f09/pic4.png 148w,
+/static/b7969a7b47e0c29099d622b0eb90b0ed/e4a3f/pic4.png 295w,
+/static/b7969a7b47e0c29099d622b0eb90b0ed/fcda8/pic4.png 590w,
+/static/b7969a7b47e0c29099d622b0eb90b0ed/f0685/pic4.png 835w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+又由于假设4，因此后卫始终在以边锋为圆心的固定半径r的圆上。将直线方程和圆的方程联立，取较大的解即可得到后卫的轨迹方程。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/23b9a4f72e38bf0598a4ba346d09df84/906b5/pic5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 16.216216216216214%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABJ0AAASdAHeZh94AAAAZ0lEQVQI122O3QYAIRSEe/+HjIpU+qOUSs1yLtayDePMMD6H4aNzzntDCGStNWKMMMYgpYTe+2//FbsB995oraGUAiEEpJRk5xw455THGFfoFbjWgrUWtVb6KudMIKUUde895pxX4APcruky9kYcnQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic5&quot;
+        title=&quot;pic5&quot;
+        src=&quot;/static/23b9a4f72e38bf0598a4ba346d09df84/fcda8/pic5.png&quot;
+        srcset=&quot;/static/23b9a4f72e38bf0598a4ba346d09df84/12f09/pic5.png 148w,
+/static/23b9a4f72e38bf0598a4ba346d09df84/e4a3f/pic5.png 295w,
+/static/23b9a4f72e38bf0598a4ba346d09df84/fcda8/pic5.png 590w,
+/static/23b9a4f72e38bf0598a4ba346d09df84/efc66/pic5.png 885w,
+/static/23b9a4f72e38bf0598a4ba346d09df84/906b5/pic5.png 950w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+其中相关替代元情况如下：
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/daebdeadc187b9fe7f472776bbf4986b/f32b7/pic6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAAA3klEQVQoz4WS5wqDQBCE8/6v5w/BDmIv2ME6YZZEzFkysCzc4ncz673w0bZt0pdlQVEUyPMcwzDss7s6fku9roB1XaOqKoHO84wnqdATcF1XlGUp0CiKMI6jXEIwO+csnrP/ddj3vcAY2/M8BEEATdPg+z4cx4FlWTBNE7Zto+u6n5XcRubt1DRNEp3QNE3FedM00tWot0DCkiRB27ayQ8Mwdmeu6yIMQ0lx5e4SyF3RAYtgOuKMbgkh7LtH9QXc7lDXdcRxvDuj26c/fNQJSCdZlu2R6ZRnaryrN0i9AbSdvrsJ0raFAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic6&quot;
+        title=&quot;pic6&quot;
+        src=&quot;/static/daebdeadc187b9fe7f472776bbf4986b/fcda8/pic6.png&quot;
+        srcset=&quot;/static/daebdeadc187b9fe7f472776bbf4986b/12f09/pic6.png 148w,
+/static/daebdeadc187b9fe7f472776bbf4986b/e4a3f/pic6.png 295w,
+/static/daebdeadc187b9fe7f472776bbf4986b/fcda8/pic6.png 590w,
+/static/daebdeadc187b9fe7f472776bbf4986b/efc66/pic6.png 885w,
+/static/daebdeadc187b9fe7f472776bbf4986b/f32b7/pic6.png 1136w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+Y（x）是后卫随着时间x变化，纵坐标变化的方程，X（x）是后卫随着时间x变化，横坐标变化的方程。
+对这两个函数分别求导，我们可以得到后卫X方向和Y方向的速度。
+由于函数过于复杂，无法从形式上把导函数写出来，即使是能够求导的几何画板也无法做到，因此我们从导数的定义出发，把导数写成了如图的形式，这样的近似能符合我们的要求。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7a522419fa696c5d41da08bff81886d1/9d5da/pic7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 22.2972972972973%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABJ0AAASdAHeZh94AAAAjUlEQVQY05VOywrEIBDz/z+sFy8FvZUiWNEqUiq0Ci2YxWGFZR+HDYQhMHkwPFFrJTbknHFdF5xzWJYFxhhIKbGuK6ZpwnEcH54O9i2wBXnvkVIizvOMYRigtSbdyrrnHexV9Id27/tGKQXWWqIQAkopKmqFfy08z5PW7PuOGCNCCOCcYxxH0tu2/Qx8AIdgNOOk4ykzAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic7&quot;
+        title=&quot;pic7&quot;
+        src=&quot;/static/7a522419fa696c5d41da08bff81886d1/fcda8/pic7.png&quot;
+        srcset=&quot;/static/7a522419fa696c5d41da08bff81886d1/12f09/pic7.png 148w,
+/static/7a522419fa696c5d41da08bff81886d1/e4a3f/pic7.png 295w,
+/static/7a522419fa696c5d41da08bff81886d1/fcda8/pic7.png 590w,
+/static/7a522419fa696c5d41da08bff81886d1/9d5da/pic7.png 871w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+所以，
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7fbdebc6e6afcce82cde5459cf868fad/a8417/pic8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 8.783783783783782%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABJ0AAASdAHeZh94AAAAS0lEQVQI13WMQQrAIAwE/f8zTYgQiCHq2RUKDR7aucwehi242Hs/HmNAVdF7R60VZpa7tZbd65vydygicHcQESICay0wM+ac2X4dHihAm6EPMMpjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic8&quot;
+        title=&quot;pic8&quot;
+        src=&quot;/static/7fbdebc6e6afcce82cde5459cf868fad/fcda8/pic8.png&quot;
+        srcset=&quot;/static/7fbdebc6e6afcce82cde5459cf868fad/12f09/pic8.png 148w,
+/static/7fbdebc6e6afcce82cde5459cf868fad/e4a3f/pic8.png 295w,
+/static/7fbdebc6e6afcce82cde5459cf868fad/fcda8/pic8.png 590w,
+/static/7fbdebc6e6afcce82cde5459cf868fad/efc66/pic8.png 885w,
+/static/7fbdebc6e6afcce82cde5459cf868fad/a8417/pic8.png 941w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+就是后卫的总的速度大小随时间x的变化。这个函数过于复杂，我们无法在形式上去研究它，因此只能够带入具体的数据利用相关软件绘图研究。
+我们上网查找资料，给出了一些基本量的大小：边锋带球奔跑速度7m/s，边锋初始位置距离中锋a=20m，中锋距离球门中心h=16m，假定后卫和边锋的距离始终是r=2m，我们绘出了图像
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 486px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c5e308d05766600248b5a225dd4a7ee7/d7db9/pic9.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.08108108108108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAd1qiRh//8QAFRABAQAAAAAAAAAAAAAAAAAAARD/2gAIAQEAAQUCKX//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAYEAADAQEAAAAAAAAAAAAAAAABEDEAIf/aAAgBAQABPyGER3Q//9oADAMBAAIAAwAAABBgD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABsQAQACAgMAAAAAAAAAAAAAAAEAERAhMUGx/9oACAEBAAE/EN9umUQFWT2w8s//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic9&quot;
+        title=&quot;pic9&quot;
+        src=&quot;/static/c5e308d05766600248b5a225dd4a7ee7/d7db9/pic9.jpg&quot;
+        srcset=&quot;/static/c5e308d05766600248b5a225dd4a7ee7/a80bd/pic9.jpg 148w,
+/static/c5e308d05766600248b5a225dd4a7ee7/1c91a/pic9.jpg 295w,
+/static/c5e308d05766600248b5a225dd4a7ee7/d7db9/pic9.jpg 486w&quot;
+        sizes=&quot;(max-width: 486px) 100vw, 486px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+图中的直的蓝色线段为边锋轨迹，紫色的曲线为后卫的轨迹
+我们也绘制出了后卫速度大小随时间变化的图像：时间取值在0到16/7s之内
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 243px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b0944b458a072b148f877767ab938b8d/3f316/pic10.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 30.405405405405407%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAduwSD//xAAXEAEAAwAAAAAAAAAAAAAAAAABEBES/9oACAEBAAEFAlyVH//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABUQAQEAAAAAAAAAAAAAAAAAABAR/9oACAEBAAY/Aq//xAAZEAADAAMAAAAAAAAAAAAAAAAAAREhQXH/2gAIAQEAAT8hc3CLR0yH/9oADAMBAAIAAwAAABBwD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABoQAQADAQEBAAAAAAAAAAAAAAEAESExYZH/2gAIAQEAAT8QSt9aG/bilurwZgDudZ//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic10&quot;
+        title=&quot;pic10&quot;
+        src=&quot;/static/b0944b458a072b148f877767ab938b8d/3f316/pic10.jpg&quot;
+        srcset=&quot;/static/b0944b458a072b148f877767ab938b8d/a80bd/pic10.jpg 148w,
+/static/b0944b458a072b148f877767ab938b8d/3f316/pic10.jpg 243w&quot;
+        sizes=&quot;(max-width: 243px) 100vw, 243px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+图中的D点是图像的极大值点，即后卫奔跑的速度的最大值是6.47m/s。在几何画板软件中，我们不断调试边锋后卫距离r的值，发现速度图线总是随着r的增大而下降的，因此r越大，后卫奔跑的越省力。
+但是r并不是越大越好，因为我们都知道，r太大根本达不到防守的效果。因此我们要给r定一个上限。此时，由假设11可知，后卫站在角平分线上时，和两条边的距离不能够超过d。所以r的最大值随着t的变化为：（d为参数）
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/aa56b4bbd7a67fa6828f0702fc2405f5/dc333/pic11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 14.864864864864865%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABJ0AAASdAHeZh94AAAAc0lEQVQI122N2QqAIBBF+/8PjJaX6CWXSBFRQcdbSUXbhcPAMHNuhSM55zKJMrwPSCmV3UkIATHG6/bk/runegt30bIoWGsxTQxCyELb9ui6HsMwoq4bcC4e8o/w3UREMMbAOb/hSomUM5TSYIxDa/0rXAGKC+oguhqwQQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic11&quot;
+        title=&quot;pic11&quot;
+        src=&quot;/static/aa56b4bbd7a67fa6828f0702fc2405f5/fcda8/pic11.png&quot;
+        srcset=&quot;/static/aa56b4bbd7a67fa6828f0702fc2405f5/12f09/pic11.png 148w,
+/static/aa56b4bbd7a67fa6828f0702fc2405f5/e4a3f/pic11.png 295w,
+/static/aa56b4bbd7a67fa6828f0702fc2405f5/fcda8/pic11.png 590w,
+/static/aa56b4bbd7a67fa6828f0702fc2405f5/efc66/pic11.png 885w,
+/static/aa56b4bbd7a67fa6828f0702fc2405f5/dc333/pic11.png 938w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+其中的𝐴(𝑥)、𝑘_1 (𝑥)和前文一致，x变量代表t。
+d=1时，我们绘制出了函数r(x)的图像
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 342px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/588d6899265ac5894504eecd22b843b9/f928b/pic12.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAduQsD//xAAXEAADAQAAAAAAAAAAAAAAAAAAASER/9oACAEBAAEFArtEf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAABD/2gAIAQEABj8Cf//EABgQAQADAQAAAAAAAAAAAAAAABEAATFx/9oACAEBAAE/Idi6ORORFOz/2gAMAwEAAgADAAAAEAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGRABAAIDAAAAAAAAAAAAAAAAAQARIWGR/9oACAEBAAE/EHmBUbCC4tKzRP/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pic12&quot;
+        title=&quot;pic12&quot;
+        src=&quot;/static/588d6899265ac5894504eecd22b843b9/f928b/pic12.jpg&quot;
+        srcset=&quot;/static/588d6899265ac5894504eecd22b843b9/a80bd/pic12.jpg 148w,
+/static/588d6899265ac5894504eecd22b843b9/1c91a/pic12.jpg 295w,
+/static/588d6899265ac5894504eecd22b843b9/f928b/pic12.jpg 342w&quot;
+        sizes=&quot;(max-width: 342px) 100vw, 342px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+这表明当后卫在角平分线上时各个时间所能有的r的最大值。因为在这个模型当中，后卫奔跑时r是不变的，因此在这个模型当中我们应该寻找到一个能够满足t从0到16/7s的r，因此这个r应该取极小值的r，为2.69。至此，在这个初步的简单的模型下，我们得到了一个比较合理的解。&lt;/p&gt;
+&lt;p&gt;所以，这个模型下的最合理的防守方案应当是：后卫始终站在边锋中锋连线，边锋中锋球门中心连线的角平分线上，和边锋距离始终保持在2.69m。&lt;/p&gt;</content:encoded></item></channel></rss>
