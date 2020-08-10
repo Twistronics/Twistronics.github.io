@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:131.25%/1.5 'Crimson Text',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.73);font-family:'Crimson Text',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}ul{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:0.85rem;line-height:1.5rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1rem;line-height:1.5rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:1.21875rem;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1.1487rem;line-height:1.5rem;border-left:0.28125rem solid #ff5700;color:hsla(0,0%,0%,0.59);font-style:italic;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.5rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:calc(1.5rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}li > ul{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.5rem / 2);}code{font-size:0.85rem;line-height:1.5rem;}kbd{font-size:0.85rem;line-height:1.5rem;}samp{font-size:0.85rem;line-height:1.5rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1rem;padding-right:1rem;padding-top:0.75rem;padding-bottom:calc(0.75rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#ff5700;text-decoration:none;text-shadow:.03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;background-image:linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #ff5700 1px, #ff5700 2px, rgba(0, 0, 0, 0) 2px);}a:hover,a:active{text-shadow:none;background-image:none;}h1,h2,h3,h4,h5,h6{margin-top:2.25rem;margin-bottom:0.75rem;}ul,ol{margin-left:1rem;}li>ol,li>ul{margin-left:1rem;margin-bottom:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.5rem;color:hsla(0,0%,0%,0.73);font-style:normal;font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){html{font-size:118.75%;line-height:29.85px;}blockquote{border-left:0.28125rem solid #ff5700;color:hsla(0,0%,0%,0.59);padding-left:0.84375rem;font-style:italic;margin-left:-1.125rem;margin-right:0;}}h1 > a{background-image:none;}</style><style data-href="/styles.7d98cd1d3e064c18e8a4.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.blog-post-module--blog-tag--2JghA{margin:.625rem .3125rem;height:2.1875rem;padding:0 1.5rem;line-height:2.1875rem;font-size:.9rem}.blog-post-module--blog-tag--2JghA,.blog-post-module--blog-tag-small-size--3s4nT{display:inline-block;border:1px solid #e6e6e6;text-decoration:none;border-radius:1.25rem;color:#222}.blog-post-module--blog-tag-small-size--3s4nT{margin:0 .3125rem;height:1.15rem;line-height:1rem;padding:0 .7rem;font-size:.8rem;white-space:nowrap}.blog-post-module--blog-tag--2JghA:hover,.blog-post-module--blog-tag-small-size--3s4nT:hover{color:#fff;background-color:grey;border:1px solid grey}</style><meta name="generator" content="Gatsby 2.23.12"/><link rel="icon" href="/favicon-32x32.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=9f50719bf6a5c0099a47921ead3762b3"/><title data-react-helmet="true">对zhwiki数据集进行LSI分析 (latent semantic indexing) | Twistronics Blog</title><meta data-react-helmet="true" name="description" content="在 zhwiki 数据集中取300篇文章作为数据集，进行LSI分析，借助python的gensim库使用tfidf"/><meta data-react-helmet="true" property="og:title" content="对zhwiki数据集进行LSI分析 (latent semantic indexing)"/><meta data-react-helmet="true" property="og:description" content="在 zhwiki 数据集中取300篇文章作为数据集，进行LSI分析，借助python的gensim库使用tfidf"/><meta data-react-helmet="true" property="og:type" content="website"/><link href="//fonts.googleapis.com/css?family=Rosario:700|Crimson+Text:400,400i,600" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-3ff9ebe37179953628c4.js"/><link as="script" rel="preload" href="/framework-93d3a746c3cf42acdafc.js"/><link as="script" rel="preload" href="/app-c94c84d1627c2405770e.js"/><link as="script" rel="preload" href="/styles-c2fe8482057191dca484.js"/><link as="script" rel="preload" href="/commons-48c9400f00a8b0e86bab.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-76a9d552cd4b1fd1ca3f.js"/><link as="fetch" rel="preload" href="/page-data\blogs\latent-semantic-indexing\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:46.5rem;padding:2.25rem 1.125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;color:inherit" href="/">Twistronics Blog</a></h3></header><main><article><header><h1 style="margin-top:1.5rem;margin-bottom:0">对zhwiki数据集进行LSI分析 (latent semantic indexing)</h1><p style="font-size:0.87055rem;line-height:1.5rem;display:block;margin-bottom:1.2rem">October 22, 2016</p><div><ul style="padding:0;margin:0 -.625rem;margin-bottom:1.5rem"><a style="background-image:none" href="/tag/Python"><li class="blog-post-module--blog-tag--2JghA">Python</li></a><a style="background-image:none" href="/tag/Algorithm"><li class="blog-post-module--blog-tag--2JghA">Algorithm</li></a><a style="background-image:none" href="/tag/Natural language processing"><li class="blog-post-module--blog-tag--2JghA">Natural language processing</li></a></ul></div></header><section><p>在 zhwiki 数据集中取300篇文章作为数据集，进行LSI分析，借助python的gensim库使用tfidf</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token comment"># coding:utf-8</span>
+
+<span class="token keyword">from</span> gensim <span class="token keyword">import</span> corpora<span class="token punctuation">,</span> models
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> thulac
+<span class="token keyword">import</span> heapq
+
+news <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'news.txt'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    news <span class="token operator">=</span> f<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+thu1 <span class="token operator">=</span> thulac<span class="token punctuation">.</span>thulac<span class="token punctuation">(</span><span class="token string">"-seg_only"</span><span class="token punctuation">)</span>
+texts <span class="token operator">=</span> <span class="token punctuation">[</span>thu1<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token keyword">for</span> n <span class="token keyword">in</span> news<span class="token punctuation">]</span>
+dictionary <span class="token operator">=</span> corpora<span class="token punctuation">.</span>Dictionary<span class="token punctuation">(</span>texts<span class="token punctuation">)</span>
+corpus <span class="token operator">=</span> <span class="token punctuation">[</span>dictionary<span class="token punctuation">.</span>doc2bow<span class="token punctuation">(</span>text<span class="token punctuation">)</span> <span class="token keyword">for</span> text <span class="token keyword">in</span> texts<span class="token punctuation">]</span>
+tfidf <span class="token operator">=</span> models<span class="token punctuation">.</span>TfidfModel<span class="token punctuation">(</span>corpus<span class="token punctuation">)</span>
+corpus_tfidf <span class="token operator">=</span> tfidf<span class="token punctuation">[</span>corpus<span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">split_sen</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    doc <span class="token operator">=</span> document
+    l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'。'</span><span class="token punctuation">,</span> <span class="token string">'，'</span><span class="token punctuation">,</span> <span class="token string">','</span><span class="token punctuation">,</span> <span class="token string">'：'</span><span class="token punctuation">,</span> <span class="token string">'？'</span><span class="token punctuation">,</span> <span class="token string">'！'</span><span class="token punctuation">,</span> <span class="token string">'；'</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> l<span class="token punctuation">:</span>
+        doc <span class="token operator">=</span> <span class="token string">' '</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>doc<span class="token punctuation">.</span>split<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> doc<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">dedupe</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    seen <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> items<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> item <span class="token keyword">not</span> <span class="token keyword">in</span> seen<span class="token punctuation">:</span>
+            <span class="token keyword">yield</span> item
+            seen<span class="token punctuation">.</span>add<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">has_num</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    s <span class="token operator">=</span> <span class="token string">'1234567890'</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> i <span class="token keyword">in</span> word<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+<span class="token keyword">for</span> test_n <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">66</span><span class="token punctuation">,</span><span class="token number">71</span><span class="token punctuation">,</span><span class="token number">87</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    test_news <span class="token operator">=</span> news<span class="token punctuation">[</span>test_n<span class="token punctuation">]</span>
+    test_sentences <span class="token operator">=</span> test_news<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'。'</span><span class="token punctuation">)</span>
+    test_sentences <span class="token operator">=</span> split_sen<span class="token punctuation">(</span>test_news<span class="token punctuation">)</span>
+
+    test_sentences <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>dedupe<span class="token punctuation">(</span>test_sentences<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    sen_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> sentence <span class="token keyword">in</span> test_sentences<span class="token punctuation">:</span>
+        word_list <span class="token operator">=</span> thu1<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>sentence<span class="token punctuation">)</span>
+        tf_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        w_tf_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> n <span class="token keyword">in</span> tfidf<span class="token punctuation">[</span>dictionary<span class="token punctuation">.</span>doc2bow<span class="token punctuation">(</span>word_list<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            tf_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>dictionary<span class="token punctuation">[</span>n<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> n<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+        temp_l <span class="token operator">=</span> heapq<span class="token punctuation">.</span>nlargest<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> tf_list<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        gi <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>temp_l<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">:</span>
+            gi <span class="token operator">=</span> <span class="token number">0.1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            gi <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token keyword">for</span> index<span class="token punctuation">,</span> g_n <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>temp_l<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                gi <span class="token operator">=</span> gi <span class="token operator">+</span> g_n<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+        g <span class="token operator">=</span> gi <span class="token operator">/</span> np<span class="token punctuation">.</span>log<span class="token punctuation">(</span><span class="token number">30</span> <span class="token operator">+</span> <span class="token builtin">len</span><span class="token punctuation">(</span>word_list<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        sen_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>sentence<span class="token punctuation">,</span> g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    res <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>heapq<span class="token punctuation">.</span>nlargest<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> sen_list<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> s<span class="token punctuation">:</span> s<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span> test_n <span class="token operator">+</span> <span class="token number">1</span>
+    res_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> s <span class="token keyword">in</span> res<span class="token punctuation">:</span>
+        res_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> test_sentences<span class="token punctuation">.</span>index<span class="token punctuation">(</span>s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    res <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>res_list<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> s <span class="token keyword">in</span> res<span class="token punctuation">:</span>
+        <span class="token keyword">print</span> s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span></code></pre></div>
+<ul>
+<li>
+<p>k取不同值时，对term-doc矩阵近似程度的变化情况
+当 k=2 时</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[[ 0.          0.16872732]
+  [ 1.          0.28385104]]
+
+ [[ 0.          0.17087512]
+  [ 1.          0.25177949]]
+
+ [[ 0.          0.09310504]
+  [ 1.          0.06657734]]
+
+ ..., 
+ [[ 0.          0.12855813]
+  [ 1.          0.05259002]]
+
+ [[ 0.          0.16851364]
+  [ 1.         -0.05191722]]
+
+ [[ 0.          0.10435963]
+  [ 1.          0.02791414]]]</code></pre></div>
+<p>k=3 时</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[[ 0.          0.16897327]
+  [ 1.          0.28507598]
+  [ 2.          0.13649461]]
+
+ [[ 0.          0.17080689]
+  [ 1.          0.24925751]
+  [ 2.          0.08284236]]
+
+ [[ 0.          0.09272927]
+  [ 1.          0.06470531]
+  [ 2.          0.00207098]]
+
+ ..., 
+ [[ 0.          0.12813977]
+  [ 1.          0.04945443]
+  [ 2.         -0.06896024]]
+
+ [[ 0.          0.1677073 ]
+  [ 1.         -0.05385373]
+  [ 2.         -0.13225321]]
+
+ [[ 0.          0.10473032]
+  [ 1.          0.02769582]
+  [ 2.         -0.03988227]]]</code></pre></div>
+<p>k=4 时</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[[ 0.          0.16871857]
+  [ 1.         -0.28459085]
+  [ 2.         -0.13770419]
+  [ 3.         -0.069019  ]]
+
+ [[ 0.          0.17117359]
+  [ 1.         -0.25219388]
+  [ 2.         -0.08207103]
+  [ 3.         -0.09496462]]
+
+ [[ 0.          0.09306016]
+  [ 1.         -0.06247403]
+  [ 2.         -0.00422359]
+  [ 3.         -0.01881501]]
+
+ ..., 
+ [[ 0.          0.12850835]
+  [ 1.         -0.04631836]
+  [ 2.          0.06921176]
+  [ 3.         -0.1830543 ]]
+
+ [[ 0.          0.16830373]
+  [ 1.          0.05348783]
+  [ 2.          0.13382081]
+  [ 3.         -0.1658659 ]]
+
+ [[ 0.          0.10508035]
+  [ 1.         -0.02866824]
+  [ 2.          0.03776732]
+  [ 3.         -0.14062948]]]</code></pre></div>
+<p>k=10 时</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[[  0.00000000e+00   1.68929300e-01]
+  [  1.00000000e+00   2.81778194e-01]
+  [  2.00000000e+00   1.39412123e-01]
+  ..., 
+  [  7.00000000e+00   5.72861970e-02]
+  [  8.00000000e+00  -1.24237738e-01]
+  [  9.00000000e+00  -1.26407685e-01]]
+
+ [[  0.00000000e+00   1.70888003e-01]
+  [  1.00000000e+00   2.48411625e-01]
+  [  2.00000000e+00   8.09905073e-02]
+  ..., 
+  [  7.00000000e+00   8.28638508e-02]
+  [  8.00000000e+00  -1.15528742e-01]
+  [  9.00000000e+00   1.88724720e-02]]
+
+ [[  0.00000000e+00   9.24077340e-02]
+  [  1.00000000e+00   6.41785279e-02]
+  [  2.00000000e+00   1.33265938e-02]
+  ..., 
+  [  7.00000000e+00  -7.64332711e-03]
+  [  8.00000000e+00  -2.11026728e-02]
+  [  9.00000000e+00   5.42782920e-02]]
+
+ ..., 
+ [[  0.00000000e+00   1.28673796e-01]
+  [  1.00000000e+00   5.48490181e-02]
+  [  2.00000000e+00  -7.34370691e-02]
+  ..., 
+  [  7.00000000e+00  -1.09288792e-01]
+  [  8.00000000e+00   2.09079613e-03]
+  [  9.00000000e+00   2.57721482e-01]]
+
+ [[  0.00000000e+00   1.67892585e-01]
+  [  1.00000000e+00  -5.02225432e-02]
+  [  2.00000000e+00  -1.28673874e-01]
+  ..., 
+  [  7.00000000e+00  -1.16714887e-02]
+  [  8.00000000e+00  -5.75828930e-03]
+  [  9.00000000e+00   2.78914422e-02]]
+
+ [[  0.00000000e+00   1.04604000e-01]
+  [  1.00000000e+00   2.73290079e-02]
+  [  2.00000000e+00  -4.04171763e-02]
+  ..., 
+  [  7.00000000e+00  -1.52651544e-01]
+  [  8.00000000e+00  -2.51226745e-03]
+  [  9.00000000e+00   2.34189977e-01]]]</code></pre></div>
+<p>可以看到，k较小时，近似效果较强，但会损失一些信息</p>
+</li>
+<li>当k取2时，所有相关词和相关文档投射到同一个二维潜在语义空间上的情形
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/95e86f0055ed6e88e9f76a8db421c515/9cab2/1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.02702702702703%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABJ0AAASdAHeZh94AAABrklEQVQ4y6WT207CQBCGeRLvfGov1Bt5AQkJh0BJaDhq4o0xAVMSCAFqC9IWevzdmbK4LZUbJ9lsWabf/PPvtFSv12HbNv4bQRCg3W6jREDLsvgwSRJeFJFIiMOQd/W/okXh+/4lMI5j3l2h2F4ssF0u4btuRokEXAXatiXTkUQBZi+vMEYjOKbJL8RRhPB4RCIKyt8MUwoUtuwegM7zB/T7O7w3m1hNJqz2sN8j8DwGUhBcdsNgUYAVahpKtVoNm00KfCoDtzcmtHIDb5UKVtMpQx1RkCCR8JQhJ6WsVjyT1wTUCJgqTG/ZMBI8PAKf0xDetwN3u4U1n7Of+/UaoXiJ2iUIPfMShS5a/h0bdgVBKkRUjuDtdnw5pmHgazbD0XFSD5WWM0BqWSqMY2ohOz5q0AjJdvNjVqgwTUjBieKVqqRofCRQk5eSBWaXJ3z0xQ1fG+7MHBYB2ctTojSffMsrzbd8vmUV+FfEp5HJx4WH1WoVnU4H4/EY3W4Xg8EA/X4fuq5jJL4W2nu9XuHZcDjkd2inMxJXarVaaIqvotFonHd18ZlIpOSiPPWMWD/E42eUlZtQ/wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="1"
+        title="1"
+        src="/static/95e86f0055ed6e88e9f76a8db421c515/fcda8/1.png"
+        srcset="/static/95e86f0055ed6e88e9f76a8db421c515/12f09/1.png 148w,
+/static/95e86f0055ed6e88e9f76a8db421c515/e4a3f/1.png 295w,
+/static/95e86f0055ed6e88e9f76a8db421c515/fcda8/1.png 590w,
+/static/95e86f0055ed6e88e9f76a8db421c515/9cab2/1.png 864w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+其中红色圆点代表文档，蓝色叉号为单词
+相近的词会拥有较为相似的权值</li>
+<li>
+<p>分别构造原始的term-term、doc-doc矩阵，以及k取2时的term-term、doc-doc矩阵，分别画出词、文档投射到二维潜在语义空间上的情形，并对词和词、文档和文档之间的相似度进行比较
+原始的term-term矩阵为</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[ 0.00048803  0.00024793  0.00030132 ...,  0.          0.          0.        ]
+ [ 0.00024793  0.00039648  0.00030132 ...,  0.          0.          0.        ]
+ [ 0.00030132  0.00030132  0.0003662  ...,  0.          0.          0.        ]
+ ..., 
+ [ 0.          0.          0.         ...,  0.01086935  0.01086935
+   0.01086935]
+ [ 0.          0.          0.         ...,  0.01086935  0.01086935
+   0.01086935]
+ [ 0.          0.          0.         ...,  0.01086935  0.01086935
+   0.01086935]]</code></pre></div>
+<p>原始的doc-doc矩阵为</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[ 1.          0.09597075  0.01256651 ...,  0.02078486  0.01757974
+   0.06769401]
+ [ 0.09597075  1.          0.03060802 ...,  0.02004322  0.01013162
+   0.01479339]
+ [ 0.01256651  0.03060802  1.         ...,  0.00817854  0.0031423
+   0.00641839]
+ ..., 
+ [ 0.02078486  0.02004322  0.00817854 ...,  1.          0.00933102
+   0.00819435]
+ [ 0.01757974  0.01013162  0.0031423  ...,  0.00933102  1.          0.01914053]
+ [ 0.06769401  0.01479339  0.00641839 ...,  0.00819435  0.01914053
+   0.98913065]]</code></pre></div>
+<p>k取2时的term-term矩阵为</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[  9.35276963e+00   2.69901289e-14]
+ [  2.69901289e-14   4.09090060e+00]]</code></pre></div>
+<p>doc-doc矩阵为</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[ 0.1065028   0.09890749  0.03303424 ...,  0.03655308  0.01427938
+   0.02576516]
+ [ 0.09890749  0.09213056  0.03146902 ...,  0.03531263  0.01608087
+   0.02516947]
+ [ 0.03303424  0.03146902  0.01250538 ...,  0.01524178  0.01248608
+   0.0115397 ]
+ ..., 
+ [ 0.03655308  0.03531263  0.01524178 ...,  0.01929222  0.01882462
+   0.01497451]
+ [ 0.01427938  0.01608087  0.01248608 ...,  0.01882462  0.03065     0.01610867]
+ [ 0.02576516  0.02516947  0.0115397  ...,  0.01497451  0.01610867
+   0.01180562]]</code></pre></div>
+</li>
+<li>
+<p>当k取3时
+term-term矩阵为</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[  9.35281176e+00  -4.56032781e-14   1.03085943e-14]
+ [ -4.56032781e-14   4.09011943e+00  -6.34128167e-15]
+ [  1.03085943e-14  -6.34128167e-15   3.78963029e+00]]</code></pre></div>
+<p>doc-doc矩阵为</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[[ 0.12634687  0.10942283  0.03535683 ...,  0.02701973 -0.00381796
+   0.01941215]
+ [ 0.10942283  0.09709541  0.03306415 ...,  0.02955603  0.0058315
+   0.02124305]
+ [ 0.03535683  0.03306415  0.01319404 ...,  0.01503685  0.01140856
+   0.01127659]
+ ..., 
+ [ 0.02701973  0.02955603  0.01503685 ...,  0.02345334  0.02733017
+   0.01751517]
+ [-0.00381796  0.0058315   0.01140856 ...,  0.02733017  0.04731181
+   0.02149145]
+ [ 0.01941215  0.02124305  0.01127659 ...,  0.01751517  0.02149145
+   0.01335409]]</code></pre></div>
+<p>将相关词和相关文档投射到同一个三维潜在语义空间
+红色圆点为文档，蓝色叉号为词
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/acfdcbd73140b4b3e5d41cc7bc90a552/27b7a/2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75.67567567567568%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABJ0AAASdAHeZh94AAAByElEQVQ4y3WUTU7DMBCFcyQOhcSaNQdA7DgBEiwrcYAKAYIFFRsEYsGmCIlFVZrEcRznr0k7zHM7wUmppWks2++b57HdgLit12sXwz7acrmkpml6Y9Jkra8J9oHatiVrLaVpSkVRUFmWVFWVg2NuX4LgP4cQAqS1JmOMA7pgaJ7nDo6o67pz3zn0M2AyyzIHAhABYMkJKhZnSUI5uy4lgRdw3W0ZdZLt+TCdcp+BOopIzeeUczKI7da1ON0BwlXEIgFtQpNmR5YXf9zd03QyccKMEzqXW9AOED9wF8fxAGgos+xOKfp8eqT38ZjC72/nDk4FJNDVavUHRKE7oN5sM5r/kFEzOj1r6fDghK6Pj+jr5ZWSxcLV03e3A8SgADc1NKRYGIeKbm5bujh/o4fLK3oejWg2nVIGl2xCHOJW9E4ZAz4QJ2tZYHPLCw2uNxV1wzVVZHgNgKg7AuXC+l4NcV1wKIDJIhGkKZ++Ng7ikvCcH9AorjNuSg8YhqGDIptz6IkE7rvCF7sCUNy5lyK3HIOoh2REoAQCGCbAPPpyGL237L9L9OEYcAATvosQm23dkBDOcLK+Rlow/NcYPnaBywvCF4c4hIn+F9SWhcH88os3AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="2"
+        title="2"
+        src="/static/acfdcbd73140b4b3e5d41cc7bc90a552/fcda8/2.png"
+        srcset="/static/acfdcbd73140b4b3e5d41cc7bc90a552/12f09/2.png 148w,
+/static/acfdcbd73140b4b3e5d41cc7bc90a552/e4a3f/2.png 295w,
+/static/acfdcbd73140b4b3e5d41cc7bc90a552/fcda8/2.png 590w,
+/static/acfdcbd73140b4b3e5d41cc7bc90a552/27b7a/2.png 804w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+</li>
+</ul></section><hr style="margin-bottom:1.5rem"/><footer><div style="display:flex;margin-bottom:3.75rem"><p>Written by <a href="https://github.com/twistronics" style="background-image:none"><strong>twistronics</strong></a></p> <!-- -->  <!-- --> </div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blogs/circRNAs/">← <!-- -->Use machine learning algorithm to predict whether an RNA sequence can form a circular RNA </a></li><li><a rel="next" href="/blogs/cs231n-Practical-Machine-Learning-Project-2/">cs231n: Practical Machine Learning Project 2<!-- --> →</a></li></ul></nav></main><footer>© <!-- -->2020<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org" style="background-image:none">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blogs/latent-semantic-indexing/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-c94c84d1627c2405770e.js"],"component---src-pages-404-js":["/component---src-pages-404-js-f54b3ee11fe2b68846ad.js"],"component---src-pages-all-tags-js":["/component---src-pages-all-tags-js-fc7b58de7b3eb2ea01bb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-e9f1f7b70f886ee7244f.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-52019674864e23d7221f.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-76a9d552cd4b1fd1ca3f.js"],"component---src-templates-tag-page-js":["/component---src-templates-tag-page-js-359eac9b6566a50e4d0f.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-76a9d552cd4b1fd1ca3f.js" async=""></script><script src="/commons-48c9400f00a8b0e86bab.js" async=""></script><script src="/styles-c2fe8482057191dca484.js" async=""></script><script src="/app-c94c84d1627c2405770e.js" async=""></script><script src="/framework-93d3a746c3cf42acdafc.js" async=""></script><script src="/webpack-runtime-3ff9ebe37179953628c4.js" async=""></script></body></html>
