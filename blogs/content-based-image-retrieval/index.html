@@ -1,0 +1,1266 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:131.25%/1.5 'Crimson Text',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.73);font-family:'Crimson Text',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}ul{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:0.85rem;line-height:1.5rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1rem;line-height:1.5rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:1.21875rem;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1.1487rem;line-height:1.5rem;border-left:0.28125rem solid #ff5700;color:hsla(0,0%,0%,0.59);font-style:italic;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.5rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:calc(1.5rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}li > ul{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.5rem / 2);}code{font-size:0.85rem;line-height:1.5rem;}kbd{font-size:0.85rem;line-height:1.5rem;}samp{font-size:0.85rem;line-height:1.5rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1rem;padding-right:1rem;padding-top:0.75rem;padding-bottom:calc(0.75rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#ff5700;text-decoration:none;text-shadow:.03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;background-image:linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #ff5700 1px, #ff5700 2px, rgba(0, 0, 0, 0) 2px);}a:hover,a:active{text-shadow:none;background-image:none;}h1,h2,h3,h4,h5,h6{margin-top:2.25rem;margin-bottom:0.75rem;}ul,ol{margin-left:1rem;}li>ol,li>ul{margin-left:1rem;margin-bottom:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.5rem;color:hsla(0,0%,0%,0.73);font-style:normal;font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){html{font-size:118.75%;line-height:29.85px;}blockquote{border-left:0.28125rem solid #ff5700;color:hsla(0,0%,0%,0.59);padding-left:0.84375rem;font-style:italic;margin-left:-1.125rem;margin-right:0;}}h1 > a{background-image:none;}</style><style data-href="/styles.7d98cd1d3e064c18e8a4.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.blog-post-module--blog-tag--2JghA{margin:.625rem .3125rem;height:2.1875rem;padding:0 1.5rem;line-height:2.1875rem;font-size:.9rem}.blog-post-module--blog-tag--2JghA,.blog-post-module--blog-tag-small-size--3s4nT{display:inline-block;border:1px solid #e6e6e6;text-decoration:none;border-radius:1.25rem;color:#222}.blog-post-module--blog-tag-small-size--3s4nT{margin:0 .3125rem;height:1.15rem;line-height:1rem;padding:0 .7rem;font-size:.8rem;white-space:nowrap}.blog-post-module--blog-tag--2JghA:hover,.blog-post-module--blog-tag-small-size--3s4nT:hover{color:#fff;background-color:grey;border:1px solid grey}</style><meta name="generator" content="Gatsby 2.23.12"/><link rel="icon" href="/favicon-32x32.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=9f50719bf6a5c0099a47921ead3762b3"/><title data-react-helmet="true">Preliminary Content Based Image Retrieval | Twistronics Blog</title><meta data-react-helmet="true" name="description" content="Color histogram based image retrieval"/><meta data-react-helmet="true" property="og:title" content="Preliminary Content Based Image Retrieval"/><meta data-react-helmet="true" property="og:description" content="Color histogram based image retrieval"/><meta data-react-helmet="true" property="og:type" content="website"/><link href="//fonts.googleapis.com/css?family=Rosario:700|Crimson+Text:400,400i,600" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-3ff9ebe37179953628c4.js"/><link as="script" rel="preload" href="/framework-93d3a746c3cf42acdafc.js"/><link as="script" rel="preload" href="/app-c94c84d1627c2405770e.js"/><link as="script" rel="preload" href="/styles-c2fe8482057191dca484.js"/><link as="script" rel="preload" href="/commons-48c9400f00a8b0e86bab.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-76a9d552cd4b1fd1ca3f.js"/><link as="fetch" rel="preload" href="/page-data\blogs\content-based-image-retrieval\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:46.5rem;padding:2.25rem 1.125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;color:inherit" href="/">Twistronics Blog</a></h3></header><main><article><header><h1 style="margin-top:1.5rem;margin-bottom:0">Preliminary Content Based Image Retrieval</h1><p style="font-size:0.87055rem;line-height:1.5rem;display:block;margin-bottom:1.2rem">April 21, 2016</p><div><ul style="padding:0;margin:0 -.625rem;margin-bottom:1.5rem"><a style="background-image:none" href="/tag/Python"><li class="blog-post-module--blog-tag--2JghA">Python</li></a><a style="background-image:none" href="/tag/Digital image processing"><li class="blog-post-module--blog-tag--2JghA">Digital image processing</li></a><a style="background-image:none" href="/tag/Algorithm"><li class="blog-post-module--blog-tag--2JghA">Algorithm</li></a></ul></div></header><section><p>利用色彩直方图对图像进行检索。</p>
+<p>首先定义图像向量。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d9ffcce90869f34489b5c58be888cd70/c8e86/1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 9.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAUUlEQVQI1y3NSQqAMBBE0ULEiAs1DjghulHR+x/QH6iGR9ND0pLUoMeIDLnrGhs6DM4pSrSYsSBi9W6iwsMHwQuHe68fT55X/vjCjtvHP9fnD+URA2V58EVnAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="1"
+        title="1"
+        src="/static/d9ffcce90869f34489b5c58be888cd70/fcda8/1.png"
+        srcset="/static/d9ffcce90869f34489b5c58be888cd70/12f09/1.png 148w,
+/static/d9ffcce90869f34489b5c58be888cd70/e4a3f/1.png 295w,
+/static/d9ffcce90869f34489b5c58be888cd70/fcda8/1.png 590w,
+/static/d9ffcce90869f34489b5c58be888cd70/c8e86/1.png 758w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+其中P为原图像，Q为目标图像</p>
+<p>使用3种算法来测量图像距离。</p>
+<ol>
+<li>Euclidean (L2)
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 400px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/446db7fce8d6903f0d9d26e481f45db8/e17e5/2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25.675675675675674%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAhElEQVQY043P2QqCQBiGYUUxKbGFSlRQWqAIDQRXvIPu/4J6R76DToIZeJiZf2PGcezWDh1eSHDEWeeTpNia4gwVrnjggFrxWANN7KOmvQZE8LTH6l/qS7wxKdnofEeOEBvFL4r3ep3JPdGi+Pe9AP7P3XxtwIgZK3GV9zXYeq1xsy3+AiRMBqlteZnWAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="2"
+        title="2"
+        src="/static/446db7fce8d6903f0d9d26e481f45db8/e17e5/2.png"
+        srcset="/static/446db7fce8d6903f0d9d26e481f45db8/12f09/2.png 148w,
+/static/446db7fce8d6903f0d9d26e481f45db8/e4a3f/2.png 295w,
+/static/446db7fce8d6903f0d9d26e481f45db8/e17e5/2.png 400w"
+        sizes="(max-width: 400px) 100vw, 400px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>Histogram Intersection (HI)
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c523c2ba032aeff7a2e14519b4b730b6/084e2/3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 26.351351351351354%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAgElEQVQY053P2wqCQBSF4Z2Shygox1MHSYguBIW66v3fzF9ZRlcpDnzMMIuZvbfZulXjqr3CEXuchtDHFp7OptD78+EDT1xwQ44CqSnoVLFFhjcafHQ3PDyrmzsSPS7hsMNB+9jJBsF0oapOWYxIWfgzhanYa+psZqpFK9Oo3yI9/ugE1nvIJT0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="3"
+        title="3"
+        src="/static/c523c2ba032aeff7a2e14519b4b730b6/fcda8/3.png"
+        srcset="/static/c523c2ba032aeff7a2e14519b4b730b6/12f09/3.png 148w,
+/static/c523c2ba032aeff7a2e14519b4b730b6/e4a3f/3.png 295w,
+/static/c523c2ba032aeff7a2e14519b4b730b6/fcda8/3.png 590w,
+/static/c523c2ba032aeff7a2e14519b4b730b6/084e2/3.png 632w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>Bhattacharyya (Bh)
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/71571840c59b54c0fa14444a38b49ca3/a1792/4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 12.837837837837837%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAXUlEQVQI143NSQqAQAxE0TSOrQiunEARZ8H7n88vlODSwIMQkoqZWYYcDiU6bKgxY0CsvUB9hEQzj1Tzh61YUKBV6KXgAyMqhTd61uvufTjhxG6fCnVgCvDqnfyqGwtCA8HA2EBbAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="4"
+        title="4"
+        src="/static/71571840c59b54c0fa14444a38b49ca3/fcda8/4.png"
+        srcset="/static/71571840c59b54c0fa14444a38b49ca3/12f09/4.png 148w,
+/static/71571840c59b54c0fa14444a38b49ca3/e4a3f/4.png 295w,
+/static/71571840c59b54c0fa14444a38b49ca3/fcda8/4.png 590w,
+/static/71571840c59b54c0fa14444a38b49ca3/a1792/4.png 780w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+</ol>
+<p>生成直方图</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token comment"># coding:utf-8</span>
+<span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> json
+
+<span class="token keyword">def</span> <span class="token function">rgb_histogram_16</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span> height<span class="token punctuation">,</span> width<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+    r_m <span class="token operator">=</span> <span class="token number">256</span> <span class="token operator">//</span> <span class="token number">2</span>
+    g_m <span class="token operator">=</span> <span class="token number">256</span> <span class="token operator">//</span> <span class="token number">4</span>
+    b_m <span class="token operator">=</span> <span class="token number">256</span> <span class="token operator">//</span> <span class="token number">2</span>
+
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span>height<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=</span> img<span class="token punctuation">[</span>i<span class="token punctuation">,</span>j<span class="token punctuation">]</span>
+
+            index <span class="token operator">=</span> <span class="token punctuation">(</span>r <span class="token operator">//</span> r_m<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token punctuation">(</span>g <span class="token operator">//</span> g_m<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">*</span> <span class="token punctuation">(</span>b <span class="token operator">//</span> b_m<span class="token punctuation">)</span>
+            l<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> l<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span>
+
+    <span class="token keyword">return</span> l
+
+<span class="token keyword">def</span> <span class="token function">rgb_histogram_128</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span> height<span class="token punctuation">,</span> width<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+    r_m <span class="token operator">=</span> <span class="token number">256</span> <span class="token operator">//</span> <span class="token number">4</span>
+    g_m <span class="token operator">=</span> <span class="token number">256</span> <span class="token operator">//</span> <span class="token number">8</span>
+    b_m <span class="token operator">=</span> <span class="token number">256</span> <span class="token operator">//</span> <span class="token number">4</span>
+
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span>height<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=</span> img<span class="token punctuation">[</span>i<span class="token punctuation">,</span>j<span class="token punctuation">]</span>
+            index <span class="token operator">=</span> <span class="token punctuation">(</span>r <span class="token operator">//</span> r_m<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">4</span> <span class="token operator">*</span> <span class="token punctuation">(</span>g <span class="token operator">//</span> g_m<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">4</span> <span class="token operator">*</span> <span class="token number">8</span> <span class="token operator">*</span> <span class="token punctuation">(</span>b <span class="token operator">//</span> b_m<span class="token punctuation">)</span>
+            l<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> l<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span>
+
+    <span class="token keyword">return</span> l
+
+data_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'16'</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'128'</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'AllImages.txt'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">:</span>
+        sl <span class="token operator">=</span> line<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sl<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">2</span><span class="token punctuation">:</span>
+            image_name <span class="token operator">=</span> sl<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            width <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>sl<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            height <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>sl<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>image_name<span class="token punctuation">)</span>
+            data_dict<span class="token punctuation">[</span><span class="token string">'16'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>image_name<span class="token punctuation">]</span> <span class="token operator">=</span> rgb_histogram_16<span class="token punctuation">(</span>img<span class="token punctuation">,</span> height<span class="token punctuation">,</span> width<span class="token punctuation">)</span>
+            data_dict<span class="token punctuation">[</span><span class="token string">'128'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>image_name<span class="token punctuation">]</span> <span class="token operator">=</span> rgb_histogram_128<span class="token punctuation">(</span>img<span class="token punctuation">,</span> height<span class="token punctuation">,</span> width<span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'init-data.json'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>data_dict<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+<p>计算距离</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token comment"># coding:utf-8</span>
+
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> math
+
+data_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'init-data.json'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    data_dict <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+
+query_images <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'QueryImages.txt'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">:</span>
+        sl <span class="token operator">=</span> line<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sl<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">2</span><span class="token punctuation">:</span>
+            image_name <span class="token operator">=</span> sl<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            width <span class="token operator">=</span> sl<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            height <span class="token operator">=</span> sl<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+            query_images<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>image_name<span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>height<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+bins_16_histogram <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+data_dict_16 <span class="token operator">=</span> data_dict<span class="token punctuation">[</span><span class="token string">'16'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> img_name <span class="token keyword">in</span> data_dict_16<span class="token punctuation">:</span>
+    l <span class="token operator">=</span> data_dict_16<span class="token punctuation">[</span>img_name<span class="token punctuation">]</span>
+
+    total <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        total <span class="token operator">=</span> total <span class="token operator">+</span> l<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        l<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1.0</span> <span class="token operator">*</span> l<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">/</span> total
+
+    bins_16_histogram<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>img_name<span class="token punctuation">,</span><span class="token string">'data'</span><span class="token punctuation">:</span>l<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">L2_distance</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    s <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>l1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        s <span class="token operator">=</span> s <span class="token operator">+</span> <span class="token builtin">pow</span><span class="token punctuation">(</span>l1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> l2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">HI_distance</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    s <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>l1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        s <span class="token operator">=</span> s <span class="token operator">+</span> <span class="token builtin">min</span><span class="token punctuation">(</span>l1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> l2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token number">1</span> <span class="token operator">-</span> s
+
+<span class="token keyword">def</span> <span class="token function">Bh_distance</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    s <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>l1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        s <span class="token operator">=</span> s <span class="token operator">+</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>l1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> l2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> s<span class="token punctuation">)</span>
+
+average_precision_16 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+average_precision_16<span class="token punctuation">[</span><span class="token string">'L2'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+average_precision_16<span class="token punctuation">[</span><span class="token string">'HI'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+average_precision_16<span class="token punctuation">[</span><span class="token string">'Bh'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+
+<span class="token keyword">for</span> query_img <span class="token keyword">in</span> query_images<span class="token punctuation">:</span>
+    name <span class="token operator">=</span> query_img<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    width <span class="token operator">=</span> query_img<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    height <span class="token operator">=</span> query_img<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+
+    bins_16 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> d <span class="token keyword">in</span> bins_16_histogram<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> d<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token operator">==</span> name<span class="token punctuation">:</span>
+            bins_16 <span class="token operator">=</span> d<span class="token punctuation">[</span><span class="token string">'data'</span><span class="token punctuation">]</span>
+            <span class="token keyword">break</span>
+
+    L2_distance_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    HI_distance_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    Bh_distance_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> d <span class="token keyword">in</span> bins_16_histogram<span class="token punctuation">:</span>
+        d_name <span class="token operator">=</span> d<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span>
+        data_l <span class="token operator">=</span> d<span class="token punctuation">[</span><span class="token string">'data'</span><span class="token punctuation">]</span>
+
+        <span class="token keyword">if</span> d_name <span class="token operator">==</span> name<span class="token punctuation">:</span>
+            <span class="token keyword">continue</span>
+
+        L2_distance_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>d_name<span class="token punctuation">,</span>
+                                 <span class="token string">'dis'</span><span class="token punctuation">:</span>L2_distance<span class="token punctuation">(</span>data_l<span class="token punctuation">,</span> bins_16<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        HI_distance_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>d_name<span class="token punctuation">,</span>
+                                 <span class="token string">'dis'</span><span class="token punctuation">:</span>HI_distance<span class="token punctuation">(</span>data_l<span class="token punctuation">,</span> bins_16<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        Bh_distance_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>d_name<span class="token punctuation">,</span>
+                                 <span class="token string">'dis'</span><span class="token punctuation">:</span>Bh_distance<span class="token punctuation">(</span>data_l<span class="token punctuation">,</span> bins_16<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    L2_distance_list <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>L2_distance_list<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">]</span>
+    HI_distance_list <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>HI_distance_list<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">]</span>
+    Bh_distance_list <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>Bh_distance_list<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">write_dis_list</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> x <span class="token keyword">in</span> l<span class="token punctuation">:</span>
+            f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+
+    filename <span class="token operator">=</span> <span class="token string">'res_'</span> <span class="token operator">+</span> name<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span><span class="token string">'-'</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'_16bins_'</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename <span class="token operator">+</span> <span class="token string">'L2.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        write_dis_list<span class="token punctuation">(</span>L2_distance_list<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename <span class="token operator">+</span> <span class="token string">'HI.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        write_dis_list<span class="token punctuation">(</span>HI_distance_list<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename <span class="token operator">+</span> <span class="token string">'Bh.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        write_dis_list<span class="token punctuation">(</span>Bh_distance_list<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+
+    average_precision_16<span class="token punctuation">[</span><span class="token string">'L2'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>name<span class="token punctuation">,</span> <span class="token string">'average'</span><span class="token punctuation">:</span>
+                                       <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                               L2_distance_list<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    average_precision_16<span class="token punctuation">[</span><span class="token string">'HI'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>name<span class="token punctuation">,</span> <span class="token string">'average'</span><span class="token punctuation">:</span>
+                                       <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                               HI_distance_list<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+    average_precision_16<span class="token punctuation">[</span><span class="token string">'Bh'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>name<span class="token punctuation">,</span> <span class="token string">'average'</span><span class="token punctuation">:</span>
+                                       <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                               Bh_distance_list<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bins_128_histogram <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+data_dict_128 <span class="token operator">=</span> data_dict<span class="token punctuation">[</span><span class="token string">'128'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> img_name <span class="token keyword">in</span> data_dict_128<span class="token punctuation">:</span>
+    l <span class="token operator">=</span> data_dict_128<span class="token punctuation">[</span>img_name<span class="token punctuation">]</span>
+
+    total <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        total <span class="token operator">=</span> total <span class="token operator">+</span> l<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">xrange</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        l<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1.0</span> <span class="token operator">*</span> l<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">/</span> total
+
+    bins_128_histogram<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>img_name<span class="token punctuation">,</span><span class="token string">'data'</span><span class="token punctuation">:</span>l<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+average_precision_128 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+average_precision_128<span class="token punctuation">[</span><span class="token string">'L2'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+average_precision_128<span class="token punctuation">[</span><span class="token string">'HI'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+average_precision_128<span class="token punctuation">[</span><span class="token string">'Bh'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> query_img <span class="token keyword">in</span> query_images<span class="token punctuation">:</span>
+    name <span class="token operator">=</span> query_img<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    width <span class="token operator">=</span> query_img<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    height <span class="token operator">=</span> query_img<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+
+    bins_128 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> d <span class="token keyword">in</span> bins_128_histogram<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> d<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token operator">==</span> name<span class="token punctuation">:</span>
+            bins_128 <span class="token operator">=</span> d<span class="token punctuation">[</span><span class="token string">'data'</span><span class="token punctuation">]</span>
+            <span class="token keyword">break</span>
+
+    L2_distance_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    HI_distance_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    Bh_distance_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> d <span class="token keyword">in</span> bins_128_histogram<span class="token punctuation">:</span>
+        d_name <span class="token operator">=</span> d<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span>
+        data_l <span class="token operator">=</span> d<span class="token punctuation">[</span><span class="token string">'data'</span><span class="token punctuation">]</span>
+
+        <span class="token keyword">if</span> d_name <span class="token operator">==</span> name<span class="token punctuation">:</span>
+            <span class="token keyword">continue</span>
+
+        L2_distance_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>d_name<span class="token punctuation">,</span>
+                                 <span class="token string">'dis'</span><span class="token punctuation">:</span>L2_distance<span class="token punctuation">(</span>data_l<span class="token punctuation">,</span> bins_128<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        HI_distance_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>d_name<span class="token punctuation">,</span>
+                                 <span class="token string">'dis'</span><span class="token punctuation">:</span>HI_distance<span class="token punctuation">(</span>data_l<span class="token punctuation">,</span> bins_128<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        Bh_distance_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>d_name<span class="token punctuation">,</span>
+                                 <span class="token string">'dis'</span><span class="token punctuation">:</span>Bh_distance<span class="token punctuation">(</span>data_l<span class="token punctuation">,</span> bins_128<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    L2_distance_list <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>L2_distance_list<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">]</span>
+    HI_distance_list <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>HI_distance_list<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">]</span>
+    Bh_distance_list <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>Bh_distance_list<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">write_dis_list</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> x <span class="token keyword">in</span> l<span class="token punctuation">:</span>
+            f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+
+    filename <span class="token operator">=</span> <span class="token string">'res_'</span> <span class="token operator">+</span> name<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span><span class="token string">'-'</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'_128bins_'</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename <span class="token operator">+</span> <span class="token string">'L2.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        write_dis_list<span class="token punctuation">(</span>L2_distance_list<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename <span class="token operator">+</span> <span class="token string">'HI.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        write_dis_list<span class="token punctuation">(</span>HI_distance_list<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename <span class="token operator">+</span> <span class="token string">'Bh.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        write_dis_list<span class="token punctuation">(</span>Bh_distance_list<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+
+
+    average_precision_128<span class="token punctuation">[</span><span class="token string">'L2'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>name<span class="token punctuation">,</span> <span class="token string">'average'</span><span class="token punctuation">:</span>
+                                       <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                               L2_distance_list<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    average_precision_128<span class="token punctuation">[</span><span class="token string">'HI'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>name<span class="token punctuation">,</span> <span class="token string">'average'</span><span class="token punctuation">:</span>
+                                       <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                               HI_distance_list<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    average_precision_128<span class="token punctuation">[</span><span class="token string">'Bh'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span>name<span class="token punctuation">,</span> <span class="token string">'average'</span><span class="token punctuation">:</span>
+                                       <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token string">'dis'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                               Bh_distance_list<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">write_average_list</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> l<span class="token punctuation">:</span>
+        f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>i<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">[</span><span class="token string">'average'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token string">'average'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> l<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'res_overall_L2_16.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    write_average_list<span class="token punctuation">(</span>average_precision_16<span class="token punctuation">[</span><span class="token string">'L2'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'res_overall_HI_16.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    write_average_list<span class="token punctuation">(</span>average_precision_16<span class="token punctuation">[</span><span class="token string">'HI'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'res_overall_Bh_16.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    write_average_list<span class="token punctuation">(</span>average_precision_16<span class="token punctuation">[</span><span class="token string">'Bh'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'res_overall_L2_128.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    write_average_list<span class="token punctuation">(</span>average_precision_128<span class="token punctuation">[</span><span class="token string">'L2'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'res_overall_HI_128.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    write_average_list<span class="token punctuation">(</span>average_precision_128<span class="token punctuation">[</span><span class="token string">'HI'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'res_overall_Bh_128.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    write_average_list<span class="token punctuation">(</span>average_precision_128<span class="token punctuation">[</span><span class="token string">'Bh'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> f<span class="token punctuation">)</span></code></pre></div>
+<p>以图像 <code class="language-text">beach/113.jpg</code> 为例
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/59577d32e72b2946815bb17ff010303f/a5608/113.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQQA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/9oADAMBAAIQAxAAAAEIlGrRbb//xAAZEAACAwEAAAAAAAAAAAAAAAAAARESEyH/2gAIAQEAAQUC5AyzRqzU/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BiP/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/Aar/xAAZEAACAwEAAAAAAAAAAAAAAAAAASExMpH/2gAIAQEABj8CIXDLLJSZk//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESFBMVFxgZH/2gAIAQEAAT8hLaYj3R5QC2/KFJKMef0Uz0n/2gAMAwEAAgADAAAAEMQP/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8QtT//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCR/8QAHhABAQACAAcAAAAAAAAAAAAAAREAITFBUWFxgbH/2gAIAQEAAT8QchcczIURwXRZ7xDRfPAFg2MwJ1BtHxxtU3s5/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="113"
+        title="113"
+        src="/static/59577d32e72b2946815bb17ff010303f/a5608/113.jpg"
+        srcset="/static/59577d32e72b2946815bb17ff010303f/a80bd/113.jpg 148w,
+/static/59577d32e72b2946815bb17ff010303f/1c91a/113.jpg 295w,
+/static/59577d32e72b2946815bb17ff010303f/a5608/113.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>先是对比按不同距离计算方式的结果</p>
+<ul>
+<li>
+<p>L2
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 400px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/446db7fce8d6903f0d9d26e481f45db8/e17e5/2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25.675675675675674%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAhElEQVQY043P2QqCQBiGYUUxKbGFSlRQWqAIDQRXvIPu/4J6R76DToIZeJiZf2PGcezWDh1eSHDEWeeTpNia4gwVrnjggFrxWANN7KOmvQZE8LTH6l/qS7wxKdnofEeOEBvFL4r3ep3JPdGi+Pe9AP7P3XxtwIgZK3GV9zXYeq1xsy3+AiRMBqlteZnWAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="2"
+        title="2"
+        src="/static/446db7fce8d6903f0d9d26e481f45db8/e17e5/2.png"
+        srcset="/static/446db7fce8d6903f0d9d26e481f45db8/12f09/2.png 148w,
+/static/446db7fce8d6903f0d9d26e481f45db8/e4a3f/2.png 295w,
+/static/446db7fce8d6903f0d9d26e481f45db8/e17e5/2.png 400w"
+        sizes="(max-width: 400px) 100vw, 400px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">beach/134.jpg 0.137677186442
+beach/122.jpg 0.139919900136
+beach/112.jpg 0.170543123144
+mountains/809.jpg 0.188651267777
+beach/132.jpg 0.202992710514
+mountains/823.jpg 0.208174379021
+beach/133.jpg 0.216244682711
+beach/136.jpg 0.219083278382
+beach/119.jpg 0.228236175802
+mountains/805.jpg 0.229282880798</code></pre></div>
+<p>其中 <code class="language-text">beach/134.jpg</code> 距离 0.137677186442
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAATbiUhSqdP/EABkQAAMBAQEAAAAAAAAAAAAAAAABAhMREv/aAAgBAQABBQJGfoxZLZL4Kz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAABAhD/2gAIAQIBAT8BLT//xAAYEAACAwAAAAAAAAAAAAAAAAAAICFCkf/aAAgBAQAGPwIktif/xAAZEAEBAQEBAQAAAAAAAAAAAAABABFhMVH/2gAIAQEAAT8hZAI+ONwjIa7si58ky//aAAwDAQACAAMAAAAQVw//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EJNEz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8Q04yX/8QAGxABAQEBAQADAAAAAAAAAAAAAREAITFRcaH/2gAIAQEAAT8QFO/uc6ls65ukIocNPu5C/EEk3vKkxBoqc93/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="134"
+        title="134"
+        src="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+        srcset="/static/d6232b0227bf2199f0ace32a321aa7ce/a80bd/134.jpg 148w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/1c91a/134.jpg 295w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">beach/122.jpg</code> 距离 0.139919900136
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5683b886d5d4b4d3f08f4fec8d020c21/a5608/122.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwABAv/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAAB4PCQlls3/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAEREhMCIf/aAAgBAQABBQLRGjmw/E30Uk//xAAWEQEBAQAAAAAAAAAAAAAAAAAAASH/2gAIAQMBAT8Bka//xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8BWwv/xAAZEAEAAgMAAAAAAAAAAAAAAAABACEgMYH/2gAIAQEABj8C1hSHJbP/xAAdEAACAQQDAAAAAAAAAAAAAAAAAREhQVFhcYGh/9oACAEBAAE/Id4bKKLgb2fhpuXcQjogok5XmD//2gAMAwEAAgADAAAAELTf/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAERMf/aAAgBAwEBPxCfVv8A/8QAFREBAQAAAAAAAAAAAAAAAAAAEEH/2gAIAQIBAT8QmP8A/8QAHBABAQACAgMAAAAAAAAAAAAAAREAITFBUWGR/9oACAEBAAE/ENDFZxJlq3rIxEqa35uCTNJBx7xOpumr9VxbthdNz//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="122"
+        title="122"
+        src="/static/5683b886d5d4b4d3f08f4fec8d020c21/a5608/122.jpg"
+        srcset="/static/5683b886d5d4b4d3f08f4fec8d020c21/a80bd/122.jpg 148w,
+/static/5683b886d5d4b4d3f08f4fec8d020c21/1c91a/122.jpg 295w,
+/static/5683b886d5d4b4d3f08f4fec8d020c21/a5608/122.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">beach/112.jpg</code> 距离 0.170543123144
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/122273cc59d8e683208d11426a25f5db/a5608/112.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABUBAQEAAAAAAAAAAAAAAAAAAAID/9oADAMBAAIQAxAAAAHC5NdmWUCk/wD/xAAaEAACAwEBAAAAAAAAAAAAAAAAAQIDExIi/9oACAEBAAEFAlFmLM2V+hV9RdR//8QAGBEAAgMAAAAAAAAAAAAAAAAAAAIBERP/2gAIAQMBAT8BdbM5P//EABkRAAEFAAAAAAAAAAAAAAAAAAABAgMSE//aAAgBAgEBPwFklTZD/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAEhMRARMv/aAAgBAQAGPwKJy3Wizo//xAAbEAADAAIDAAAAAAAAAAAAAAAAAREhMUFRYf/aAAgBAQABPyFhvB+F2YLDyKlYTHapF7H/2gAMAwEAAgADAAAAECcf/8QAFhEBAQEAAAAAAAAAAAAAAAAAEQEQ/9oACAEDAQE/EBQw/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAR/9oACAECAQE/EFTsv//EABwQAAICAgMAAAAAAAAAAAAAAAERACExUUGR0f/aAAgBAQABPxAHlkIsNPDlfkDWoXeYdmDaFtQBNA6G4MoHTP/Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="112"
+        title="112"
+        src="/static/122273cc59d8e683208d11426a25f5db/a5608/112.jpg"
+        srcset="/static/122273cc59d8e683208d11426a25f5db/a80bd/112.jpg 148w,
+/static/122273cc59d8e683208d11426a25f5db/1c91a/112.jpg 295w,
+/static/122273cc59d8e683208d11426a25f5db/a5608/112.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+感觉匹配结果还可以，图像比较相似</p>
+</li>
+<li>
+<p>HI
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c523c2ba032aeff7a2e14519b4b730b6/084e2/3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 26.351351351351354%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAgElEQVQY053P2wqCQBSF4Z2Shygox1MHSYguBIW66v3fzF9ZRlcpDnzMMIuZvbfZulXjqr3CEXuchtDHFp7OptD78+EDT1xwQ44CqSnoVLFFhjcafHQ3PDyrmzsSPS7hsMNB+9jJBsF0oapOWYxIWfgzhanYa+psZqpFK9Oo3yI9/ugE1nvIJT0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="3"
+        title="3"
+        src="/static/c523c2ba032aeff7a2e14519b4b730b6/fcda8/3.png"
+        srcset="/static/c523c2ba032aeff7a2e14519b4b730b6/12f09/3.png 148w,
+/static/c523c2ba032aeff7a2e14519b4b730b6/e4a3f/3.png 295w,
+/static/c523c2ba032aeff7a2e14519b4b730b6/fcda8/3.png 590w,
+/static/c523c2ba032aeff7a2e14519b4b730b6/084e2/3.png 632w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">beach/134.jpg 0.131981187537
+beach/122.jpg 0.15210590409
+mountains/809.jpg 0.196460065508
+beach/112.jpg 0.222421684723
+mountains/834.jpg 0.226862349878
+beach/132.jpg 0.234053497942
+mountains/830.jpg 0.240593768372
+beach/133.jpg 0.244698496683
+beach/115.jpg 0.24916015789
+beach/135.jpg 0.255952380952</code></pre></div>
+<p>其中<code class="language-text">flowers/614.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAATbiUhSqdP/EABkQAAMBAQEAAAAAAAAAAAAAAAABAhMREv/aAAgBAQABBQJGfoxZLZL4Kz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAABAhD/2gAIAQIBAT8BLT//xAAYEAACAwAAAAAAAAAAAAAAAAAAICFCkf/aAAgBAQAGPwIktif/xAAZEAEBAQEBAQAAAAAAAAAAAAABABFhMVH/2gAIAQEAAT8hZAI+ONwjIa7si58ky//aAAwDAQACAAMAAAAQVw//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EJNEz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8Q04yX/8QAGxABAQEBAQADAAAAAAAAAAAAAREAITFRcaH/2gAIAQEAAT8QFO/uc6ls65ukIocNPu5C/EEk3vKkxBoqc93/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="134"
+        title="134"
+        src="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+        srcset="/static/d6232b0227bf2199f0ace32a321aa7ce/a80bd/134.jpg 148w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/1c91a/134.jpg 295w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">beach/122.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5683b886d5d4b4d3f08f4fec8d020c21/a5608/122.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwABAv/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAAB4PCQlls3/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAEREhMCIf/aAAgBAQABBQLRGjmw/E30Uk//xAAWEQEBAQAAAAAAAAAAAAAAAAAAASH/2gAIAQMBAT8Bka//xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8BWwv/xAAZEAEAAgMAAAAAAAAAAAAAAAABACEgMYH/2gAIAQEABj8C1hSHJbP/xAAdEAACAQQDAAAAAAAAAAAAAAAAAREhQVFhcYGh/9oACAEBAAE/Id4bKKLgb2fhpuXcQjogok5XmD//2gAMAwEAAgADAAAAELTf/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAERMf/aAAgBAwEBPxCfVv8A/8QAFREBAQAAAAAAAAAAAAAAAAAAEEH/2gAIAQIBAT8QmP8A/8QAHBABAQACAgMAAAAAAAAAAAAAAREAITFBUWGR/9oACAEBAAE/ENDFZxJlq3rIxEqa35uCTNJBx7xOpumr9VxbthdNz//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="122"
+        title="122"
+        src="/static/5683b886d5d4b4d3f08f4fec8d020c21/a5608/122.jpg"
+        srcset="/static/5683b886d5d4b4d3f08f4fec8d020c21/a80bd/122.jpg 148w,
+/static/5683b886d5d4b4d3f08f4fec8d020c21/1c91a/122.jpg 295w,
+/static/5683b886d5d4b4d3f08f4fec8d020c21/a5608/122.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">mountains/809.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e5007425214d5d17a1ee64480629544a/a5608/809.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEDBP/EABYBAQEBAAAAAAAAAAAAAAAAAAACA//aAAwDAQACEAMQAAABytTvKpkD/8QAGxAAAgIDAQAAAAAAAAAAAAAAAQIAEQMSEyH/2gAIAQEAAQUCVBNBShKbJsO1Tr7/AP/EABYRAQEBAAAAAAAAAAAAAAAAAAASAf/aAAgBAwEBPwGcS//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAECAQE/AbU//8QAGhAAAgMBAQAAAAAAAAAAAAAAABEBITEScf/aAAgBAQAGPwK5K0tjS8kXEGH/xAAbEAADAQEAAwAAAAAAAAAAAAAAAREhQVGRof/aAAgBAQABPyFjkrMR1m/gazoRs0EpEPFG1Z9n/9oADAMBAAIAAwAAABBQD//EABYRAQEBAAAAAAAAAAAAAAAAAAARUf/aAAgBAwEBPxCCMf/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/EKW//8QAHRABAAICAgMAAAAAAAAAAAAAAQARIUFRoTFhsf/aAAgBAQABPxDLXWwbi2Cb2W9XzACXenHyXwxZKCuPHcCRt0kYxAxbC2O5/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="809"
+        title="809"
+        src="/static/e5007425214d5d17a1ee64480629544a/a5608/809.jpg"
+        srcset="/static/e5007425214d5d17a1ee64480629544a/a80bd/809.jpg 148w,
+/static/e5007425214d5d17a1ee64480629544a/1c91a/809.jpg 295w,
+/static/e5007425214d5d17a1ee64480629544a/a5608/809.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+和 L2 时的前两张图片相同，第三张和第四张图片互换了一下位置</p>
+</li>
+<li>
+<p>Bh
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/71571840c59b54c0fa14444a38b49ca3/a1792/4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 12.837837837837837%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAXUlEQVQI143NSQqAQAxE0TSOrQiunEARZ8H7n88vlODSwIMQkoqZWYYcDiU6bKgxY0CsvUB9hEQzj1Tzh61YUKBV6KXgAyMqhTd61uvufTjhxG6fCnVgCvDqnfyqGwtCA8HA2EBbAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="4"
+        title="4"
+        src="/static/71571840c59b54c0fa14444a38b49ca3/fcda8/4.png"
+        srcset="/static/71571840c59b54c0fa14444a38b49ca3/12f09/4.png 148w,
+/static/71571840c59b54c0fa14444a38b49ca3/e4a3f/4.png 295w,
+/static/71571840c59b54c0fa14444a38b49ca3/fcda8/4.png 590w,
+/static/71571840c59b54c0fa14444a38b49ca3/a1792/4.png 780w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">beach/122.jpg 0.127089051466
+beach/134.jpg 0.154179502958
+mountains/834.jpg 0.197902754449
+mountains/809.jpg 0.199309111313
+beach/119.jpg 0.218180358319
+mountains/830.jpg 0.22271219433
+beach/128.jpg 0.238612162928
+beach/127.jpg 0.240160635222
+buses/312.jpg 0.244401249701
+beach/133.jpg 0.247038963759</code></pre></div>
+<p>其中 <code class="language-text">beach/122.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5683b886d5d4b4d3f08f4fec8d020c21/a5608/122.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwABAv/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAAB4PCQlls3/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAEREhMCIf/aAAgBAQABBQLRGjmw/E30Uk//xAAWEQEBAQAAAAAAAAAAAAAAAAAAASH/2gAIAQMBAT8Bka//xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8BWwv/xAAZEAEAAgMAAAAAAAAAAAAAAAABACEgMYH/2gAIAQEABj8C1hSHJbP/xAAdEAACAQQDAAAAAAAAAAAAAAAAAREhQVFhcYGh/9oACAEBAAE/Id4bKKLgb2fhpuXcQjogok5XmD//2gAMAwEAAgADAAAAELTf/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAERMf/aAAgBAwEBPxCfVv8A/8QAFREBAQAAAAAAAAAAAAAAAAAAEEH/2gAIAQIBAT8QmP8A/8QAHBABAQACAgMAAAAAAAAAAAAAAREAITFBUWGR/9oACAEBAAE/ENDFZxJlq3rIxEqa35uCTNJBx7xOpumr9VxbthdNz//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="122"
+        title="122"
+        src="/static/5683b886d5d4b4d3f08f4fec8d020c21/a5608/122.jpg"
+        srcset="/static/5683b886d5d4b4d3f08f4fec8d020c21/a80bd/122.jpg 148w,
+/static/5683b886d5d4b4d3f08f4fec8d020c21/1c91a/122.jpg 295w,
+/static/5683b886d5d4b4d3f08f4fec8d020c21/a5608/122.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">beach/134.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAATbiUhSqdP/EABkQAAMBAQEAAAAAAAAAAAAAAAABAhMREv/aAAgBAQABBQJGfoxZLZL4Kz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAABAhD/2gAIAQIBAT8BLT//xAAYEAACAwAAAAAAAAAAAAAAAAAAICFCkf/aAAgBAQAGPwIktif/xAAZEAEBAQEBAQAAAAAAAAAAAAABABFhMVH/2gAIAQEAAT8hZAI+ONwjIa7si58ky//aAAwDAQACAAMAAAAQVw//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EJNEz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8Q04yX/8QAGxABAQEBAQADAAAAAAAAAAAAAREAITFRcaH/2gAIAQEAAT8QFO/uc6ls65ukIocNPu5C/EEk3vKkxBoqc93/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="134"
+        title="134"
+        src="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+        srcset="/static/d6232b0227bf2199f0ace32a321aa7ce/a80bd/134.jpg 148w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/1c91a/134.jpg 295w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">mountains/834.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/bdc74ec185bed003a532979cfeae8a52/a5608/834.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEA//EABUBAQEAAAAAAAAAAAAAAAAAAAED/9oADAMBAAIQAxAAAAGdx31lmIH/xAAZEAADAQEBAAAAAAAAAAAAAAAAAQIRExT/2gAIAQEAAQUCUaczmRWt1ML04f/EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AYQ//8QAFREBAQAAAAAAAAAAAAAAAAAAABL/2gAIAQIBAT8Btb//xAAdEAABAgcAAAAAAAAAAAAAAAAAATIQERIhYXGh/9oACAEBAAY/AkzFK7jZ7UZ0/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAERUSEx/9oACAEBAAE/IUYPwiNJ05Q78djQixwxyP8A/9oADAMBAAIAAwAAABBnD//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/ECH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPxBt/8QAHRABAQABBAMAAAAAAAAAAAAAAREAITFBcWGhsf/aAAgBAQABPxDngKm6dYzr2xONIlIXDBDIGkeeclTJtQ+YqTteEepn/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="834"
+        title="834"
+        src="/static/bdc74ec185bed003a532979cfeae8a52/a5608/834.jpg"
+        srcset="/static/bdc74ec185bed003a532979cfeae8a52/a80bd/834.jpg 148w,
+/static/bdc74ec185bed003a532979cfeae8a52/1c91a/834.jpg 295w,
+/static/bdc74ec185bed003a532979cfeae8a52/a5608/834.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+前二名又是这两个，看来它们的确很相似
+从这个例子看来，这三种距离对于比较相似的图像的识别还是比较有共通之处的，不过对于有所不同的图像的反应就有一些区别</p>
+</li>
+</ul>
+<p>对比 16 bins 和 128 bins 的结果，上面已经出现了 16 的时候，下面放上 128 的图像</p>
+<ul>
+<li>
+<p>128、L2</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">horses/719.jpg 0.327136088981
+foods/901.jpg 0.366376131948
+beach/112.jpg 0.377965906873
+buses/311.jpg 0.37865737103
+horses/716.jpg 0.380330431777
+foods/920.jpg 0.380744280326
+foods/919.jpg 0.383257892651
+mountains/824.jpg 0.384145857933
+buses/313.jpg 0.384914322625
+mountains/800.jpg 0.386463744417</code></pre></div>
+<p>其中 <code class="language-text">buses/311.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8c244fef9819364741bab0a06e7fb5ec/a5608/719.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAXykspYYF//EABgQAAMBAQAAAAAAAAAAAAAAAAABAhEx/9oACAEBAAEFAuEvW5MTHMq+n//EABYRAQEBAAAAAAAAAAAAAAAAABEAAf/aAAgBAwEBPwEwi//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAECAQE/AaU//8QAFxAAAwEAAAAAAAAAAAAAAAAAAAEREP/aAAgBAQAGPwIaxVFmf//EABsQAQACAgMAAAAAAAAAAAAAAAEAESFBMWGh/9oACAEBAAE/IdB3BXQRovcC81F7sqExnydQrOvZ/9oADAMBAAIAAwAAABDPD//EABcRAQADAAAAAAAAAAAAAAAAAAABEXH/2gAIAQMBAT8QjYs//8QAGBEAAgMAAAAAAAAAAAAAAAAAAAERIWH/2gAIAQIBAT8QSuiOn//EABwQAQADAAIDAAAAAAAAAAAAAAEAESFBUWFx8f/aAAgBAQABPxArcEKZ19g0ReVOInS0oYFYLnMCZUUV9pSuxY//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="719"
+        title="719"
+        src="/static/8c244fef9819364741bab0a06e7fb5ec/a5608/719.jpg"
+        srcset="/static/8c244fef9819364741bab0a06e7fb5ec/a80bd/719.jpg 148w,
+/static/8c244fef9819364741bab0a06e7fb5ec/1c91a/719.jpg 295w,
+/static/8c244fef9819364741bab0a06e7fb5ec/a5608/719.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+好像匹配到了奇怪的东西，可能是代码有问题，再重新检查代码</p>
+</li>
+</ul>
+<p>重新检查了代码，果然有问题，修改之后</p>
+<ul>
+<li>
+<p>128、L2</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">beach/134.jpg 0.183660623617
+beach/127.jpg 0.216883234872
+mountains/830.jpg 0.218500081174
+mountains/835.jpg 0.241195427718
+mountains/803.jpg 0.247272211702
+mountains/833.jpg 0.252977377995
+mountains/829.jpg 0.260260550787
+beach/135.jpg 0.267152675287
+mountains/834.jpg 0.26737878973
+buses/308.jpg 0.271912188021</code></pre></div>
+<p>其中 <code class="language-text">beach/134.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAATbiUhSqdP/EABkQAAMBAQEAAAAAAAAAAAAAAAABAhMREv/aAAgBAQABBQJGfoxZLZL4Kz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAABAhD/2gAIAQIBAT8BLT//xAAYEAACAwAAAAAAAAAAAAAAAAAAICFCkf/aAAgBAQAGPwIktif/xAAZEAEBAQEBAQAAAAAAAAAAAAABABFhMVH/2gAIAQEAAT8hZAI+ONwjIa7si58ky//aAAwDAQACAAMAAAAQVw//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EJNEz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8Q04yX/8QAGxABAQEBAQADAAAAAAAAAAAAAREAITFRcaH/2gAIAQEAAT8QFO/uc6ls65ukIocNPu5C/EEk3vKkxBoqc93/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="134"
+        title="134"
+        src="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+        srcset="/static/d6232b0227bf2199f0ace32a321aa7ce/a80bd/134.jpg 148w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/1c91a/134.jpg 295w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+果然又出现了这个图像</p>
+<p><code class="language-text">beach/127.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/085b33340c067f4c30c77ee5833b63c4/a5608/127.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAFYqVTGXif/xAAaEAACAgMAAAAAAAAAAAAAAAAAIQECAxAS/9oACAEBAAEFAtMijjG+D//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AZS//8QAFREBAQAAAAAAAAAAAAAAAAAAABL/2gAIAQIBAT8BpT//xAAWEAEBAQAAAAAAAAAAAAAAAAABEAD/2gAIAQEABj8Crln/xAAaEAACAwEBAAAAAAAAAAAAAAAAARExUWEh/9oACAEBAAE/IYvg3h0iL1ti1ItkNP/aAAwDAQACAAMAAAAQO8//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxClP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/EGH/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUFRYYHx/9oACAEBAAE/EFcENnqAl2cXRDawz3AWai48QvZpePcfgn//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="127"
+        title="127"
+        src="/static/085b33340c067f4c30c77ee5833b63c4/a5608/127.jpg"
+        srcset="/static/085b33340c067f4c30c77ee5833b63c4/a80bd/127.jpg 148w,
+/static/085b33340c067f4c30c77ee5833b63c4/1c91a/127.jpg 295w,
+/static/085b33340c067f4c30c77ee5833b63c4/a5608/127.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">mountains/830.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4a77dcc14c74964c8cfef7873a90177a/a5608/830.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAASwzTkcf/8QAGBABAAMBAAAAAAAAAAAAAAAAAQADEhH/2gAIAQEAAQUC0q2BG17uNk3P/8QAFREBAQAAAAAAAAAAAAAAAAAAACH/2gAIAQMBAT8BR//EABYRAQEBAAAAAAAAAAAAAAAAAAASAf/aAAgBAgEBPwG1a//EABgQAAMBAQAAAAAAAAAAAAAAAAABMTIQ/9oACAEBAAY/ApzJDKIj/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAEhMRFBYZGxwf/aAAgBAQABPyGk4Fp0PQgPYNAG+fA//9oADAMBAAIAAwAAABCU/wD/xAAWEQADAAAAAAAAAAAAAAAAAAABECH/2gAIAQMBAT8QgT//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBTL//EABsQAQEAAgMBAAAAAAAAAAAAAAERACExQVGB/9oACAEBAAE/EDUZCoK6ySTZe+JF3oomOrdfG3Hvp8y1B+c//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="830"
+        title="830"
+        src="/static/4a77dcc14c74964c8cfef7873a90177a/a5608/830.jpg"
+        srcset="/static/4a77dcc14c74964c8cfef7873a90177a/a80bd/830.jpg 148w,
+/static/4a77dcc14c74964c8cfef7873a90177a/1c91a/830.jpg 295w,
+/static/4a77dcc14c74964c8cfef7873a90177a/a5608/830.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+</li>
+<li>
+<p>128、HI</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">beach/134.jpg 0.313450071387
+beach/127.jpg 0.336073318216
+mountains/830.jpg 0.355757117662
+mountains/833.jpg 0.369383555891
+mountains/835.jpg 0.394400352734
+mountains/834.jpg 0.406294616612
+mountains/803.jpg 0.415711346267
+beach/135.jpg 0.415826824557
+mountains/828.jpg 0.424256739733
+buses/309.jpg 0.424456202234</code></pre></div>
+<p>其中 <code class="language-text">DataSet/beach/134.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAATbiUhSqdP/EABkQAAMBAQEAAAAAAAAAAAAAAAABAhMREv/aAAgBAQABBQJGfoxZLZL4Kz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAABAhD/2gAIAQIBAT8BLT//xAAYEAACAwAAAAAAAAAAAAAAAAAAICFCkf/aAAgBAQAGPwIktif/xAAZEAEBAQEBAQAAAAAAAAAAAAABABFhMVH/2gAIAQEAAT8hZAI+ONwjIa7si58ky//aAAwDAQACAAMAAAAQVw//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EJNEz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8Q04yX/8QAGxABAQEBAQADAAAAAAAAAAAAAREAITFRcaH/2gAIAQEAAT8QFO/uc6ls65ukIocNPu5C/EEk3vKkxBoqc93/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="134"
+        title="134"
+        src="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+        srcset="/static/d6232b0227bf2199f0ace32a321aa7ce/a80bd/134.jpg 148w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/1c91a/134.jpg 295w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">DataSet/beach/127.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/085b33340c067f4c30c77ee5833b63c4/a5608/127.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAFYqVTGXif/xAAaEAACAgMAAAAAAAAAAAAAAAAAIQECAxAS/9oACAEBAAEFAtMijjG+D//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AZS//8QAFREBAQAAAAAAAAAAAAAAAAAAABL/2gAIAQIBAT8BpT//xAAWEAEBAQAAAAAAAAAAAAAAAAABEAD/2gAIAQEABj8Crln/xAAaEAACAwEBAAAAAAAAAAAAAAAAARExUWEh/9oACAEBAAE/IYvg3h0iL1ti1ItkNP/aAAwDAQACAAMAAAAQO8//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxClP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/EGH/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUFRYYHx/9oACAEBAAE/EFcENnqAl2cXRDawz3AWai48QvZpePcfgn//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="127"
+        title="127"
+        src="/static/085b33340c067f4c30c77ee5833b63c4/a5608/127.jpg"
+        srcset="/static/085b33340c067f4c30c77ee5833b63c4/a80bd/127.jpg 148w,
+/static/085b33340c067f4c30c77ee5833b63c4/1c91a/127.jpg 295w,
+/static/085b33340c067f4c30c77ee5833b63c4/a5608/127.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">DataSet/mountains/830.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4a77dcc14c74964c8cfef7873a90177a/a5608/830.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAASwzTkcf/8QAGBABAAMBAAAAAAAAAAAAAAAAAQADEhH/2gAIAQEAAQUC0q2BG17uNk3P/8QAFREBAQAAAAAAAAAAAAAAAAAAACH/2gAIAQMBAT8BR//EABYRAQEBAAAAAAAAAAAAAAAAAAASAf/aAAgBAgEBPwG1a//EABgQAAMBAQAAAAAAAAAAAAAAAAABMTIQ/9oACAEBAAY/ApzJDKIj/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAEhMRFBYZGxwf/aAAgBAQABPyGk4Fp0PQgPYNAG+fA//9oADAMBAAIAAwAAABCU/wD/xAAWEQADAAAAAAAAAAAAAAAAAAABECH/2gAIAQMBAT8QgT//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBTL//EABsQAQEAAgMBAAAAAAAAAAAAAAERACExQVGB/9oACAEBAAE/EDUZCoK6ySTZe+JF3oomOrdfG3Hvp8y1B+c//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="830"
+        title="830"
+        src="/static/4a77dcc14c74964c8cfef7873a90177a/a5608/830.jpg"
+        srcset="/static/4a77dcc14c74964c8cfef7873a90177a/a80bd/830.jpg 148w,
+/static/4a77dcc14c74964c8cfef7873a90177a/1c91a/830.jpg 295w,
+/static/4a77dcc14c74964c8cfef7873a90177a/a5608/830.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+和 L2 时结果的前三一样</p>
+</li>
+<li>
+<p>128、Bh</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">beach/134.jpg 0.307872386787
+beach/127.jpg 0.314306473374
+mountains/833.jpg 0.321804919999
+mountains/803.jpg 0.364784598703
+mountains/830.jpg 0.379896729202
+beach/135.jpg 0.384291280058
+beach/128.jpg 0.386842551973
+buses/309.jpg 0.389839269003
+mountains/835.jpg 0.400281106657
+mountains/834.jpg 0.401127742134</code></pre></div>
+<p>其中 <code class="language-text">DataSet/beach/134.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAATbiUhSqdP/EABkQAAMBAQEAAAAAAAAAAAAAAAABAhMREv/aAAgBAQABBQJGfoxZLZL4Kz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAABAhD/2gAIAQIBAT8BLT//xAAYEAACAwAAAAAAAAAAAAAAAAAAICFCkf/aAAgBAQAGPwIktif/xAAZEAEBAQEBAQAAAAAAAAAAAAABABFhMVH/2gAIAQEAAT8hZAI+ONwjIa7si58ky//aAAwDAQACAAMAAAAQVw//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EJNEz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8Q04yX/8QAGxABAQEBAQADAAAAAAAAAAAAAREAITFRcaH/2gAIAQEAAT8QFO/uc6ls65ukIocNPu5C/EEk3vKkxBoqc93/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="134"
+        title="134"
+        src="/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg"
+        srcset="/static/d6232b0227bf2199f0ace32a321aa7ce/a80bd/134.jpg 148w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/1c91a/134.jpg 295w,
+/static/d6232b0227bf2199f0ace32a321aa7ce/a5608/134.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">DataSet/beach/127.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/085b33340c067f4c30c77ee5833b63c4/a5608/127.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAFYqVTGXif/xAAaEAACAgMAAAAAAAAAAAAAAAAAIQECAxAS/9oACAEBAAEFAtMijjG+D//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AZS//8QAFREBAQAAAAAAAAAAAAAAAAAAABL/2gAIAQIBAT8BpT//xAAWEAEBAQAAAAAAAAAAAAAAAAABEAD/2gAIAQEABj8Crln/xAAaEAACAwEBAAAAAAAAAAAAAAAAARExUWEh/9oACAEBAAE/IYvg3h0iL1ti1ItkNP/aAAwDAQACAAMAAAAQO8//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxClP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/EGH/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUFRYYHx/9oACAEBAAE/EFcENnqAl2cXRDawz3AWai48QvZpePcfgn//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="127"
+        title="127"
+        src="/static/085b33340c067f4c30c77ee5833b63c4/a5608/127.jpg"
+        srcset="/static/085b33340c067f4c30c77ee5833b63c4/a80bd/127.jpg 148w,
+/static/085b33340c067f4c30c77ee5833b63c4/1c91a/127.jpg 295w,
+/static/085b33340c067f4c30c77ee5833b63c4/a5608/127.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">DataSet/mountains/833.jpg</code>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 378px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ecbd5992b857423a2cb78556b07ff2ac/a5608/833.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABIZ1ty0JCf//EABoQAQACAwEAAAAAAAAAAAAAAAIAAQMEERD/2gAIAQEAAQUCR55yLO1R2HG3d//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AYj/xAAYEQACAwAAAAAAAAAAAAAAAAAAARESUf/aAAgBAgEBPwGS6w//xAAbEAACAQUAAAAAAAAAAAAAAAAAAQIQETEygf/aAAgBAQAGPwKmCzZw3kf/xAAcEAACAgIDAAAAAAAAAAAAAAABEQAhEDFRYZH/2gAIAQEAAT8hJ1hFbeANJriKAVSAqNp9p//aAAwDAQACAAMAAAAQyB//xAAXEQADAQAAAAAAAAAAAAAAAAAAEUFR/9oACAEDAQE/EGg+n//EABcRAQADAAAAAAAAAAAAAAAAAAEQESH/2gAIAQIBAT8QDWkD/8QAGxABAQACAwEAAAAAAAAAAAAAAREAIVFhkTH/2gAIAQEAAT8QgKLfm7rAd69kwRzyHnrtL28uQpu0Cy33ENxB0w8M/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="833"
+        title="833"
+        src="/static/ecbd5992b857423a2cb78556b07ff2ac/a5608/833.jpg"
+        srcset="/static/ecbd5992b857423a2cb78556b07ff2ac/a80bd/833.jpg 148w,
+/static/ecbd5992b857423a2cb78556b07ff2ac/1c91a/833.jpg 295w,
+/static/ecbd5992b857423a2cb78556b07ff2ac/a5608/833.jpg 378w"
+        sizes="(max-width: 378px) 100vw, 378px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+前三张中只有一张和 L2、HI 不同
+感觉 128 和 16 之间出现了直接的差别，但是距离计算方式之间的差别不算很大。</p>
+</li>
+</ul>
+<p>观察一下总体的情况，对于下面的文件</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">res_overall_Bh_128.txt
+res_overall_Bh_16.txt
+res_overall_HI_128.txt
+res_overall_HI_16.txt
+res_overall_L2_128.txt
+res_overall_L2_16.txt</code></pre></div>
+<p>以 Bh 为例
+<code class="language-text">res_overall_Bh_16.txt</code>文件</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">arborgreens/Image01.jpg 0.188324000561
+arborgreens/Image02.jpg 0.18992732555
+arborgreens/Image03.jpg 0.172542218214
+beach/110.jpg 0.18276675412
+beach/112.jpg 0.294493955404
+beach/113.jpg 0.269598983469
+elephants/510.jpg 0.253993692233
+elephants/511.jpg 0.271067761446
+elephants/512.jpg 0.275212797227
+flowers/600.jpg 0.33531091889
+flowers/601.jpg 0.356802480673
+flowers/602.jpg 0.330024311649
+foods/901.jpg 0.327076701864
+foods/902.jpg 0.19078837401
+foods/903.jpg 0.204641689287
+football/Image09.jpg 0.197247384163
+football/Image10.jpg 0.180235797361
+football/Image11.jpg 0.165268902942
+horses/700.jpg 0.256349675865
+horses/701.jpg 0.197522748907
+horses/702.jpg 0.324929520272
+mountains/800.jpg 0.25526255972
+mountains/802.jpg 0.244074748031
+mountains/803.jpg 0.224138218296
+tribe/10.jpg 0.211874575496
+tribe/12.jpg 0.175787494598
+tribe/17.jpg 0.172481896183
+0.238805388386</code></pre></div>
+<p><code class="language-text">res_overall_Bh_128.txt</code> 文件</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">arborgreens/Image01.jpg 0.379575253107
+arborgreens/Image02.jpg 0.333328661185
+arborgreens/Image03.jpg 0.316437638502
+beach/110.jpg 0.375161917182
+beach/112.jpg 0.554815545637
+beach/113.jpg 0.418935344047
+elephants/510.jpg 0.412968653424
+elephants/511.jpg 0.44334773381
+elephants/512.jpg 0.402083430353
+flowers/600.jpg 0.538939154945
+flowers/601.jpg 0.476439257062
+flowers/602.jpg 0.494710982403
+foods/901.jpg 0.496855297716
+foods/902.jpg 0.37010252108
+foods/903.jpg 0.35283214766
+football/Image09.jpg 0.322061988105
+football/Image10.jpg 0.321620711879
+football/Image11.jpg 0.355264769844
+horses/700.jpg 0.4284228142
+horses/701.jpg 0.330747641145
+horses/702.jpg 0.466105453911
+mountains/800.jpg 0.470838863069
+mountains/802.jpg 0.404510471363
+mountains/803.jpg 0.387979761501
+tribe/10.jpg 0.343733980937
+tribe/12.jpg 0.289036235818
+tribe/17.jpg 0.303311898278
+0.399635856599</code></pre></div>
+<p>128 和 16 相比，平均距离明显上升，L2 和 HI 也是同样的情况，可能是因为分箱变多，能分辨出的差异就越多</p>
+<p>所以可以通过提高分箱数来提升查询精度。由于直方图是一种全局的信息，也可以增加使用特征点算法或者感知哈希等方法来提升查询精度</p></section><hr style="margin-bottom:1.5rem"/><footer><div style="display:flex;margin-bottom:3.75rem"><p>Written by <a href="https://github.com/twistronics" style="background-image:none"><strong>twistronics</strong></a></p> <!-- -->  <!-- --> </div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blogs/Peak-signal-to-noise-ratio/">← <!-- -->IDCT图像压缩，Peak signal-to-noise ratio 实验</a></li><li><a rel="next" href="/blogs/Audio-signal-processing/">Matlab音频转换实验<!-- --> →</a></li></ul></nav></main><footer>© <!-- -->2020<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org" style="background-image:none">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blogs/content-based-image-retrieval/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-c94c84d1627c2405770e.js"],"component---src-pages-404-js":["/component---src-pages-404-js-f54b3ee11fe2b68846ad.js"],"component---src-pages-all-tags-js":["/component---src-pages-all-tags-js-fc7b58de7b3eb2ea01bb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-e9f1f7b70f886ee7244f.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-52019674864e23d7221f.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-76a9d552cd4b1fd1ca3f.js"],"component---src-templates-tag-page-js":["/component---src-templates-tag-page-js-359eac9b6566a50e4d0f.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-76a9d552cd4b1fd1ca3f.js" async=""></script><script src="/commons-48c9400f00a8b0e86bab.js" async=""></script><script src="/styles-c2fe8482057191dca484.js" async=""></script><script src="/app-c94c84d1627c2405770e.js" async=""></script><script src="/framework-93d3a746c3cf42acdafc.js" async=""></script><script src="/webpack-runtime-3ff9ebe37179953628c4.js" async=""></script></body></html>
