@@ -1,0 +1,804 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:131.25%/1.5 'Crimson Text',serif;box-sizing:border-box;overflow-y:scroll;scroll-behavior:smooth;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.73);font-family:'Crimson Text',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Rosario',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}ul{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:0.85rem;line-height:1.5rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1rem;line-height:1.5rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:1.21875rem;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1.1487rem;line-height:1.5rem;border-left:0.28125rem solid #ff5700;color:hsla(0,0%,0%,0.59);font-style:italic;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.5rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:calc(1.5rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}li > ul{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.5rem / 2);}code{font-size:0.85rem;line-height:1.5rem;}kbd{font-size:0.85rem;line-height:1.5rem;}samp{font-size:0.85rem;line-height:1.5rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1rem;padding-right:1rem;padding-top:0.75rem;padding-bottom:calc(0.75rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#ff5700;text-decoration:none;text-shadow:.03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;background-image:linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #ff5700 1px, #ff5700 2px, rgba(0, 0, 0, 0) 2px);}a:hover,a:active{text-shadow:none;background-image:none;}h1,h2,h3,h4,h5,h6{margin-top:2.25rem;margin-bottom:0.75rem;}ul,ol{margin-left:1rem;}li>ol,li>ul{margin-left:1rem;margin-bottom:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.5rem;color:hsla(0,0%,0%,0.73);font-style:normal;font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){html{font-size:118.75%;line-height:29.85px;}blockquote{border-left:0.28125rem solid #ff5700;color:hsla(0,0%,0%,0.59);padding-left:0.84375rem;font-style:italic;margin-left:-1.125rem;margin-right:0;}}h1 > a{background-image:none;}</style><style data-href="/styles.2eb406826dd04e80762a.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.bm-item{display:inline-block;text-decoration:none;margin-bottom:10px;color:#d1d1d1;transition:color .2s;text-shadow:none}.bm-item:hover{color:#fff}.bm-burger-button{position:fixed;width:36px;height:30px;right:36px;top:36px}.bm-burger-bars{background:#373a47}.bm-cross-button{height:24px;width:24px}.bm-cross{background:#bdc3c7}.bm-menu{background:#000;padding:2.5em 1.5em 0;font-size:1.15em}.bm-morph-shape{fill:#000}.bm-item-list{color:#b8b7ad}.bm-overlay{background:rgba(0,0,0,.3)}.bm-item{background-image:none}.bm-menu-background-div{position:fixed;width:80px;height:75px;right:0;top:0;background:#fff}h3>a:hover,li>a:hover{padding:10px 2px}.blog-post-module--blog-tag--2JghA{margin:.625rem .3125rem;height:2.1875rem;padding:0 1.5rem;line-height:2.1875rem;font-size:.9rem}.blog-post-module--blog-tag--2JghA,.blog-post-module--blog-tag-small-size--3s4nT{display:inline-block;border:1px solid #e6e6e6;text-decoration:none;border-radius:1.25rem;color:#222}.blog-post-module--blog-tag-small-size--3s4nT{margin:0 .3125rem;height:1.15rem;line-height:1rem;padding:0 .7rem;font-size:.8rem;white-space:nowrap}.blog-post-module--blog-tag--2JghA:hover,.blog-post-module--blog-tag-small-size--3s4nT:hover{color:#fff;background-color:grey;border:1px solid grey}</style><meta name="generator" content="Gatsby 2.23.12"/><link rel="icon" href="/favicon-32x32.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=9f50719bf6a5c0099a47921ead3762b3"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=9f50719bf6a5c0099a47921ead3762b3"/><title data-react-helmet="true">以服务为中心的软件开发设计与实现——截图—&gt;视频检索系统 | Twistronics Blog</title><meta data-react-helmet="true" name="description" content="用户可以用本地的截图缩略图来搜索相对应的视频播放位置。服务器端可以使用云平台的服务来处理与存储图像哈希与截图缩略图。"/><meta data-react-helmet="true" property="og:title" content="以服务为中心的软件开发设计与实现——截图—&gt;视频检索系统"/><meta data-react-helmet="true" property="og:description" content="用户可以用本地的截图缩略图来搜索相对应的视频播放位置。服务器端可以使用云平台的服务来处理与存储图像哈希与截图缩略图。"/><meta data-react-helmet="true" property="og:type" content="website"/><link href="//fonts.googleapis.com/css?family=Rosario:700|Crimson+Text:400,400i,600" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-abc6effa4822a41b5603.js"/><link as="script" rel="preload" href="/framework-95b680cb3190aa9bfe59.js"/><link as="script" rel="preload" href="/app-65fd028b4a4e5da0a59c.js"/><link as="script" rel="preload" href="/styles-89fd2ae28bdf06750a71.js"/><link as="script" rel="preload" href="/777cf710-40a4af3c2a38b71e6e80.js"/><link as="script" rel="preload" href="/commons-323b77c17de897f80d11.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-d1fa31acb385254cb459.js"/><link as="fetch" rel="preload" href="/page-data\blogs\Screenshot-retrieval\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="bm-menu-background-div"><div><div class="bm-overlay" style="position:fixed;z-index:1000;width:100%;height:100%;background:rgba(0, 0, 0, 0.3);opacity:0;-moz-transform:translate3d(100%, 0, 0);-ms-transform:translate3d(100%, 0, 0);-o-transform:translate3d(100%, 0, 0);-webkit-transform:translate3d(100%, 0, 0);transform:translate3d(100%, 0, 0);transition:opacity 0.3s, transform 0s 0.3s"></div><div id="" class="bm-menu-wrap" style="position:fixed;right:0;z-index:1100;width:300px;height:100%;-moz-transform:translate3d(100%, 0, 0);-ms-transform:translate3d(100%, 0, 0);-o-transform:translate3d(100%, 0, 0);-webkit-transform:translate3d(100%, 0, 0);transform:translate3d(100%, 0, 0);transition:all 0.3s"><div class="bm-morph-shape" style="position:absolute;width:120px;height:100%;right:inherit;left:0;-moz-transform:rotateY(180deg);-ms-transform:rotateY(180deg);-o-transform:rotateY(180deg);-webkit-transform:rotateY(180deg);transform:rotateY(180deg)"><svg width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none"><path d="M-1,0h101c0,0-97.833,153.603-97.833,396.167C2.167,627.579,100,800,100,800H-1V0z"></path></svg></div><div class="bm-menu" style="height:100%;box-sizing:border-box;overflow:visible;position:fixed;right:0;width:180px;white-space:nowrap"><nav class="bm-item-list" style="height:100%;position:relative;left:-110px;width:170%;overflow:auto"><a href="/" style="display:none" class="bm-item" tabindex="-1">Home</a><a href="/" class="bm-item" style="display:block" tabindex="-1">Home</a><a href="/all-tags" class="bm-item" style="display:block" tabindex="-1">All tags</a></nav></div><div><div class="bm-cross-button" style="position:absolute;width:24px;height:24px;right:8px;top:8px"><span style="position:absolute;top:6px;right:14px"><span class="bm-cross" style="position:absolute;width:3px;height:14px;transform:rotate(45deg)"></span><span class="bm-cross" style="position:absolute;width:3px;height:14px;transform:rotate(-45deg)"></span></span><button style="position:absolute;left:0;top:0;width:100%;height:100%;margin:0;padding:0;border:none;font-size:0;background:transparent;cursor:pointer" tabindex="-1">Close Menu</button></div></div></div><div><div class="bm-burger-button" style="z-index:1000"><span><span class="bm-burger-bars" style="position:absolute;height:20%;left:0;right:0;top:0%;opacity:1"></span><span class="bm-burger-bars" style="position:absolute;height:20%;left:0;right:0;top:40%;opacity:1"></span><span class="bm-burger-bars" style="position:absolute;height:20%;left:0;right:0;top:80%;opacity:1"></span></span><button style="position:absolute;left:0;top:0;width:100%;height:100%;margin:0;padding:0;border:none;font-size:0;background:transparent;cursor:pointer">Open Menu</button></div></div></div></div><div style="margin-left:auto;margin-right:auto;max-width:46.5rem;padding:2.25rem 1.125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none" href="/">Twistronics Blog</a></h3></header><main><article><header><h1 style="margin-top:1.5rem;margin-bottom:0">以服务为中心的软件开发设计与实现——截图—&gt;视频检索系统</h1><p style="font-size:0.87055rem;line-height:1.5rem;display:block;margin-bottom:1.2rem">June 11, 2016</p><div><ul style="padding:0;margin:0 -.625rem;margin-bottom:1.5rem"><a style="background-image:none" href="/tag/Java"><li class="blog-post-module--blog-tag--2JghA">Java</li></a><a style="background-image:none" href="/tag/Python"><li class="blog-post-module--blog-tag--2JghA">Python</li></a><a style="background-image:none" href="/tag/Javascript"><li class="blog-post-module--blog-tag--2JghA">Javascript</li></a><a style="background-image:none" href="/tag/Spring boot"><li class="blog-post-module--blog-tag--2JghA">Spring boot</li></a><a style="background-image:none" href="/tag/Redis"><li class="blog-post-module--blog-tag--2JghA">Redis</li></a><a style="background-image:none" href="/tag/Apache"><li class="blog-post-module--blog-tag--2JghA">Apache</li></a><a style="background-image:none" href="/tag/HTML"><li class="blog-post-module--blog-tag--2JghA">HTML</li></a><a style="background-image:none" href="/tag/MySQL"><li class="blog-post-module--blog-tag--2JghA">MySQL</li></a><a style="background-image:none" href="/tag/Django"><li class="blog-post-module--blog-tag--2JghA">Django</li></a><a style="background-image:none" href="/tag/FFmpeg"><li class="blog-post-module--blog-tag--2JghA">FFmpeg</li></a><a style="background-image:none" href="/tag/PHP"><li class="blog-post-module--blog-tag--2JghA">PHP</li></a><a style="background-image:none" href="/tag/Azure"><li class="blog-post-module--blog-tag--2JghA">Azure</li></a></ul></div></header><section><h2>文件结构</h2>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">以服务为中心.zip
+
+	代码  （这个文件夹里是全部的代码）
+		www  （这个文件夹里是所有用在apache上的html和php代码）
+		imgnosm-master  （这个文件夹使用的是 java 的 spring-boot 后端框架写的一个微服务，用来查询截图所对应的具体时间位置）
+		bili  （这个文件夹是使用 python　的　django 后端框架写的一个微服务，用来调用百度以图搜图api）
+	文档.html 
+ 	以服务为中心ppt.pptx  (当时展示用的ppt）
+	img  （这个文件夹可以不用看，这是为了让html显示图片用的文件夹）</code></pre></div>
+<h2>功能架构</h2>
+<p>初始架构
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5ec2a165ca73344ce798ef3f3ec0b7b9/e2310/1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.75675675675676%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACmElEQVQoz32STUhUcRDAZ1dXzV1d3dUlshYPSoSnDkHUoZvHkpCoTgmFQUVQIKiHuhTWoTpEUSBUaIpIaWELWZCradT63X743NR11d11v973vn373pvee0YH0+Z/mPnPn/nN/GcGYAd5Ma3o+tE4Qu+8UtbnVex8FO2IaGeiaOucVSr65rBwdAiNIQHtccQKTxotsJsspRSDpl2LSkmKV4icjEKQlak2QmC8tJxWwRgi8dLd6amD7uAPzusnRF843rUVPcwAfCIN4BlSNWUANwEfkzEdOLgolWZEJaoBmvwCWtwc3lkWFO2+QDPXH0c8xxBl1BNQqVFAyIf/yVc/lvAirmkBoqxIAvJKRkJRB7DcjcZfw5XhKP08sBLpDlF4AVgwAYxhAbizdeB5ZwO3uB/GiSqHNFgEASx/pcSsZDa3rgFWhaw8RtNISjkd6KMS7dsLsCpmCxT0BErzBpbbIPDAaXy/fs4wMnHU0Xt6b35Hb/2Z1y01myIXRsxgTzwpNy+kcYJN6cA5erNVg6hmoerIO780bwIZzHDY6TAeMamGKuW3X1bva+4ynzJWF9vyoPLqzftORcawgtrJqM1iUUJWB9IcXrn3gany++KTkU3es5HO9oPvZNnfcvdMNvzTQzXOTMQXwyu8H+OZeE4dgOxKccJTBpHi8XL/vFC3Va+agM9GYLrJBjX1DeBsvKgD7O3PDI7WJ/DGNaxP2buBViJBJCSk1U/zalgOB1MsPmQRGV6+5grhIVqDpRPIctwqfPlcvON0g0nU9VsfZyEzOJKVMEir+5iixBWSEX8mSC4WTMhnv8WwNppYI+dmZ3gqyUzAAJp2XRnEbQ6Ls7DYWWvTHjr/PFpm0HC8Y8raeKv7wInvWKT5fgN+KdDZGIUVAwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="1"
+        title="1"
+        src="/static/5ec2a165ca73344ce798ef3f3ec0b7b9/fcda8/1.png"
+        srcset="/static/5ec2a165ca73344ce798ef3f3ec0b7b9/12f09/1.png 148w,
+/static/5ec2a165ca73344ce798ef3f3ec0b7b9/e4a3f/1.png 295w,
+/static/5ec2a165ca73344ce798ef3f3ec0b7b9/fcda8/1.png 590w,
+/static/5ec2a165ca73344ce798ef3f3ec0b7b9/efc66/1.png 885w,
+/static/5ec2a165ca73344ce798ef3f3ec0b7b9/e2310/1.png 968w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>最终架构
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5b9f7055b0a9d7643ff94031cb7d43d8/84a90/254822979155332019.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60.810810810810814%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC5UlEQVQoz4WSXUgUURTH766ZiiaKSiL1UA+VEVGGL4YP9SiEUdEn5msU5UP5UFD5aAX50BIVElQYKVqChenqrpjfqaWr++Gu5u7qujOuOzuzO193d+Z0Z9Y+DTownHv+3PO7nP8ZhP4RzTZFzy+nYPM7Gy4wi5A/AeRjIb9jDvLbZtXcm2YwAPSjcOitEbDdCMAaNoBK1BI9hwQwanmOwicxgBr8PMK5uzpjXirMSTiBWQkc7U4p7+/+cdxMoGY2WWnZHEWoN4w4QUnRJG9IPQNaSBKwfBDkBE6WcQi09kHa8Epwv3XO1uz20s3uYPzUOiiGUE/EiODXS32rlA4cohcvJgjAxc4kHMykGuS9CRUUYLC4XOS8nTHF+qolkPVHbKv+FxtGNnQHM1E9ED96dT8WGDir3wY+EceCSqZV9AorSxWdE2kBDspXGH5+lZMXPFH5RpJilbYgS6zaOP5+O+qTDxqGZ/cciDQWIKtzZ0DmTlsEgGcrkGCIl4osKJxvCYQ4+EzDOMsPi9ssLS213a+brntZqohMmYpy6tuzMhr7z6X77ualtNkrsz692Xuo50Qxqrl62OIYvTJBJmp00cqY36N6ljzKGk0DLym+Mrc1c1TsOTrY2vR1ytI1RFMzuwnwz00XPt9RqHlZeacsl5TZ/Qvuy3w8DKan95VbdbXqvcYGRQUVQjjmr8A1Wx9/HCn+0L3wxLHImZyUdAmFUDqyL9P6AnhBrDI9qv8yPj3yqgMGszXNFmDPq8SzfpcbX+uzxQfnF/U1R7HiQw+mDSNL+Hg4aTLQvDyGJgmQ5bhUrZloDz3ffOBd9hPXIF3TfCxc0C7X0QD77MTLSLI5KqsRVAUptAQVFBsCJuAHThB7USvahARRNK4Dj0w7XA10aK2GnHUvbJRaHhFV80QIdwysxjsGvIxljZOsFA/6LxIU4BgjChCJsMAI0PvTux+A34No6H/h4iBnzMWVDtoDpZ4o7NK073lRHasu87tSAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="254822979155332019"
+        title="254822979155332019"
+        src="/static/5b9f7055b0a9d7643ff94031cb7d43d8/fcda8/254822979155332019.png"
+        srcset="/static/5b9f7055b0a9d7643ff94031cb7d43d8/12f09/254822979155332019.png 148w,
+/static/5b9f7055b0a9d7643ff94031cb7d43d8/e4a3f/254822979155332019.png 295w,
+/static/5b9f7055b0a9d7643ff94031cb7d43d8/fcda8/254822979155332019.png 590w,
+/static/5b9f7055b0a9d7643ff94031cb7d43d8/efc66/254822979155332019.png 885w,
+/static/5b9f7055b0a9d7643ff94031cb7d43d8/84a90/254822979155332019.png 982w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h2>进度计划</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/658b8ebda1b30157cead31851f29879f/64d87/2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 73.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAABb0lEQVQ4y32T0a6CQAxE+f9/9AEEUQEjoCCgVk+TIQty7yYNa92dzky70fv9NoKlfZgbx9Hj9Xr59/F42DRNc073tCJtwqTW8/m04/HocTgcLI5jK8vSbrebNU3joOFdvtGaTdd11ve9DcPgbK7Xq8f5fLY0TWeQ9RJGFKIDRHWBdl1vVVVZURQOyp5gT04sfxhK3npxGLlIzfPcC8GaYoACWNf1wsvZQ5LEujEwAZSLl8vFPYQlYKHvs+SJrn3ZbTGkAABZljmAwOUn+fv9viAQVWli5bcifxBcxEdkIRlA5AJG7Pd7Z8gZWBMi44Dj9wcX6ao6y5ecvFKXAQasbdu5SRAIZS88XM8ildVlAE+nkxdisFX8zy5zaGu2kIRfsNs68/NSwrFBCgDIwE8x1GvBN5RsNfBnsPVWJQn/kKSOIhuW/Gav10SI+UIyC4YEh5Mksd1ut3jHBHnOaCZpDmo237KGG0kyXh0P9//5+AELkJATf4oPJQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="2"
+        title="2"
+        src="/static/658b8ebda1b30157cead31851f29879f/fcda8/2.png"
+        srcset="/static/658b8ebda1b30157cead31851f29879f/12f09/2.png 148w,
+/static/658b8ebda1b30157cead31851f29879f/e4a3f/2.png 295w,
+/static/658b8ebda1b30157cead31851f29879f/fcda8/2.png 590w,
+/static/658b8ebda1b30157cead31851f29879f/64d87/2.png 818w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h2>算法说明</h2>
+<ul>
+<li>感知哈希算法</li>
+<li>缩小图片尺寸</li>
+<li>转为灰度图片</li>
+<li>计算灰度平均值</li>
+<li>比较像素的灰度</li>
+<li>计算哈希值</li>
+<li>
+<p>对比图片指纹</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 73px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ebc043a865cdc802635e0469e4163b34/2bc29/3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 95.8904109589041%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAD8klEQVQ4y0WTWW8aVxiG82eqSr2p1IsqF5VatepNlVw0Si3bdevES+K1boxXHLDxeDCrzVD2bYABzD4MzLAMMMAwwzKDgdhO7apVc9Gb/oPGMa47drArPTffkZ5zvu+c99y7urrq9d71ubjh3fnF+duL839ueCuUwuJl7+IOofz3sieI9y57vVd0nCd9bSrYLgY4wslGoKxZHJaNx+RTWZOYDmhaGfcRHT2iIwKvWfSYjv7959F7+YIjEQazNNLOOm6j/ErCuBoDJ3zLj4LiQUw5RVrFbBTiMzCfvaZd8PFZ119nXF/m8z42aeUycA2zJqAlp+ixf+VxamskCz7NKSeLhiUmqGmkbA3c3iAcXBpmE+Y3J7Xbk3NeBjM3M65qzIBsjikHP4Wnvy7Kn1TVk5RirKSbpz0AE9ExcQODmpmEhQru/dGlb+Wsl0FNwq50BHKLR8BvP4aff0krx1u/zLeMC02zqGxZKToklF9VCuupkD4Ny0/54v9yFTUKjZWDWnh1EHj4kWvyC0Y18cqyeAqLu47V4v4soZ3LOWT5wF7Op0Et0pN67nZm0segRhY1Ul7QJXoEPvjQOfZZCfihpZ87ti3zpkVCPh4FJwmLJItoCLcirF/rVom+fFgICHdQjepIh8T180Plgw8co/ezL79jFOO8bq6qnYls/ohsjaHGjbRXhTlARL14WE725W4l0iQcdcxMIXJkfUg78Ak8+TkpHSiDo6XdcVI5lVDORvcWMdtWEt6NmDbtwHQjH7uRL3sntUS76OsU/XXMElLMQBNfIQvfUMBwYWckLhlC5c/yThl1oE17lTE7gOjW98VPKulgX35dS3Qof5cKcGknbpF4pU8wcIyFpit7z5LbI7h6mvYrGNSQQdQRqwzWLKuWvy+l/H35mIkf5r0t0tMk7HR4v+gBGQQ4DAA8vMZCU1XjT+zBbiUKEV5lyLzpVIkUoqFi0tef+agcEdLXTDsaKSuH21qEvY2bOxjUDe10HCLevsT6d6iACneDYfOmS72kWhou3cnt4kE9ZathFqG3OmbiUhYOMzbjOi6kaCGSJiyuOF/mHVLcKYvZZD7dmn7jabU/8/uQxI1CNoWE1VBDEzPV4vpKSMscKJsHIOuRksZlHBKlrFLUvh00bFhkz2tktC/XcVcppCuHdeXgHi1kOAZRAXUaBnJuoOKXF5ybUdV8QD4bM4gFOWyU2HdmGoX4tSz87FIYSru2szCQdW2THiDv2cYs6371Qmj/BW7biOsWzSvD+hcDbnA2CK0iGpFBPMrePdXv3eopR55xeYHf+GtOasRhCe1UsF/rmSM6yaZ8dMLLF+KdKi5ki80E35x1Bfk/3LMG54m5msQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="3"
+        title="3"
+        src="/static/ebc043a865cdc802635e0469e4163b34/2bc29/3.png"
+        srcset="/static/ebc043a865cdc802635e0469e4163b34/2bc29/3.png 73w"
+        sizes="(max-width: 73px) 100vw, 73px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span> -> <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 65px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/40c294d3d57b7829719121c8a7eaa1f7/4247e/4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 118.46153846153847%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAC/ElEQVQ4y6WUyy/jURzFf0VLgmrFeEuItLHxaERsWJCI2jQRIrFASGyxEc96TTdtg6XEgpCIEP0DBEXYYCPCBmmM9xDGozGN18xnekV+omYycRa3ube/c7/3nnPuV/r1CUjPXjw+Pno8np9eeGR4eHh4enriA99k8TM/P19eXh4dHR0ZGfnFC61Wm5aW1tfXd35+zgc++ZLb7T4+Ph4bG8vNzZUkSaVShYWFhYeHq9XqlJSUzs7Ora2tm5sbTuGDvLi42NraWl1dnZycHBoayhZ1dXVtbW0tLS2MkC0Wy8TEhMvl8kHu7++nVFxcnFKpjIqKamhoWFlZ+ebF6uqq2WzOzMysqqpaWlryQWZvTguTkS16enpOTk7Ef0dHR+3t7exYUFAwPT0tFp9lkLq6usRV35MpDpnFoqKimZmZf1RG7cbGxo2Njevra0w6ODiAHBMTYzQaIWPn7e0t4p+enn734g0ZwfLz85uamsbHx/f29vb39wW5sLBwdnb26uoKRzGvu7v7qxcv5ICAAEZ/f3/4sbGxFRUVy8vLcvLc3Nzh4aHVajUYDKwkJCTEx8dLo6Oj2dnZWVlZeBsYGJiUlJSTk1NbWzs4ODg1NdXR0VFcXIyX6+vrSNDc3BwREUEZhULBKG1vbzscDk6Smpqq0WjI2cjIyMDAQE1NTUlJCeTJyUk8u7i4gMwuiA/Lz8/vDx/F0QY9SktLMzIy7HY7x3M6nUxxuLe3F/FFNuXkl8rCOuoPDw/bbDYkQeqdnZ2hoSExReFX53yQwd3dHdKTCiTlIEzPzs6YshEO/a3ye4iv7+/vd3d3Kc6dLy8vMe8/yOQBL7AN2TY3N0VmPiRzQl4fAYImEsbDIJ55eXnYtra2xoN7Y5W8FEx0RnDcek0YmU1MTKysrKyvrycCwcHB0ivkZLoCGUpPTy8rK+MNCoXoKtShsVAzKChIkkNORl4Sq9PpTCbTwsIChtMJ9Hp9SEgIjUWMGhne3JleRwPEHrwVrY8p5v34ANJnWu9vsGuNl0J24iEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="4"
+        title="4"
+        src="/static/40c294d3d57b7829719121c8a7eaa1f7/4247e/4.png"
+        srcset="/static/40c294d3d57b7829719121c8a7eaa1f7/4247e/4.png 65w"
+        sizes="(max-width: 65px) 100vw, 65px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span> -> 8f373714acfcf4d0</p>
+</li>
+<li>离散余弦变换
+离散余弦变换（英语：DCT for Discrete Cosine Transform）是与傅里叶变换相关的一种变换，类似于离散傅里叶变换，但是只使用实数。离散余弦变换相当于一个长度大概是它两倍的离散傅里叶变换，这个离散傅里叶变换是对一个实偶函数进行的（因为一个实偶函数的傅里叶变换仍然是一个实偶函数），在有些变形里面需要将输入或者输出的位置移动半个单位
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/bfb7a038b96d9335ae1cf368688b5ad7/8c557/700px-Dandelion_clock_quarter_dft_dct.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEaElEQVQ4y5WVaUxcVRTHHwyf/aR+MEBCQ5BvaviCCTSM0UACpIlRQqgEwicwNa2KNk1tqQ1aCgQrW2SZYmcEGygtS0JDUIkFhbKWKdWUdQaGZTIszj7vvfve3zN3hmkH2xpucnLe3Jzzm7PdewUcWowxrvv6+lBQUID09HRkZmaiuLgYOTk5XEpKSrC7u8vtFEUJ8xeeB2xra0NMTAwSExPR3NyMgYEB5OXl8b2UlBTYbLajAfV6PeLi4nhkRqMRw8PDGB8fR1JSEgfa7fajAdvb25GQkMABtbW1GBkZweDgIIelpaVhf3//aECdTof4+HjExsYiOTkZpaWlyMrKQnR0NP+9s7NzNKC/KRkZGcjNzeWSnZ2N/Px83iS/djgc3E5V1XCgqjLalBHQJGBQVD80YOh0OTA3O4vl5WWYTKYwZz/sgHeg/xNhaAUzsZi3UFVfh4mJCYyNjYXSfBJZOFRQR6vBHp2Cd+8s9r0Xsc6uYlGpxbzShPvQY8ragfWG5pCHvyQBgAr/5KytqSEYB3rm34BtVcCS8xVMivEYYknoZu+gRf4AlSiEYa0I9s9zIJGTy+mEKIoh4L17QFfXQe2DwC1vJv4Sj+FPloIh5T30KifQzk6iiZXgilKKDs8Z+BaLIFMJXK4AMNBYFb29QGvrIeAj+SRG2VsEexe32QlcZwW4Jn+Cb+RzOC9dwFWpEgPSj6C+weV2wefzhYAtLSpqalT+rSgqr6vwh3IKPUo6bikfoo0Voo5gX0sX8YVYjdNiFU67O1C8TaeCyXB7PGFjUlYGXL4c3kthUDkDHUXWQmnWK4Uolz/Fx2IlPvI04X1JhzxzH/IqvGQqweF00eisYWvLiv5+G53tfRQV2TE97aJSeCFJMoTfqaNd7Cx+ZuUwsCtolOtQLrbjkq8LX7JenDMPo7xsnf+7j+pnMPxEF4cBN270486dYQwNTWFqagGbm5twu90QZFWCqIhcfJSWj0lBoT0acIfHiceP/4bZbOaDLcsyXrQE/M8SJQ9udnejs7OT3zb+SPxLlhl1VuHNOGgIb8qa141JC8P0Qx+mZ1xUD39Ndkl2MDWzC+OkCdszM/wgPj3UB4DDImRc2Ibw+gqiXppGRNSviIjsQ0REB6I01yEIrUiNroD90mc8qk2LCysr0jMvhVDKx48byXGIIHdJ3yIxkLQhMqKJdBO0b34L3A8ATat2zM+LwfP8HKBW+xs5dkCjuRmE6ThIo2kk3Yi3tdXYRE0AaHJQKZ4AnxWkkKa9y1OLjAyk6IcJQgMiNfWka3BMq0eDusiNV0xOjI76eA0DDVHCGsJrqNX2c4BG4wf9wL8FoZaAdaSr8FpSJ76aVThkadmFnp4XT4WQmnqbHL8j8QO+J7nGIwvsVeDlV/UoPb/FjTc2/qFHq5MGu4fel18o2jE8eGDE0tIKtret8NDRFObmbPSiWegq2giK5SlZx+iIBQ+NtuDsSVhdXaBBXyBtgsVigdVqxd7eHn8SJEnCv/Fhfr8qkUr/AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="700px Dandelion clock quarter dft dct"
+        title="700px Dandelion clock quarter dft dct"
+        src="/static/bfb7a038b96d9335ae1cf368688b5ad7/fcda8/700px-Dandelion_clock_quarter_dft_dct.png"
+        srcset="/static/bfb7a038b96d9335ae1cf368688b5ad7/12f09/700px-Dandelion_clock_quarter_dft_dct.png 148w,
+/static/bfb7a038b96d9335ae1cf368688b5ad7/e4a3f/700px-Dandelion_clock_quarter_dft_dct.png 295w,
+/static/bfb7a038b96d9335ae1cf368688b5ad7/fcda8/700px-Dandelion_clock_quarter_dft_dct.png 590w,
+/static/bfb7a038b96d9335ae1cf368688b5ad7/8c557/700px-Dandelion_clock_quarter_dft_dct.png 700w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/38bde62b9b2070862fcfeafcdf9b1345/2bef9/1353633096_2524.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.83783783783784%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAABuUlEQVQ4y4WSW0/jQAyFM/akTRCwQFtoq1IgQMv9smUFAomnfdn//4f2O5OpVBCFSEee2GPPObYLN6/dLBaFGfbCzBb4JtHdQrDA2Qo+C8n8/JHwlyJ3RRH6IYRb8IfkGf4rd5c9zvcSLIPHl/mkrjxGUvqLHncofEmxBcyOTydTxUr3SO7X7Ih/z5ZiYy4dgWEnlmE1FmNEvA+IVdgh2FgyDME/SL7JspJkij6BO3xTcAIOYTgFD+CZOw32nTtNIpHYhw8F98EeF35hGxJ+pz6aHcCmL3AegH573265t5PbtF7uZl3ptR4FJHtUfpKsr2xl191OvX7yqS/mPY7bMJMsrc4cjPGL9QbY5f8IvLFLkq/NmGfJpFmSLquCj6zBJd6eimGFGa+fwXSehmS+UIxebWNv1FMRXvZQTDUcVK3KQZBHFdUQDnltb83eDqpuvX7L2TN2zSPEKwo1nNX0SbfsqF8l4CHi7ZTHUiOWeUD7+k9DNXsBQy3ntfqBzFGe8D9wr4nnlbon/oqsE/znWnwwxDcDT0E9Zc2AWrXFwrbTRO6mirQD8Sb7bHXaxEda6i/acBq9rHT+D7BxFtcmkiE7AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="1353633096 2524"
+        title="1353633096 2524"
+        src="/static/38bde62b9b2070862fcfeafcdf9b1345/fcda8/1353633096_2524.png"
+        srcset="/static/38bde62b9b2070862fcfeafcdf9b1345/12f09/1353633096_2524.png 148w,
+/static/38bde62b9b2070862fcfeafcdf9b1345/e4a3f/1353633096_2524.png 295w,
+/static/38bde62b9b2070862fcfeafcdf9b1345/fcda8/1353633096_2524.png 590w,
+/static/38bde62b9b2070862fcfeafcdf9b1345/efc66/1353633096_2524.png 885w,
+/static/38bde62b9b2070862fcfeafcdf9b1345/2bef9/1353633096_2524.png 1024w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>通过索引加快汉明距离匹配速度
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7333340b10893d66a8af636ae9155212/5d030/5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.70270270270271%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACu0lEQVQ4y41Ua08TQRTtnzN+1ESjf0P/Ah9RP5UIMQ0KRj5ISCsJxEc0IPStbekD2t227KMspQstfW53d7bHO1OqrYh6Nzc7O505c865d+rbkxXEqjp4MMoRz9HojzkdHqXNGBhjM/O+SEVH/PhEfIy6XaDZxE3BPA9OvQ5H09CTZbR0HX3Lguu6sG0bHv3uC3PAsiY2NJ4+g/rgIZpnJi4HQ1z2LbQtm8aWYMIZtefmYN67j+aduxgGg2NFNO/YjgAWgLFqTQDupgpY/hjBi2wFixkZz3e/YSlygMW9FGRVR90w8LlQxptYBmvxLMKFErSyDsdxUJU1DK0hSa6eIKGMJTPyiefl/Dw6fr/wlNFizo7LcUjWh1wJq+EUVqMZ7BOgIqkk10GF3gNSMpZ85eFX6Rhv00VsPfEj5A8gqJ5h8+gYwfQRBo4rpG3nJLyKZbEcyyFK62tEyHUZFFJpccAIDcLkIRv0UTw1ES2ryLctpGh+f/0d4nkJSdWATf4w5kI1myhoBopGAzXzAs3zllBwYbYEU19crWNPUmAaJzjv9nHa6uB06EL7soPKrduoxZOoU4EYseCm80IZzRYanZ5g7VLysMg/UZSoYiCpn4nJrYMiFnaSCIQzWCFJ6xkJL3NVBNIl9Oh0LjlE8pf201ikNZ/SeVTJEs6sXFQw6P/0sHa96a4a2X69iv7jR0RhAJcKE5ZVbOZkbObLSEoV6LSXA2pUB85ypig7xQrWEjlsUGHWvx8SwxJCG9sILQTo9IGo9Hsqygq1zEo8j/ChDJXaxeZtI2nTDMeAR2R0lIrBi5AkKxJ0eqbRQva8LZrao2z1+uR1T2Sbxj16c+86ne6vxp4A/ivG93kq+R2nhzOf3PUZQO6R59GC0fWcbPgN8tqBM4Ac7GZmN/8LTacvSmAJ8uxvgP9zyCR+APwupiHtAhd0AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="5"
+        title="5"
+        src="/static/7333340b10893d66a8af636ae9155212/fcda8/5.png"
+        srcset="/static/7333340b10893d66a8af636ae9155212/12f09/5.png 148w,
+/static/7333340b10893d66a8af636ae9155212/e4a3f/5.png 295w,
+/static/7333340b10893d66a8af636ae9155212/fcda8/5.png 590w,
+/static/7333340b10893d66a8af636ae9155212/5d030/5.png 771w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+</ul>
+<h2>操作示例</h2>
+<ul>
+<li>首先，进入浏览器输入网址</li>
+<li>然后进入主页面
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/664485beedd40c05673732813663b62d/0f98f/3.pic_hd.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABcVQoHULyj//EABwQAAIBBQEAAAAAAAAAAAAAAAECAAQSIjEzQv/aAAgBAQABBQIqse1QMp5qeqa//8QAFxEAAwEAAAAAAAAAAAAAAAAAAQIQEf/aAAgBAwEBPwFRs//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AWf/xAAYEAADAQEAAAAAAAAAAAAAAAAAAREgMf/aAAgBAQAGPwI6kW4//8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFBYXHB/9oACAEBAAE/IVmhkTldWXKefCOP0Rtt7+T/2gAMAwEAAgADAAAAEAfP/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAERMYH/2gAIAQMBAT8Qm4Oz/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EFhF/8QAHhABAAICAQUAAAAAAAAAAAAAAQAhETFBUWFx0fD/2gAIAQEAAT8QBZ5oJUNh00RC1Dyb1FTz7nyOjCCIMOeyf//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="3 pic hd"
+        title="3 pic hd"
+        src="/static/664485beedd40c05673732813663b62d/1c72d/3.pic_hd.jpg"
+        srcset="/static/664485beedd40c05673732813663b62d/a80bd/3.pic_hd.jpg 148w,
+/static/664485beedd40c05673732813663b62d/1c91a/3.pic_hd.jpg 295w,
+/static/664485beedd40c05673732813663b62d/1c72d/3.pic_hd.jpg 590w,
+/static/664485beedd40c05673732813663b62d/a8a14/3.pic_hd.jpg 885w,
+/static/664485beedd40c05673732813663b62d/fbd2c/3.pic_hd.jpg 1180w,
+/static/664485beedd40c05673732813663b62d/0f98f/3.pic_hd.jpg 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>再点击选择截图进行上传
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4112097267f99d39158c3a768bf56ae9/0f98f/4.pic_hd.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABcVQoHULyj//EABwQAAIBBQEAAAAAAAAAAAAAAAECAAQSIjEzQv/aAAgBAQABBQIqse1QMp5qeqa//8QAFxEAAwEAAAAAAAAAAAAAAAAAAQIQEf/aAAgBAwEBPwFRs//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AWf/xAAYEAADAQEAAAAAAAAAAAAAAAAAAREgMf/aAAgBAQAGPwI6kW4//8QAHBAAAgICAwAAAAAAAAAAAAAAAAERITFBYXHB/9oACAEBAAE/IW1aVDzp0bIc8Qx9Idyvfh//2gAMAwEAAgADAAAAEAfP/8QAGBEAAgMAAAAAAAAAAAAAAAAAABEBMWH/2gAIAQMBAT8QdWE2f//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBYRf/EAB8QAQACAgAHAAAAAAAAAAAAAAEAESExQVFhcYHR8P/aAAgBAQABPxAFfNBMRWh0lwfBELiHZvUWHf3PkcmEEQU49E//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="4 pic hd"
+        title="4 pic hd"
+        src="/static/4112097267f99d39158c3a768bf56ae9/1c72d/4.pic_hd.jpg"
+        srcset="/static/4112097267f99d39158c3a768bf56ae9/a80bd/4.pic_hd.jpg 148w,
+/static/4112097267f99d39158c3a768bf56ae9/1c91a/4.pic_hd.jpg 295w,
+/static/4112097267f99d39158c3a768bf56ae9/1c72d/4.pic_hd.jpg 590w,
+/static/4112097267f99d39158c3a768bf56ae9/a8a14/4.pic_hd.jpg 885w,
+/static/4112097267f99d39158c3a768bf56ae9/fbd2c/4.pic_hd.jpg 1180w,
+/static/4112097267f99d39158c3a768bf56ae9/0f98f/4.pic_hd.jpg 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/04af03b42f7b2042934b369cbd9dc8d3/0f98f/5.pic_hd.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 54.05405405405405%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABcRqUjtFhR//EABoQAQACAwEAAAAAAAAAAAAAAAECEQAEEhP/2gAIAQEAAQUC5MkUWyy3nZX1hJr/xAAWEQEBAQAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BDZ//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwFn/8QAGhAAAgIDAAAAAAAAAAAAAAAAABEBAhAxwf/aAAgBAQAGPwIfRxbOz//EABsQAQEBAQADAQAAAAAAAAAAAAERACFBYYHh/9oACAEBAAE/IWfb8XI8BPbF0AvO48jMBWQ5gwKfm//aAAwDAQACAAMAAAAQmA//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxCw/8QAFhEAAwAAAAAAAAAAAAAAAAAAARAR/9oACAECAQE/ECi//8QAHRABAAMAAQUAAAAAAAAAAAAAAQARIUFRYYGx0f/aAAgBAQABPxCgMR4XqAegUVs7xdVTGfE1L3f2KBloc54isAJR0xP/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="5 pic hd"
+        title="5 pic hd"
+        src="/static/04af03b42f7b2042934b369cbd9dc8d3/1c72d/5.pic_hd.jpg"
+        srcset="/static/04af03b42f7b2042934b369cbd9dc8d3/a80bd/5.pic_hd.jpg 148w,
+/static/04af03b42f7b2042934b369cbd9dc8d3/1c91a/5.pic_hd.jpg 295w,
+/static/04af03b42f7b2042934b369cbd9dc8d3/1c72d/5.pic_hd.jpg 590w,
+/static/04af03b42f7b2042934b369cbd9dc8d3/a8a14/5.pic_hd.jpg 885w,
+/static/04af03b42f7b2042934b369cbd9dc8d3/fbd2c/5.pic_hd.jpg 1180w,
+/static/04af03b42f7b2042934b369cbd9dc8d3/0f98f/5.pic_hd.jpg 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>等待一段时间，就可以得到图片检索的结果(如果视频在服务器中，就从服务器中检索得到该截图在视频具体的位置)
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c8fbb4229ee0bf2ca26bb5da2363ed4e/0f98f/7.pic_hd.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 54.05405405405405%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABcRqUjtFhR//EABoQAQACAwEAAAAAAAAAAAAAAAECEQAEEhP/2gAIAQEAAQUC5MkUWyy3nZX1hJr/xAAWEQEBAQAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BDZ//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwFn/8QAGxAAAQQDAAAAAAAAAAAAAAAAAAECEBExQcH/2gAIAQEABj8C2X0tHTk//8QAGxABAAMAAwEAAAAAAAAAAAAAAQARIUFhkeH/2gAIAQEAAT8had8LEcVnaF6gLmw5EYC2qMgaCr5P/9oADAMBAAIAAwAAABBYD//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/ELD/xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8QKL//xAAcEAEAAwACAwAAAAAAAAAAAAABABEhQVGBodH/2gAIAQEAAT8QMTAe16YLQpYsl1VMZ8TUvd/YoGWhzniKgAlHWJ//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="7 pic hd"
+        title="7 pic hd"
+        src="/static/c8fbb4229ee0bf2ca26bb5da2363ed4e/1c72d/7.pic_hd.jpg"
+        srcset="/static/c8fbb4229ee0bf2ca26bb5da2363ed4e/a80bd/7.pic_hd.jpg 148w,
+/static/c8fbb4229ee0bf2ca26bb5da2363ed4e/1c91a/7.pic_hd.jpg 295w,
+/static/c8fbb4229ee0bf2ca26bb5da2363ed4e/1c72d/7.pic_hd.jpg 590w,
+/static/c8fbb4229ee0bf2ca26bb5da2363ed4e/a8a14/7.pic_hd.jpg 885w,
+/static/c8fbb4229ee0bf2ca26bb5da2363ed4e/fbd2c/7.pic_hd.jpg 1180w,
+/static/c8fbb4229ee0bf2ca26bb5da2363ed4e/0f98f/7.pic_hd.jpg 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/19b6345fe67d4ab524da8697d58ec5be/0f98f/8.pic_hd.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAetpYhY//8QAGRAAAgMBAAAAAAAAAAAAAAAAAAIBERIg/9oACAEBAAEFAnqDCmV4/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAQQDAAAAAAAAAAAAAAAAAQACMpEDICH/2gAIAQEABj8C5iDlEUoitP/EABkQAAEFAAAAAAAAAAAAAAAAAAERICExUf/aAAgBAQABPyEEZjBTne//2gAMAwEAAgADAAAAEHPP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHRAAAQMFAQAAAAAAAAAAAAAAAQAR0SAhUXGR8f/aAAgBAQABPxAuJQrsgBtl4qFi4oo//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="8 pic hd"
+        title="8 pic hd"
+        src="/static/19b6345fe67d4ab524da8697d58ec5be/1c72d/8.pic_hd.jpg"
+        srcset="/static/19b6345fe67d4ab524da8697d58ec5be/a80bd/8.pic_hd.jpg 148w,
+/static/19b6345fe67d4ab524da8697d58ec5be/1c91a/8.pic_hd.jpg 295w,
+/static/19b6345fe67d4ab524da8697d58ec5be/1c72d/8.pic_hd.jpg 590w,
+/static/19b6345fe67d4ab524da8697d58ec5be/a8a14/8.pic_hd.jpg 885w,
+/static/19b6345fe67d4ab524da8697d58ec5be/fbd2c/8.pic_hd.jpg 1180w,
+/static/19b6345fe67d4ab524da8697d58ec5be/0f98f/8.pic_hd.jpg 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>同时也会调用百度识图的api进行检索
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d0924914b12cdf8c38f943d50cd6be28/0f98f/10.pic_hd.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe2sZrH/xAAXEAADAQAAAAAAAAAAAAAAAAAAAhIg/9oACAEBAAEFApUlSVx//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAwEBAAAAAAAAAAAAAAAAAAEykSD/2gAIAQEABj8ClErCVnH/xAAVEAEBAAAAAAAAAAAAAAAAAAAg8f/aAAgBAQABPyGetS//2gAMAwEAAgADAAAAEAPP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGBAAAwEBAAAAAAAAAAAAAAAAANHxESD/2gAIAQEAAT8QgUSiMVOP/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="10 pic hd"
+        title="10 pic hd"
+        src="/static/d0924914b12cdf8c38f943d50cd6be28/1c72d/10.pic_hd.jpg"
+        srcset="/static/d0924914b12cdf8c38f943d50cd6be28/a80bd/10.pic_hd.jpg 148w,
+/static/d0924914b12cdf8c38f943d50cd6be28/1c91a/10.pic_hd.jpg 295w,
+/static/d0924914b12cdf8c38f943d50cd6be28/1c72d/10.pic_hd.jpg 590w,
+/static/d0924914b12cdf8c38f943d50cd6be28/a8a14/10.pic_hd.jpg 885w,
+/static/d0924914b12cdf8c38f943d50cd6be28/fbd2c/10.pic_hd.jpg 1180w,
+/static/d0924914b12cdf8c38f943d50cd6be28/0f98f/10.pic_hd.jpg 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/eeee77fad213e2219ed0d2e59ead522b/0f98f/6.pic_hd.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIEBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAerGsQsf/8QAGRAAAQUAAAAAAAAAAAAAAAAAAgABERIg/9oACAEBAAEFAjgXVRx//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAHBAAAgAHAAAAAAAAAAAAAAAAAAEDERIgMjOR/9oACAEBAAY/AlKFUaDFcs//xAAbEAEAAgIDAAAAAAAAAAAAAAABESEAIDFBYf/aAAgBAQABPyEADLlArJp9x1r7/9oADAMBAAIAAwAAABCwz//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQEAAgIDAAAAAAAAAAAAAAERACEgcVFh0f/aAAgBAQABPxABU5Bd9YNQNJCGnnrCRr9R84f/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="6 pic hd"
+        title="6 pic hd"
+        src="/static/eeee77fad213e2219ed0d2e59ead522b/1c72d/6.pic_hd.jpg"
+        srcset="/static/eeee77fad213e2219ed0d2e59ead522b/a80bd/6.pic_hd.jpg 148w,
+/static/eeee77fad213e2219ed0d2e59ead522b/1c91a/6.pic_hd.jpg 295w,
+/static/eeee77fad213e2219ed0d2e59ead522b/1c72d/6.pic_hd.jpg 590w,
+/static/eeee77fad213e2219ed0d2e59ead522b/a8a14/6.pic_hd.jpg 885w,
+/static/eeee77fad213e2219ed0d2e59ead522b/fbd2c/6.pic_hd.jpg 1180w,
+/static/eeee77fad213e2219ed0d2e59ead522b/0f98f/6.pic_hd.jpg 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+</ul>
+<h2>运行环境</h2>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Ubuntu 14.04
+java jdk 1.8.0_73 
+python 2.7.6
+apache2
+PHP 5.5.9
+Redis server 2.8.4
+Maven 3.0.5
+django 1.9.6</code></pre></div>
+<h2>运行方式</h2>
+<ul>
+<li>将 <code class="language-text">代码/www</code> 文件夹里的文件放在apache的网页根目录下</li>
+<li>在 <code class="language-text">代码/bili</code> 文件夹里，使用命令 <code class="language-text">python manage.py runserver 0.0.0.0:7777</code></li>
+<li>在 <code class="language-text">代码/imgnosm-master</code> 文件夹里，使用命令 <code class="language-text">mvn spring-boot:run</code></li>
+</ul>
+<h2>代码结构</h2>
+<ul>
+<li>
+<p><code class="language-text">代码/www</code></p>
+<ul>
+<li>index.html 主页面</li>
+<li>upload.php  上传页面</li>
+<li>其余  静态资源文件，不重要</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">代码/bili</code></p>
+<ul>
+<li>
+<p>data 主要文件夹</p>
+<ul>
+<li>
+<p>views.py</p>
+<ul>
+<li><code class="language-text">def baiduapi(request)</code>  主要函数，调用baidu的图像搜索api</li>
+</ul>
+</li>
+<li>其余 django默认文件，不重要</li>
+</ul>
+</li>
+<li>其余 django默认文件，不重要</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">代码/imgnosm-master</code></p>
+<ul>
+<li>pom.xml  spirng-boot 的 maven 配置文件</li>
+<li>
+<p>src  主要代码文件</p>
+<ul>
+<li>
+<p>java/imgnosm</p>
+<ul>
+<li>imghash  用来计算图像hash的工具类文件夹，调用方法可以在web文件夹中直接看到</li>
+<li>
+<p>web/ui/mvc spring-boot 服务文件夹</p>
+<ul>
+<li>
+<p><code class="language-text">MessageController.java/public class MessageController</code></p>
+<ul>
+<li><code class="language-text">@RequestMapping(value = &quot;search&quot;) public String imgSearchName</code>  用来搜索视频截图位置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其余 不重要	</li>
+</ul>
+</li>
+<li>
+<p>resources</p>
+<ul>
+<li>application.properties  spring-boot 配置</li>
+<li>其余  不重要</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>script  用来存放截图时临时运行的脚本 </li>
+<li>其余  默认文件夹，不重要</li>
+</ul>
+</li>
+</ul>
+<h2>技术细节</h2>
+<ul>
+<li>Spring Boot后端框架</li>
+<li>
+<p>直接运行</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">java -jar spring-boot.jar</code></pre></div>
+</li>
+<li>
+<p>快速启动</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> hello<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot</span><span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>autoconfigure</span><span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype</span><span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation</span><span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Controller</span>
+<span class="token annotation punctuation">@EnableAutoConfiguration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SampleController</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ResponseBody</span>
+    <span class="token class-name">String</span> <span class="token function">home</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"Hello World!"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">SampleController</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+</li>
+<li>
+<p>简单配置</p>
+<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.3.3.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span></code></pre></div>
+</li>
+<li>
+<p>本地调试</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mvn spring-boot:run</code></pre></div>
+</li>
+<li>
+<p>快速打包</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mvn package</code></pre></div>
+</li>
+<li>
+<p>Django</p>
+<ul>
+<li>介绍	</li>
+</ul>
+<p>Django框架的核心包括：一个 面向对象 的映射器，用作数据模型（以Python类的形式定义）和关系性数据库间的媒介；一个基于正则表达式的URL分发器；一个视图系统，用于处理请求；以及一个模板系统。</p>
+<p>核心框架中还包括：</p>
+<p>一个轻量级的、独立的Web服务器，用于开发和测试。
+一个表单序列化及验证系统，用于HTML表单和适于数据库存储的数据之间的转换。
+一个缓存框架，并有几种缓存方式可供选择。
+中间件支持，允许对请求处理的各个阶段进行干涉。
+内置的分发系统允许应用程序中的组件采用预定义的信号进行相互间的通信。
+一个序列化系统，能够生成或读取采用XML或JSON表示的Django模型实例。
+一个用于扩展模板引擎的能力的系统。</p>
+</li>
+<li>
+<p>bootstrap</p>
+<ul>
+<li>介绍</li>
+</ul>
+<p>Bootstrap采用模块化设计，并且用LESS样式表语言来实现各种组件和工具。一个名为bootstrap.less的文件包括了这些组件和工具，开发者可以修改这个文件，自行决定项目需要哪些组件。</p>
+<p>通过一个基本配置文件可以进行有限的定制，此外也可以进行更加深入的定制。</p>
+<p>LESS语言支持变量、函数、运算符、组合选择器和一个叫做Mixin（混入）的功能。</p>
+<p>从Bootstrap 2.0开始，Bootstrap文档包括一个叫做“自定义”的特别选项，开发者可以根据自己的实际需要来选择包含的组件和效果，然后生成和下载已经编译好的包。</p>
+<p>网格系统和响应式设计以1170像素宽为基准。此外开发者也可以自定义基准。这两种情况下，Bootstrap都能提供四种变体：手机竖屏、手机横屏和平板电脑、PC低分辨率、高分辨率，每个变体都会自动调整网格宽度。</p>
+<p>CSS
+Bootstrap对一系列HTML组件的基本样式进行了定义，并且为文本、表格和表单元素设计了一套独特的、现代化的样式。</p>
+<p>可重用组件
+除了基本HTML元素，Bootstrap还包括了其他常用的界面元素，例如带有高级功能的按钮（例如按钮组合、带有下拉菜单选项的按钮、导航栏、水平和垂直标签组、导航、分页等等）、标签、高级排版、缩略图、警告信息、进度条等。</p>
+<p>这些组件都使用CSS的类实现。在页面中需要将其对应到特定的HTML元素上面。</p>
+<p>JavaScript组件
+通过jQuery，Bootstrap加入了一些JavaScript组件。它们提供了例如对话框、工具提示、轮播等功能。此外还增强了一些用户界面元素的功能，例如输入框的自动完成。Bootstrap 2.0支持以下JavaScript插件：Modal（模态对话框）、Dropdown（下拉菜单）、Scrollspy（滚动监听）、Tab（标签页）、Tooltip（工具提示）、Popover（浮动提示）、Alert（警告）、Button（按钮）、Collapse（折叠）、Carousel（轮播）、Typeahead（输入提示）、Affix（附加导航）.</p>
+</li>
+<li>阿里云域名
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b218532e2624b392f712f46cb61f2e1b/7d62e/6.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 58.78378378378378%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACC0lEQVQoz1VSy4oUQRDsux5E3fUP9EP8NU9+gyfxedGLIngWQRAdWRA87YrL7jj9mK7uqq53hxnV0wMOBJUdUx0ZGdnV/bdnePjxF+6+/I5bTz7h5NlXnL7+Idjg5NUG9+RkvZ7kTg/1HalvPP+Gm/Lu7TdnePD+J6rzXYvzusOfTuGq19j7BBUzGhfRSN36Q+2WuhWutuE//DUOO2PRuoBqGkcU6BFz9LhsNTYXDcxk0fcKTV1Da41hGNC2Lfr9HsFZpOCRUgJyxtj30KqXOqEaRawXopOL1jl0xuN3PaAXga5rcCnum0GcjwaNNGi1hQEwEWlGiBG9UrDWYRauKmJdh066T9aWCzEGOO8LfMoIgihuTEhwuwvEd48QPjyGVQ1CRnHNKeZ5RqVEfS8EYUXQS34uJhGgUCpCKS+CEiHCfov0+SnSlxcIRkFMwk4TJgFWQbrUMrqW3IbJodcTnFsyolCMK8S9CEQsSHku0/D9LGKcpoxMMMtRuhhjoNTyTMEQQgHFSgMR4FKCt4UnVzTEGOMqDrlBCnjJjE7IMROKMBeC/6k1fHnOEsP631AW2MkdtwgSFCyLkE3z86Ag6zKmgPmSKzkf7q0N6ZA7IHfMkF14cZIca/n2GDJfWMei2PX1VeHXKHhSkBwb8VdR+ehQOnCUJOGum00FuZzehyPHM5elJGy322KC/D+D64betAxyvgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="6"
+        title="6"
+        src="/static/b218532e2624b392f712f46cb61f2e1b/fcda8/6.png"
+        srcset="/static/b218532e2624b392f712f46cb61f2e1b/12f09/6.png 148w,
+/static/b218532e2624b392f712f46cb61f2e1b/e4a3f/6.png 295w,
+/static/b218532e2624b392f712f46cb61f2e1b/fcda8/6.png 590w,
+/static/b218532e2624b392f712f46cb61f2e1b/efc66/6.png 885w,
+/static/b218532e2624b392f712f46cb61f2e1b/c83ae/6.png 1180w,
+/static/b218532e2624b392f712f46cb61f2e1b/7d62e/6.png 2368w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>github静态页面
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/3b4049a1202e1802d01e45ca0add34f0/adef7/7.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.86486486486486%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACEklEQVQ4y41Ry2pUQRScv/MTRFcuRAS/wJVrd4KIClEQdJUsRkwgkgQVBQXBhegioGEyM/fdPbfvq+/7ltU9M3EwaGwozunTfaq76oxw0Spy9MLHoCT6WABd98/ro2EY0LbtEk1jY13XqMoSVVWhjCW0O0cpQlShh1oXqHnPnK37mtXecI36vocQwiKMomUuJdwwgOP78FjzuA8iAakUXNeF73nwGBX35r7J53M+yk9YwigM4ToOZtOpjdFiAWchMSOZIwUCFWPKM9N4apr5UMhHPBL7zCesySSBLgqMOhIG3PhsmpPklISKhEZykef2ksmzLLOxpMSybSy01taezFhFuWceNiRtBoMBFQ/LaolC08Oa/jQdfetQ1S3RkKS1uamdLfZaDzcLZhkiL4yRaRrOUpyW9DO2NYtIwSdMDGXKofer9o0frmFWrkskeYOnz57j+s1bOHjzHroGVFaxXmORaA6nsFHE+XnC3x9c/bCsOdUM9+7cxt0rl/DiyRZ+TFwcHL3Fh4+f8fXbMX5OHHw/PoEXLNCv+v5KaHyL0wo745e4ce0qfJlge2eM+w8e4eHjLbzae439w3cY7+5jMvOWTm0oPE/IH6Yqx+6JwOXtT/giKVEoxJS7lmy8M3Kl+g/J2kgOFSLKTullQPMDkdiagRmIz72/Hkp/AWHbdsiLyiLNNYe0zG3cBGsFp/Wnh78AWXrdGVl4r2wAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="7"
+        title="7"
+        src="/static/3b4049a1202e1802d01e45ca0add34f0/fcda8/7.png"
+        srcset="/static/3b4049a1202e1802d01e45ca0add34f0/12f09/7.png 148w,
+/static/3b4049a1202e1802d01e45ca0add34f0/e4a3f/7.png 295w,
+/static/3b4049a1202e1802d01e45ca0add34f0/fcda8/7.png 590w,
+/static/3b4049a1202e1802d01e45ca0add34f0/efc66/7.png 885w,
+/static/3b4049a1202e1802d01e45ca0add34f0/c83ae/7.png 1180w,
+/static/3b4049a1202e1802d01e45ca0add34f0/adef7/7.png 1716w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>
+<p>apache2</p>
+<p>Apache HTTP Server（简称Apache）是Apache软件基金会的一个开放源代码的网页服务器软件，可以在大多数电脑操作系统中运行，由于其跨平台和安全性[注 1]。被广泛使用，是最流行的Web服务器软件之一。它快速、可靠并且可通过简单的API扩充，将Perl／Python等解释器编译到服务器中。
+Apache支持许多特性，大部分通过编译的模块实现。这些特性从服务器端的编程语言支持到身份认证方案。一些通用的语言接口支持Perl，Python，Tcl， 和PHP。流行的认证模块包括mod<em>access，mod</em>auth和mod<em>digest。其他的例子有SSL和TLS支持（mod</em>ssl），代理服务器（proxy）模块，很有用的URL重写（由mod<em>rewrite实现），定制日志文件（mod</em>log<em>config），以及过滤支持（mod</em>include和mod<em>ext</em>filter）。Apache日志可以通过网页浏览器使用免费的脚本AWStats或Visitors来进行分析。</p>
+</li>
+<li>
+<p>PHP</p>
+<p>PHP（全称：PHP：Hypertext Preprocessor，即“PHP：超文本预处理器”）是一种开源的通用计算机脚本语言，尤其适用于网络开发并可嵌入HTML中使用。PHP的语法借鉴吸收C语言、Java和Perl等流行计算机语言的特点，易于一般程序员学习。PHP的主要目标是允许网络开发人员快速编写动态页面，但PHP也被用于其他很多领域。</p>
+<p>PHP最初是由勒多夫在1995年开始开发的；现在PHP的标准由the PHP Group维护。PHP以PHP License作为许可协议，不过因为这个协议限制了PHP名称的使用，所以和开放源代码许可协议GPL不兼容。</p>
+<p>PHP的应用范围相当广泛，尤其是在网页程序的开发上。一般来说PHP大多运行在网页服务器上，通过运行PHP代码来产生用户浏览的网页。PHP可以在多数的服务器和操作系统上运行，而且使用PHP完全是免费的。根据2013年4月的统计数据，PHP已经被安装在超过2亿4400万个网站和210万台服务器上。</p>
+<p>PHP on Microsoft Windows PHP 5.5.22 / PHP 5.6.6 是由 Microsoft VC11 所编译；其将不支持旧有的 Windows XP 系统。支持 Windows XP 系统的最新版为 PHP 5.4.38，采用 Microsoft VC9 编译。</p>
+</li>
+<li>
+<p>Redis</p>
+<p>Redis是一个开源、支持网络、基于内存、键值对存储数据库，使用ANSI C编写。从 2015 年 6 月开始，Redis 的开发由Redis Labs赞助，在 2013 年 5 月至 2015 年 6 月期间，其开发由Pivotal赞助。在2013年5月之前，其开发由VMware赞助。根据月度排行网站DB-Engines.com的数据显示，Redis是最流行的键值对存储数据库。</p>
+<p>支持语言
+许多语言都包含Redis支持，包括：</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ActionScript
+C
+C++
+C#
+Clojure
+Common Lisp
+Dart
+Erlang
+Go
+Haskell
+Haxe
+Io
+Java
+Node.js
+Lua
+Objective-C
+Perl
+PHP
+Pure Data
+Python
+R[6]
+Ruby
+Scala
+Smalltalk
+Tcl</code></pre></div>
+</li>
+<li>
+<p>python简单示例</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> redis
+
+r<span class="token operator">=</span>redis<span class="token punctuation">.</span>Redis<span class="token punctuation">(</span>host<span class="token operator">=</span><span class="token string">'localhost'</span><span class="token punctuation">,</span>port<span class="token operator">=</span><span class="token number">6379</span><span class="token punctuation">,</span>db<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+r<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">,</span><span class="token string">'aaa'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> r<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+x<span class="token operator">=</span><span class="token number">0</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	r<span class="token punctuation">.</span>lpush<span class="token punctuation">(</span><span class="token string">'list'</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span>
+	x<span class="token operator">=</span>x<span class="token operator">+</span><span class="token number">1</span>
+<span class="token keyword">print</span> r<span class="token punctuation">.</span>lrange<span class="token punctuation">(</span><span class="token string">'list'</span><span class="token punctuation">,</span><span class="token string">'0'</span><span class="token punctuation">,</span><span class="token string">'10'</span><span class="token punctuation">)</span>
+
+dict_hash<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span><span class="token string">'tang'</span><span class="token punctuation">,</span><span class="token string">'password'</span><span class="token punctuation">:</span><span class="token string">'tang_passwd'</span><span class="token punctuation">}</span>
+r<span class="token punctuation">.</span>hmset <span class="token punctuation">(</span><span class="token string">'hash_test'</span><span class="token punctuation">,</span>dict_hash<span class="token punctuation">)</span>
+<span class="token keyword">print</span> r<span class="token punctuation">.</span>hgetall<span class="token punctuation">(</span><span class="token string">'hash_test'</span><span class="token punctuation">)</span>
+
+r<span class="token punctuation">.</span>sadd<span class="token punctuation">(</span><span class="token string">'set_test'</span><span class="token punctuation">,</span><span class="token string">'aaa'</span><span class="token punctuation">,</span><span class="token string">'bbb'</span><span class="token punctuation">)</span>
+r<span class="token punctuation">.</span>sadd<span class="token punctuation">(</span><span class="token string">'set_test'</span><span class="token punctuation">,</span><span class="token string">'ccc'</span><span class="token punctuation">)</span>
+r<span class="token punctuation">.</span>sadd<span class="token punctuation">(</span><span class="token string">'set_test'</span><span class="token punctuation">,</span><span class="token string">'ddd'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> r<span class="token punctuation">.</span>smembers<span class="token punctuation">(</span><span class="token string">'set_test'</span><span class="token punctuation">)</span>
+
+r<span class="token punctuation">.</span>zadd<span class="token punctuation">(</span><span class="token string">'zset_test'</span><span class="token punctuation">,</span><span class="token string">'aaa'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'bbb'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+r<span class="token punctuation">.</span>zadd<span class="token punctuation">(</span><span class="token string">'zset_test'</span><span class="token punctuation">,</span><span class="token string">'ccc'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+r<span class="token punctuation">.</span>zadd<span class="token punctuation">(</span><span class="token string">'zset_test'</span><span class="token punctuation">,</span><span class="token string">'ddd'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> r<span class="token punctuation">.</span>zrange<span class="token punctuation">(</span><span class="token string">'zset_test'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span></code></pre></div>
+</li>
+</ul></section><hr style="margin-bottom:1.5rem"/><footer><div style="display:flex;margin-bottom:3.75rem"><p>Written by <a href="https://github.com/twistronics" style="background-image:none"><strong>twistronics</strong></a></p> <!-- -->  <!-- --> </div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blogs/ucore_lab_8/">← <!-- -->Operating System (8) : 文件系统</a></li><li><a rel="next" href="/blogs/hello-lucene-1/">HelloLucene 使用Lucene搭建简易检索系统 (1)<!-- --> →</a></li></ul></nav></main><footer>© <!-- -->2020<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com" style="background-image:none">Gatsby</a></footer></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blogs/Screenshot-retrieval/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-65fd028b4a4e5da0a59c.js"],"component---src-pages-404-js":["/component---src-pages-404-js-e148cbc30da18de1fa3b.js"],"component---src-pages-all-tags-js":["/component---src-pages-all-tags-js-645f8c97e140c042bf1e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-092cb2046be5cfa10eb1.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-e1627bb17d88ac2053ef.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-d1fa31acb385254cb459.js"],"component---src-templates-tag-page-js":["/component---src-templates-tag-page-js-09ee9bcb7b182a74d270.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-d1fa31acb385254cb459.js" async=""></script><script src="/commons-323b77c17de897f80d11.js" async=""></script><script src="/777cf710-40a4af3c2a38b71e6e80.js" async=""></script><script src="/styles-89fd2ae28bdf06750a71.js" async=""></script><script src="/app-65fd028b4a4e5da0a59c.js" async=""></script><script src="/framework-95b680cb3190aa9bfe59.js" async=""></script><script src="/webpack-runtime-abc6effa4822a41b5603.js" async=""></script></body></html>
