@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{dsEm:function(e,t,n){"use strict";n.r(t);var l=n("q1tI"),a=n.n(l),o=n("Wbzz");t.default=function(){return a.a.createElement("div",{style:{margin:"5rem",display:"flex",justifyContent:"center"}},a.a.createElement("ul",null,a.a.createElement("li",null,a.a.createElement(o.Link,{to:"https://www.google.com"},"Google"))))}}}]);
+//# sourceMappingURL=component---src-pages-temp-urls-js-6907be883b0f7835c443.js.map
