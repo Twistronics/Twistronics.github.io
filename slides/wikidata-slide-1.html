@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <style>
+    code::-webkit-scrollbar {
+      display: none;
+    }
+
+    .reveal .controls {
+      color: #f29305;
+    }
+
+    .reveal .progress {
+      background: rgba(0, 0, 0, 0.2);
+      color: #f29305e0;
+    }
+  </style>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-autoslide="1800">
+          <div>
+            <span>
+              <strong>维基数据</strong
+              >（Wikidata）是一个基于维基百科的，可协同编辑的<strong
+                class="fragment highlight-blue"
+                data-fragment-index="1"
+                >知识库</strong
+              >
+              <br />
+              <img width="500" src="res\img\Wikidata-logo-en.svg" />
+            </span>
+          </div>
+        </section>
+
+        <section data-auto-animate data-autoslide="1500">
+          <h3>Wikidata的所有知识以三元组表示</h3>
+        </section>
+
+        <section data-auto-animate data-autoslide="1500">
+          <h3>Wikidata的所有知识以三元组表示</h3>
+          比如：
+          <span data-id="triad"
+            ><span>罗素</span> &nbsp; &nbsp;<span>著作</span>
+            &nbsp; &nbsp;
+            <span>西方哲学史</span></span
+          >
+        </section>
+
+        <section
+          data-auto-animate
+          data-autoslide="1500"
+          data-transition="zoom-out"
+        >
+          <h3>Wikidata的所有知识以三元组表示</h3>
+          比如：
+          <span data-id="triad"
+            ><span style="color: blue">罗素</span> &nbsp; &nbsp;<span
+              style="color: #f29305"
+              >著作</span
+            >
+            &nbsp; &nbsp;
+            <span style="color: bisque">西方哲学史</span></span
+          >
+        </section>
+
+        <section data-transition="zoom-in" data-autoslide="1500">
+          <p>其中每一项对应一个维基数据项</p>
+          <br />
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr)">
+            <span
+              style="color: blue"
+              class="fragment fade-in"
+              data-fragment-index="1"
+              >罗素</span
+            >
+            <span
+              style="color: #f29305"
+              class="fragment fade-in"
+              data-fragment-index="2"
+              >著作</span
+            >
+            <span
+              style="color: bisque"
+              class="fragment fade-in"
+              data-fragment-index="3"
+              >西方哲学史</span
+            >
+
+            <span
+              style="color: blue"
+              class="fragment fade-in"
+              data-fragment-index="1"
+              >wd:Q33760</span
+            >
+            <span
+              style="color: #f29305"
+              class="fragment fade-in"
+              data-fragment-index="2"
+              >wdt:P800</span
+            >
+            <span
+              style="color: bisque"
+              class="fragment fade-in"
+              data-fragment-index="3"
+              >wd:Q133740</span
+            >
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <p>转换成查询语句</p>
+        </section>
+
+        <section data-auto-animate>
+          <p>转换成查询语句</p>
+          <pre>
+						<code class="hljs sql" data-trim data-id="code-simple-1">
+							select ?who ?whoLabel
+							where
+							{
+                ?who wdt:P800 wd:Q133740 .
+                  
+                SERVICE wikibase:label {           
+                  bd:serviceParam wikibase:language "zh" .
+                }
+							}
+						</code>
+					</pre>
+        </section>
+
+        <section data-auto-animate>
+          <pre>
+						<code class="hljs sql" data-trim data-line-numbers="1" data-id="code-simple-1">
+							select ?who ?whoLabel
+							where
+							{
+                ?who wdt:P800 wd:Q133740 .
+                  
+                SERVICE wikibase:label {           
+                  bd:serviceParam wikibase:language "zh" .
+                }
+							}
+						</code>
+					</pre>
+          <p>
+            <code style="color: #dda">?who</code>&nbsp;&nbsp;<code
+              style="color: #dda"
+              >?whoLabel</code
+            >&nbsp;&nbsp;表示需要查询的变量
+          </p>
+        </section>
+
+        <section data-auto-animate>
+          <pre>
+						<code class="hljs sql" data-trim data-line-numbers="2-9" data-id="code-simple-1">
+							select ?who ?whoLabel
+							where
+							{
+                ?who wdt:P800 wd:Q133740 .
+                  
+                SERVICE wikibase:label {           
+                  bd:serviceParam wikibase:language "zh" .
+                }
+							}
+						</code>
+					</pre>
+          <p>
+            <code style="color: #f92672">where</code>&nbsp;&nbsp;中表示查询逻辑
+          </p>
+        </section>
+
+        <section data-auto-animate>
+          <div>在三元组中用变量替换想要查询的内容</div>
+          <pre>
+						<code class="hljs sql" data-trim data-noescape data-line-numbers="4" data-id="code-simple-1">
+							select ?who ?whoLabel
+							where
+							{
+                ?who wdt:P800 wd:Q133740 .
+                  
+                SERVICE wikibase:label {           
+                  bd:serviceParam wikibase:language "zh" .
+                }
+							}
+						</code>
+					</pre>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr)">
+            <span
+              style="color: blue"
+              class="fragment fade-in"
+              data-fragment-index="1"
+              >?</span
+            >
+            <span
+              style="color: #f29305"
+              class="fragment fade-in"
+              data-fragment-index="2"
+              >著作</span
+            >
+            <span
+              style="color: bisque"
+              class="fragment fade-in"
+              data-fragment-index="3"
+              >西方哲学史</span
+            >
+
+            <span
+              style="color: blue"
+              class="fragment fade-in"
+              data-fragment-index="1"
+              >?who</span
+            >
+            <span
+              style="color: #f29305"
+              class="fragment fade-in"
+              data-fragment-index="2"
+              >wdt:P800</span
+            >
+            <span
+              style="color: bisque"
+              class="fragment fade-in"
+              data-fragment-index="3"
+              >wd:Q133740</span
+            >
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <pre>
+						<code class="hljs sql" data-trim data-noescape data-line-numbers="6-8" data-id="code-simple-1">
+							select ?who ?whoLabel
+							where
+							{
+                ?who wdt:P800 wd:Q133740 .
+                  
+                SERVICE wikibase:label {           
+                  bd:serviceParam wikibase:language "zh" .
+                }
+							}
+						</code>
+					</pre>
+          <div>
+            这表示使用&nbsp;<strong style="color: aqua">Wikidata</strong
+            >&nbsp;的标签服务<br /><span style="color: #a6e22e">"zh"&nbsp;</span
+            >表示使用中文标签
+          </div>
+        </section>
+
+        <section>
+          <section data-autoslide="6000">
+            <div style="display: grid; grid-template-rows: 1fr 1fr 5fr">
+              <h5>进行查询</h5>
+              <a href="https://query.wikidata.org/"
+                >https://query.wikidata.org/</a
+              >
+              <iframe
+                style="height: 10.5em; width: 30em"
+                data-src="https://query.wikidata.org/#select%20%3Fwho%20%3FwhoLabel%0Awhere%0A%7B%0A%20%20%3Fwho%20wdt%3AP800%20wd%3AQ133740%20.%0A%20%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22zh%22%20.%0A%20%20%7D%0A%7D%0A"
+              ></iframe>
+            </div>
+          </section>
+
+          <section data-autoslide="6000">
+            <h4>查询结果</h4>
+            <iframe
+              style="transform: scale(2) translateY(1em)"
+              data-src="https://query.wikidata.org/embed.html#select%20%3Fwho%20%3FwhoLabel%0Awhere%0A%7B%0A%20%20%3Fwho%20wdt%3AP800%20wd%3AQ133740%20.%0A%20%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22zh%22%20.%0A%20%20%7D%0A%7D%0A"
+            ></iframe>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <div>好了，你已经学会了<br /><br />接下来做一个简单的问题吧</div>
+          </section>
+          <section data-auto-animate>
+            <div>查找所有漫画家</div>
+            <pre>
+              <code class="hljs sql" data-trim data-noescape data-id="mangaka-1">
+                select ?who ?whoLabel
+                where
+                {
+                  ?who wdt:P106 wd:Q191633 .
+                      
+                  SERVICE wikibase:label {           
+                    bd:serviceParam wikibase:language "zh" .
+                  }
+                }
+              </code>
+            </pre>
+          </section>
+          <section data-auto-animate data-autoslide="8000">
+            <pre>
+                <code class="hljs sql" data-trim data-noescape data-id="mangaka-1" data-line-numbers="4">
+                  select ?who ?whoLabel
+                  where
+                  {
+                    ?who wdt:P106 wd:Q191633 .
+                        
+                    SERVICE wikibase:label {           
+                      bd:serviceParam wikibase:language "zh" .
+                    }
+                  }
+                </code>
+              </pre>
+            <iframe
+              style="width: 60vw; height: 40vh; border: none"
+              data-src="https://query.wikidata.org/embed.html#select%20%3Fwho%20%3FwhoLabel%0Awhere%0A%7B%0A%20%20%3Fwho%20wdt%3AP106%20wd%3AQ191633%20.%0A%20%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22zh%22%20.%0A%20%20%7D%0A%7D%0A"
+              referrerpolicy="origin"
+              sandbox="allow-scripts allow-same-origin allow-popups"
+            ></iframe>
+          </section>
+          <section data-auto-animate>
+            <div>查询所有漫画家的工作</div>
+            <pre>
+              <code class="hljs sql" data-trim data-noescape data-id="mangaka-1">
+                select ?who ?whoLabel ?job ?jobLabel
+                where
+                {
+                  ?who wdt:P106 wd:Q191633 .
+                  ?who wdt:P106 ?job .
+                      
+                  SERVICE wikibase:label {           
+                    bd:serviceParam wikibase:language "zh" .
+                  }
+                }
+              </code>
+            </pre>
+          </section>
+          <section data-auto-animate data-autoslide="10000">
+            <pre>
+              <code class="hljs sql" data-trim data-noescape data-id="mangaka-1" data-line-numbers="5">
+                select ?who ?whoLabel ?job ?jobLabel
+                where
+                {
+                  ?who wdt:P106 wd:Q191633 .
+                  ?who wdt:P106 ?job .
+                      
+                  SERVICE wikibase:label {           
+                    bd:serviceParam wikibase:language "zh" .
+                  }
+                }
+              </code>
+            </pre>
+            <iframe
+              style="width: 60vw; height: 40vh; border: none"
+              data-src="https://query.wikidata.org/embed.html#%20%20select%20%3Fwho%20%3FwhoLabel%20%3Fjob%20%3FjobLabel%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20where%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fwho%20wdt%3AP106%20wd%3AQ191633%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fwho%20wdt%3AP106%20%3Fjob%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22zh%22%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D"
+              referrerpolicy="origin"
+              sandbox="allow-scripts allow-same-origin allow-popups"
+            ></iframe>
+          </section>
+          <section data-auto-animate>
+            <div>统计数量</div>
+            <pre>
+              <code class="hljs sql" data-trim data-noescape data-id="mangaka-1" data-line-numbers="1,11">
+                select ?job ?jobLabel (COUNT(?who) AS ?count)
+                where
+                {
+                  ?who wdt:P106 wd:Q191633 .
+                  ?who wdt:P106 ?job .
+                      
+                  SERVICE wikibase:label {           
+                    bd:serviceParam wikibase:language "zh" .
+                  }
+                }
+                group by ?job ?jobLabel
+              </code>
+            </pre>
+          </section>
+          <section data-auto-animate>
+            <div>显示人数最多的前200项</div>
+            <pre>
+              <code class="hljs sql" data-trim data-noescape data-id="mangaka-1" data-line-numbers="12-13">
+                select ?job ?jobLabel (COUNT(?who) AS ?count)
+                where
+                {
+                  ?who wdt:P106 wd:Q191633 .
+                  ?who wdt:P106 ?job .
+                      
+                  SERVICE wikibase:label {           
+                    bd:serviceParam wikibase:language "zh" .
+                  }
+                }
+                group by ?job ?jobLabel
+                order by desc(?count)
+                limit 200
+              </code>
+            </pre>
+          </section>
+          <section data-auto-animate data-autoslide="10000">
+            <pre>
+              <code class="hljs sql" data-trim data-noescape data-id="mangaka-1">
+                select ?job ?jobLabel (COUNT(?who) AS ?count)
+                where
+                {
+                  ?who wdt:P106 wd:Q191633 .
+                  ?who wdt:P106 ?job .
+                      
+                  SERVICE wikibase:label {           
+                    bd:serviceParam wikibase:language "zh" .
+                  }
+                }
+                group by ?job ?jobLabel
+                order by desc(?count)
+                limit 200
+              </code>
+            </pre>
+            <iframe
+              style="width: 80vw; height: 50vh; border: none"
+              data-src="https://query.wikidata.org/embed.html#select%20%3Fjob%20%3FjobLabel%20%28COUNT%28%3Fwho%29%20AS%20%3Fcount%29%0Awhere%0A%7B%0A%20%20%3Fwho%20wdt%3AP106%20wd%3AQ191633%20.%0A%20%20%3Fwho%20wdt%3AP106%20%3Fjob%20.%0A%20%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22zh%22%20.%0A%20%20%7D%0A%7D%0Agroup%20by%20%3Fjob%20%3FjobLabel%0Aorder%20by%20desc%28%3Fcount%29%0Alimit%20200"
+              referrerpolicy="origin"
+              sandbox="allow-scripts allow-same-origin allow-popups"
+            ></iframe>
+          </section>
+          <section data-auto-animate>
+            <div>使用气泡图</div>
+            <pre>
+              <code class="hljs sql" data-trim data-noescape data-id="mangaka-1" data-line-numbers="1">
+                #defaultView:BubbleChart
+
+                select ?job ?jobLabel (COUNT(?who) AS ?count)
+                where
+                {
+                  ?who wdt:P106 wd:Q191633 .
+                  ?who wdt:P106 ?job .
+                      
+                  SERVICE wikibase:label {           
+                    bd:serviceParam wikibase:language "zh" .
+                  }
+                }
+                group by ?job ?jobLabel
+                order by desc(?count)
+                limit 200
+              </code>
+            </pre>
+          </section>
+          <section data-auto-animate data-autoslide="12000">
+            <pre>
+              <code class="hljs sql" data-trim data-noescape data-id="mangaka-1" >
+                #defaultView:BubbleChart
+
+                select ?job ?jobLabel (COUNT(?who) AS ?count)
+                where
+                {
+                  ?who wdt:P106 wd:Q191633 .
+                  ?who wdt:P106 ?job .
+                      
+                  SERVICE wikibase:label {           
+                    bd:serviceParam wikibase:language "zh" .
+                  }
+                }
+                group by ?job ?jobLabel
+                order by desc(?count)
+                limit 200
+              </code>
+            </pre>
+            <iframe
+              style="width: 80vw; height: 30vh; border: none"
+              data-src="https://query.wikidata.org/embed.html#%23defaultView%3ABubbleChart%0Aselect%20%3Fjob%20%3FjobLabel%20%28COUNT%28%3Fwho%29%20AS%20%3Fcount%29%0Awhere%0A%7B%0A%20%20%3Fwho%20wdt%3AP106%20wd%3AQ191633%20.%0A%20%20%3Fwho%20wdt%3AP106%20%3Fjob%20.%0A%20%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22zh%22%20.%0A%20%20%7D%0A%7D%0Agroup%20by%20%3Fjob%20%3FjobLabel%0Aorder%20by%20desc%28%3Fcount%29%0Alimit%20200"
+              referrerpolicy="origin"
+              sandbox="allow-scripts allow-same-origin allow-popups"
+            ></iframe>
+          </section>
+        </section>
+
+        <section>
+          <section data-auto-animate data-autoslide="10000">
+            <style>
+              table.styled-table td,
+              table.styled-table th {
+                border: 0;
+                font-size: 80%;
+                text-align: center;
+              }
+              table.styled-table tr td:nth-of-type(1) {
+                color: blue;
+              }
+
+            </style>
+            <div style="color:aqua">查询后的结果</div>
+            <table class="styled-table">
+              <tr>
+                <th>job</th>
+                <th>jobLabel</th>
+                <th>count</th>
+              </tr>
+              <tr>
+                <td>wd:Q191633</td>
+                <td>漫画家</td>
+                <td>6492</td>
+              </tr>
+
+              <tr>
+                <td>wd:Q644687</td>
+                <td>插画家</td>
+                <td>957</td>
+              </tr>
+            </table>
+            <div>...</div>
+            <table class="styled-table">
+              <tr>
+                <td>wd:Q2705098</td>
+                <td>电视艺人</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>wd:Q622807</td>
+                <td>声优</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>wd:Q639669</td>
+                <td>音乐家</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>wd:Q1079215</td>
+                <td>AV女优</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>wd:Q105186</td>
+                <td>药剂师</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>wd:Q183287</td>
+                <td> <div data-id="yakuza">极道</div> </td>
+                <td>2</td>
+              </tr>
+            </table>
+          </section>
+          <section data-auto-animate="">
+            <div data-id="yakuza" style="color:gray;">极道 ？</div> 是什么，哪位漫画家是极道？
+          </section>
+          <section>
+            <div>在知识库中查询既是<span style="color:#f92672">漫画家</span>，又是<span style="color:gray">极道</span>的人</div>
+          </section>
+          <section data-auto-animate data-autoslide="10000">
+           <pre>
+            <code class="hljs sql" data-trim data-noescape data-id="mangaka-1" data-line-numbers="4-5">
+              select ?who ?whoLabel
+              where
+              {
+                ?who wdt:P106 wd:Q191633 .
+                ?who wdt:P106 wd:Q183287 .
+                    
+                SERVICE wikibase:label {           
+                  bd:serviceParam wikibase:language "zh" .
+                }
+              }
+            </code>
+          </pre>
+          <iframe style="width: 80vw; height: 50vh; border: none;" data-src="https://query.wikidata.org/embed.html#select%20%3Fwho%20%3FwhoLabel%0Awhere%0A%7B%0A%20%20%3Fwho%20wdt%3AP106%20wd%3AQ191633%20.%0A%20%20%3Fwho%20wdt%3AP106%20wd%3AQ183287%20.%0A%20%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22zh%22%20.%0A%20%20%7D%0A%7D%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups" ></iframe>
+          </section>
+          <section>
+            通过查询到的wiki entries，可以打开维基百科的链接
+          </section>
+          <section>
+            <div>极道</div>
+            <iframe style="width: 20em; height: 30em;" data-src="https://zh.wikipedia.org/wiki/%E6%A5%B5%E9%81%93" frameborder="0"></iframe>
+          </section>
+          <section data-autoslide="12000">
+            <div><div><strong>安部让二</strong></div>
+            <div style="font-size: 60%">漫画<span style="color:gray;">《少年犯之七人》</span>作者。16岁加入暴力团，殴打十六名早稻田大学学生。后因各种犯罪行为在监狱服刑8年，出狱后第二年开始写小说，5年后成为人气作家。因为日本经济泡沫破灭，大幅负债，与妻子离婚。后来开始学习画漫画，获得第51回小学馆漫画奖<br></div>
+            <iframe style="width: 20em; height: 30em;" data-src="https://zh.wikipedia.org/wiki/%E5%AE%89%E9%83%A8%E8%AE%A9%E4%BA%8C"></iframe>
+          </section>
+          <section>
+            <div>中野ジロー</div>
+            <iframe style="width: 20em; height: 30em;" data-src="https://ja.wikipedia.org/wiki/%E4%B8%AD%E9%87%8E%E3%82%B8%E3%83%AD%E3%83%BC" frameborder="0"></iframe>
+          </section>
+        </section>
+        <section>
+          <h1>完</h1>
+          <h2>感谢观看</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        autoSlide: 3500,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // hash: false,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
